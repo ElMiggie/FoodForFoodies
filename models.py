@@ -18,3 +18,8 @@ from google.appengine.ext import ndb
 
 class Food(ndb.Model):
   food_name = ndb.StringProperty(required=True)
+  recipe1Name = ndb.StringProperty(required=True)
+  recipe2Name = ndb.StringProperty(required=True)
+  recipe3Name = ndb.StringProperty(required=True)
+  recipe4Name = ndb.StringProperty(required=True)
+  recipe5Name = ndb.StringProperty(required=True)
