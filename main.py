@@ -67,15 +67,20 @@ class RecipeHandler (webapp2.RequestHandler):
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
-        # fav_foods = Food.query().order(-Food.food_name).fetch(3)
-        # dict_for_template = {'top_fav_foods': fav_foods}
-        # self.response.write(food_list_template.render(dict_for_template))
+        apple_pie = models.Nutrition(calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+        #food_query = model.Nutrition.query().order()
+        #person_query = model.Facebook.query().filter(model.Nutrition.name == 'raw_input()')
+        #all_food = person_query.fetch()
+        #info = models.Nutrition.query().fetch()
         html = food_list_template.render({
-        'food_calories': "0",
-        'food_fats': "0",
-        'food_sodium' : "0",
-        'food_carbs': "0",
+        'food_name': "Apple Pie",
+        'food_calories': apple_pie.calories,
+        'food_fats': apple_pie.fats,
+        'food_sodium' : apple_pie.sodium,
+        'food_carbs': apple_pie.carbs,
         })
+        self.response.write(html)
+        apple_pie.put()
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
