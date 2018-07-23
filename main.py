@@ -9,7 +9,7 @@
 #      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
+# distributed under the License is distributed on an "AS IS" BASIS,ß
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
@@ -70,9 +70,9 @@ class MainHandler(webapp2.RequestHandler):
 #         # self.response.write(food_list_template.render(dict_for_template))
 #         html = food_list_template.render({
 #         'food_calories'= models.
-#         'food_fats'= ,
-#         'food_sodium'= ,
-#         'food_carbs' ,
+#         'food_fats'=
+#         'food_sodium'=
+#         'food_carbs'
 #         )}
 
 app = webapp2.WSGIApplication([
