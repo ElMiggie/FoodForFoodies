@@ -43,7 +43,7 @@ class MainHandler(webapp2.RequestHandler):
         'recipe4Name': foods[foodIndex].recipe4Name,
         'recipe5Name': foods[foodIndex].recipe5Name
         })
-        self.response.write(start_template.render(html)
+        self.response.write(start_template.render(html))
 
 class RandomFoodHandler(webapp2.RequestHandler):
     def get(self):
@@ -82,11 +82,6 @@ class InfoHandler(webapp2.RequestHandler):
         # 'food_sodium': self.response.,
         # 'food_carbs': self.response.,
         # )}
-          recipe_template=jinja_current_dir.get_template("templates/results.html")
-          rendered_recipe=recipe_template.render({
-          # 'recipe_picture': recipe_picture
-          })
-          self.response.write(rendered_recipe)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
