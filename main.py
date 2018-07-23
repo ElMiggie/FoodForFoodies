@@ -68,6 +68,8 @@ class RecipeHandler (webapp2.RequestHandler):
     def get (self):
         recipes=jinja_current_dir.get_template("templates/results.html")
         html=recipes.render({
+        "ingredients_array": models.Recipe.query().fetch(),
+        "directions_array": directions_array
         })
         self.response.write(html)
 
