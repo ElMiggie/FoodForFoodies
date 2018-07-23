@@ -1,0 +1,46 @@
+<!--
+  Copyright 2018 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food For Foodies</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheets/boring-style.css">
+  </head>
+  <body>
+    <h1> Food for Foodies</h1>
+  <!--  <h3> Menu: </h3>
+    <a href = -->
+    <form method=POST action="/">
+      Search for your favorite foods here:<br>
+      <input type="text" name="search_food">
+      <input type="image" src="static/MagnifyingGlass.png" alt="Search" width="48" height="30">
+      <br>
+
+      <h1>Food of the day: {{ food_name }}</h1>
+      Around the world:
+      <a href = '/recipes'> South America: {{ recipe1Name }} </a>
+      <a href = '/recipes'> North America: {{ recipe2Name }} </a>
+      <a href = '/recipes'> Europe: {{ recipe3Name }} </a>
+      <a href = '/recipes'> Asia: {{ recipe4Name }} </a>
+      <a href = '/recipes'> Africa: {{ recipe5Name }} </a>
+
+
+      <!-- make search button a picture -->
+    </form>
+  </body>
+</html>
