@@ -62,7 +62,7 @@ class MainHandler(webapp2.RequestHandler):
 #         self.response.write(food_list_template.render(dict_for_template))
 
 
-class RecipeHandler(webapp2.RequestHandler):
+class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         # fav_foods = Food.query().order(-Food.food_name).fetch(3)
@@ -87,6 +87,7 @@ app = webapp2.WSGIApplication([
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
+    ('/nutrition', InfoHandler),
     # ('/', FoodHandler),
     # ('/showfavs', ShowFoodHandler),
     # ('/recipes', RecipeHandler)
