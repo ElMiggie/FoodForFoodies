@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from google.appengine.ext import ndb
+from google.appengine.ext import ndb, ListProperty
 
 class Food(ndb.Model):
   food_name = ndb.StringProperty(required=True)
@@ -25,9 +25,9 @@ class Food(ndb.Model):
   recipe5Name = ndb.StringProperty(required=True)
 
 
-# class Recipe (ndb.Model):
-#     ingredients=ndb.ListProperty(required=True)
-#     directions=ndb.ListProperty(required=True)
+ class Recipe (ndb.Model):
+    ingredients=ndb.ListProperty(required=True)
+    directions=ndb.ListProperty(required=True)
 class Nutrition(ndb.Model):
     calories = ndb.IntegerProperty(required=True)
     fats = ndb.IntegerProperty(required=True)
