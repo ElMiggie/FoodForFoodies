@@ -19,16 +19,20 @@
 <html>
   <head>
     <title>Food For Foodies</title>
-    <link rel="stylesheet" type="text/css" href="StyleSheets/main-page.css">
+    <link rel="stylesheet" href="app-stylesheets/main-page.css">
   </head>
   <body>
-    <h1> Food for Foodies</h1>
-  <!--  <h3> Menu: </h3>
-    <a href = -->
+    <div id="title">
+      <h3 class="menu"> Menu: </h3>
+      <h1 class="websiteName"> Food for </h1>
+      <h1 class="websiteName"> Foodies</h1>
+
+    </div>
+    <!-- <a href ='/'> -->
     <form method=POST action="/">
       Search for your favorite foods here:<br>
       <input type="text" name="search_food">
-      <input type="image" src="static/MagnifyingGlass.png" alt="Search" width="48" height="30">
+      <input type="image" src="static/MagnifyingGlass.png" alt="Search" width="30" height="20">
       <br>
 
       <h1 class="header">Food of the day: {{ food_name }}</h1>
