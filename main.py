@@ -30,17 +30,17 @@ class FoodHandler(webapp2.RequestHandler):
         start_template = jinja_current_dir.get_template("templates/welcome.html")
         self.response.write(start_template.render())
 
-    def post(self):
-        the_fav_food = self.request.get('user-fav-food')
-
-        #put into database (optional)
-        food_record = Food(food_name = the_fav_food)
-        food_record.put()
-
-        #pass to the template via a dictionary
-        variable_dict = {'fav_food_for_view': the_fav_food}
-        end_template = jinja_current_dir.get_template("templates/results.html")
-        self.response.write(end_template.render(variable_dict))
+    # def post(self):
+    #     the_fav_food = self.request.get('user-fav-food')
+    #
+    #     #put into database (optional)
+    #     food_record = Food(food_name = the_fav_food)
+    #     food_record.put()
+    #
+    #     #pass to the template via a dictionary
+    #     variable_dict = {'fav_food_for_view': the_fav_food}
+    #     end_template = jinja_current_dir.get_template("templates/results.html")
+    #     self.response.write(end_template.render(variable_dict))
 
 class ShowFoodHandler(webapp2.RequestHandler):
     def get(self):
@@ -49,7 +49,16 @@ class ShowFoodHandler(webapp2.RequestHandler):
         dict_for_template = {'top_fav_foods': fav_foods}
         self.response.write(food_list_template.render(dict_for_template))
 
+class RecipeHandler(webapp2.RequestHandler):
+    def get(self):
+          recipe_template=jinja_current_dir.get_template("templates/results.html")
+          rendered_recipe=recipe_template.render({
+          'recipe_picture': 
+          })
+          self.response.write(rendered_recipe)
+
 app = webapp2.WSGIApplication([
     ('/', FoodHandler),
-    ('/showfavs', ShowFoodHandler)
+    ('/showfavs', ShowFoodHandler),
+    ('/recipes', RecipeHandler)
 ], debug=True)
