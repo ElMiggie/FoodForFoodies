@@ -30,7 +30,7 @@ handlers:
   static_dir: my-images
 
 #new handlers should go ABOVE the catch all url (.*)
-- url: .*
+- url: /.*
   script: main.app
 
 
