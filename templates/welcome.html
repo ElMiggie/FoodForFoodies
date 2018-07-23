@@ -19,26 +19,30 @@
 <html>
   <head>
     <title>Food For Foodies</title>
-    <link rel="stylesheet" href="app-stylesheets/main-page.css">
+    <link rel="stylesheet" style="text/css" href="app-stylesheets/main-page.css">
   </head>
   <body>
     <div id="title">
       <h3 class="menu"> Menu: </h3>
       <h1 class="websiteName"> Food for </h1>
       <h1 class="websiteName"> Foodies</h1>
-
     </div>
-    <!-- <a href ='/'> -->
-    <form method=POST action="/">
+
+    <div class="serch_bar">
+      <form method=POST action="/">
       Search for your favorite foods here:<br>
       <input type="text" name="search_food">
       <input type="image" src="static/MagnifyingGlass.png" alt="Search" width="30" height="20">
-      <br>
+    </form>
+    </div>
 
       <h1 class="header">Food of the day: {{ food_name }}</h1>
-      <p class="randomsection">Around the world:</p>
-      <p class="randrecipes"><a href = '/recipes'> South America: {{ recipe1Name }} </a></p>
-      <p class="randrecipes"><a href = '/recipes'> North America: {{ recipe2Name }} </a></p>
-      <p class="randrecipes"><a href = '/recipes'> Europe: {{ recipe3Name }} </a></p>
-      <p class="randrecipes"><a href = '/recipes'> Asia: {{ recipe4Name }} </a></p>
-      <p class="randrecipes"><a href = '/recipes'> Africa: {{ recipe5Name }} </a></p>
+      <p class="randomsection">{{ food_name }} Around the World:</p>
+
+      <div class="container">
+        <p class="randrecipes"><a href = '/recipes'> South America: {{ recipe1Name }} </a></p>
+        <p class="randrecipes"><a href = '/recipes'> North America: {{ recipe2Name }} </a></p>
+        <p class="randrecipes"><a href = '/recipes'> Europe: {{ recipe3Name }} </a></p>
+        <p class="randrecipes"><a href = '/recipes'> Asia: {{ recipe4Name }} </a></p>
+        <p class="randrecipes"><a href = '/recipes'> Africa: {{ recipe5Name }} </a></p>
+      </div>

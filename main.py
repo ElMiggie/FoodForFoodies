@@ -31,8 +31,12 @@ jinja_current_dir = jinja2.Environment(
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_current_dir.get_template("Templates/welcome.html")
+<<<<<<< HEAD
+        randomFoodList = ["Apples", "Peaches", "Pomegranates"]
+=======
         # self.response.write(start_template.render())
         randomFoodList = ["Apple", "Peaches", "Pomegranate"]
+>>>>>>> 70c87ba9222fa2bc88f95e8599f3c686ea85284c
         foodIndex = random.randint(0, 2)
         foods = models.Food.query().fetch()
         start_template = jinja_current_dir.get_template("templates/welcome.html")
