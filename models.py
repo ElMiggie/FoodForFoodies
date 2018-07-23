@@ -24,6 +24,17 @@ class Food(ndb.Model):
   recipe4Name = ndb.StringProperty(required=True)
   recipe5Name = ndb.StringProperty(required=True)
 
+<<<<<<< HEAD
 # class Recipe (ndb.Model):
 #     ingredients=ndb.ListProperty(required=True)
 #     directions=ndb.ListProperty(required=True)
+=======
+class Recipe (ndb.Model):
+    ingredients=ndb.ListProperty(required=True)
+    directions=ndb.ListProperty(required=True)
+class Nutrition(ndb.Model):
+    calories = ndb.IntegerProperty(required=True)
+    fats = ndb.IntegerProperty(required=True)
+    carbs = ndb.IntegerProperty(required=True)
+    sodium = ndb.IntegerProperty(required=True)
+>>>>>>> cf87ada78b88ec4c13afc00b0a63974b232e5a60

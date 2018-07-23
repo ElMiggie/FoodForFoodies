@@ -16,15 +16,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Food List</title>
+    <title>Nutritional Facts</title>
     <link rel="stylesheet" type="text/css" href="app-stylesheets/boring-style.css">
   </head>
   <body>
-    <h1>People's Favorite Foods</h1>
-    {% for food in top_fav_foods %}
-      <p>{{food.food_name}}</p>
-    {% endfor %}  
-    <h4>The fetched records from the query look like this</h4>
-    {{top_fav_foods}}
+    <h1> Nutritional Facts for {{food_name}} </h1>
+      <img
+    <ul>
+      <li>Calories: {{food_calories}}</li>
+      <li>Fat: {{food_fats}}</li>
+      <li>Sodium: {{food_sodium}}</li>
+      <li>Carbohydrates: {{food_carbs}}</li>
   </body>
 </html>

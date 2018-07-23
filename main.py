@@ -80,32 +80,32 @@ class RandomFoodHandler(webapp2.RequestHandler):
 #         self.response.write(food_list_template.render(dict_for_template))
 
 
-# class RecipeHandler(webapp2.RequestHandler):
-#     def get(self):
-#         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
-#         # fav_foods = Food.query().order(-Food.food_name).fetch(3)
-#         # dict_for_template = {'top_fav_foods': fav_foods}
-#         # self.response.write(food_list_template.render(dict_for_template))
-#         html = food_list_template.render({
-#         'food_calories': self.response.,
-#         'food_fats': self.response.,
-#         'food_sodium': self.response.,
-#         'food_carbs': self.response.,
-#         )}
-#
-# app = webapp2.WSGIApplication([
-#     ('/', FoodHandler),
-#     ('/nutrition', ShowFoodHandler)
-#
-#           recipe_template=jinja_current_dir.get_template("templates/results.html")
-#           rendered_recipe=recipe_template.render({
-#           # 'recipe_picture': recipe_picture
-#           })
-#           self.response.write(rendered_recipe)
+class InfoHandler(webapp2.RequestHandler):
+    def get(self):
+        food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
+        # fav_foods = Food.query().order(-Food.food_name).fetch(3)
+        # dict_for_template = {'top_fav_foods': fav_foods}
+        # self.response.write(food_list_template.render(dict_for_template))
+        html = food_list_template.render({
+        'food_calories': self.response.,
+        'food_fats': self.response.,
+        'food_sodium': self.response.,
+        'food_carbs': self.response.,
+        )}
+
+app = webapp2.WSGIApplication([
+    ('/', FoodHandler),
+    ('/nutrition', ShowFoodHandler)
+
+          recipe_template=jinja_current_dir.get_template("templates/results.html")
+          rendered_recipe=recipe_template.render({
+          # 'recipe_picture': recipe_picture
+          })
+          self.response.write(rendered_recipe)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/random', RandomFoodHandler),
+    ('/nutrition', InfoHandler),
     # ('/', FoodHandler),
     # ('/showfavs', ShowFoodHandler),
     # ('/recipes', RecipeHandler)
