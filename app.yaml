@@ -26,8 +26,8 @@ handlers:
 - url: /app-stylesheets
   static_dir: app-stylesheets
 
-- url: /my-images
-  static_dir: my-images
+- url: /static
+  static_dir: static
 
 #new handlers should go ABOVE the catch all url (.*)
 - url: /.*

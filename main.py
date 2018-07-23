@@ -14,7 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+### give eah food a number and randomly pick a number and pull that id info
 import webapp2
+import random
 import os
 import jinja2
 from models import Food
@@ -25,24 +28,41 @@ jinja_current_dir = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class FoodHandler(webapp2.RequestHandler):
+class MainHandler(webapp2.RequestHandler):
     def get(self):
-        start_template = jinja_current_dir.get_template("templates/welcome.html")
+        start_template = jinja_current_dir.get_template("Templates/welcome.html")
         self.response.write(start_template.render())
 
-    def post(self):
-        the_fav_food = self.request.get('user-fav-food')
+        randomFoodList = ["apple", "peaches", "spaghetti"]
+        foodOfDay = random.choice(randomFoodList)
 
-        #put into database (optional)
-        food_record = Food(food_name = the_fav_food)
-        food_record.put()
 
-        #pass to the template via a dictionary
-        variable_dict = {'fav_food_for_view': the_fav_food}
-        end_template = jinja_current_dir.get_template("templates/results.html")
-        self.response.write(end_template.render(variable_dict))
+# class FoodHandler(webapp2.RequestHandler):
+#     def get(self):
+#         start_template = jinja_current_dir.get_template("templates/welcome.html")
+#         self.response.write(start_template.render())
+#
+#     def post(self):
+#         the_fav_food = self.request.get('user-fav-food')
+#
+#         #put into database (optional)
+#         food_record = Food(food_name = the_fav_food)
+#         food_record.put()
+#
+#         #pass to the template via a dictionary
+#         variable_dict = {'fav_food_for_view': the_fav_food}
+#         end_template = jinja_current_dir.get_template("templates/results.html")
+#         self.response.write(end_template.render(variable_dict))
 
-class ShowFoodHandler(webapp2.RequestHandler):
+# class ShowFoodHandler(webapp2.RequestHandler):
+#     def get(self):
+#         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
+#         fav_foods = Food.query().order(-Food.food_name).fetch(3)
+#         dict_for_template = {'top_fav_foods': fav_foods}
+#         self.response.write(food_list_template.render(dict_for_template))
+
+
+class RecipeHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         # fav_foods = Food.query().order(-Food.food_name).fetch(3)
@@ -58,4 +78,17 @@ class ShowFoodHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', FoodHandler),
     ('/nutrition', ShowFoodHandler)
+
+          recipe_template=jinja_current_dir.get_template("templates/results.html")
+          rendered_recipe=recipe_template.render({
+          # 'recipe_picture': recipe_picture
+          })
+          self.response.write(rendered_recipe)
+
+app = webapp2.WSGIApplication([
+    ('/', MainHandler),
+    # ('/', FoodHandler),
+    # ('/showfavs', ShowFoodHandler),
+    # ('/recipes', RecipeHandler)
+
 ], debug=True)
