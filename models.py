@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from google.appengine.ext import ndb
+from google.appengine.ext import ndb, ListProperty
 
 class Food(ndb.Model):
   food_name = ndb.StringProperty(required=True)
