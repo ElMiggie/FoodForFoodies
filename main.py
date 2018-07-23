@@ -20,7 +20,8 @@ import webapp2
 import random
 import os
 import jinja2
-from models import Food
+import models
+from random_food_data import seed_data
 
 #remember, you can get this by searching for jinja2 google app engine
 jinja_current_dir = jinja2.Environment(
@@ -30,11 +31,28 @@ jinja_current_dir = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        start_template = jinja_current_dir.get_template("Templates/welcome.html")
-        self.response.write(start_template.render())
-
-        randomFoodList = ["apple", "peaches", "spaghetti"]
+        randomFoodList = ["Apple", "Peaches", "Spaghetti"]
         foodOfDay = random.choice(randomFoodList)
+        foods = models.Food.query().fetch()
+        start_template = jinja_current_dir.get_template("templates/welcome.html")
+        self.response.write(start_template.render({
+        'food_name': foodOfDay,
+        'recipe1Name': foods[0].recipe1Name,
+        'recipe2Name': foods[0].recipe2Name,
+        'recipe3Name': foods[0].recipe3Name,
+        'recipe4Name': foods[0].recipe4Name,
+        'recipe5Name': foods[0].recipe5Name,
+        }))
+
+class RandomFoodHandler(webapp2.RequestHandler):
+    def get(self):
+        apple = models.Food(food_name = "Apple", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
+        peaches = models.Food(food_name = "Peaches")
+        spaghetti = models.Food(food_name = "Spaghetti")
+
+        apple.put()
+
+
 
 
 # class FoodHandler(webapp2.RequestHandler):
@@ -87,7 +105,11 @@ app = webapp2.WSGIApplication([
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
+<<<<<<< HEAD
     ('/nutrition', InfoHandler),
+=======
+    ('/random', RandomFoodHandler),
+>>>>>>> 1d380e62f4e265b28bc968c019d391c5a2d427e8
     # ('/', FoodHandler),
     # ('/showfavs', ShowFoodHandler),
     # ('/recipes', RecipeHandler)
