@@ -51,10 +51,10 @@ class MainHandler(webapp2.RequestHandler):
             peaches.put()
             pomegranate.put()
 
-        apple_pie= models.Recipe(ingredients=["1/3 to 1/2 cup sugar", "1/4 cup Gold Medal all-purpose flour", "1/2 teaspoon ground cinnamon", "1/2 teaspoon ground nutmeg", "1/8 teaspoon salt", "8 cups thinly sliced peeled tart apples (8 medium)", "2 tablespoons butter or margarine"],
-               directions=["Heat oven to 425ºF. Prepare Double-Crust Pastry", "Mix sugar, flour, cinnamon, nutmeg and salt in large bowl. Stir in apples. Turn into pastry-lined pie plate. Dot with butter. Trim overhanging edge of pastry 1/2 inch from rim of plate", "Roll other round of pastry. Fold into fourths and cut slits so steam can escape. Unfold top pastry over filling; trim overhanging edge 1 inch from rim of plate. Fold and roll top edge under lower edge, pressing on rim to seal; flute as desired. Cover edge with 3-inch strip of aluminum foil to prevent excessive browning. Remove foil during last 15 minutes of baking", "Bake 40 to 50 minutes or until crust is brown and juice begins to bubble through slits in crust. Serve warm if desired."]
-        apple_pie.put()
-    
+        # apple_pie= models.Recipe(ingredients=["1/3 to 1/2 cup sugar", "1/4 cup Gold Medal all-purpose flour", "1/2 teaspoon ground cinnamon", "1/2 teaspoon ground nutmeg", "1/8 teaspoon salt", "8 cups thinly sliced peeled tart apples (8 medium)", "2 tablespoons butter or margarine"],
+        #        directions=["Heat oven to 425ºF. Prepare Double-Crust Pastry", "Mix sugar, flour, cinnamon, nutmeg and salt in large bowl. Stir in apples. Turn into pastry-lined pie plate. Dot with butter. Trim overhanging edge of pastry 1/2 inch from rim of plate", "Roll other round of pastry. Fold into fourths and cut slits so steam can escape. Unfold top pastry over filling; trim overhanging edge 1 inch from rim of plate. Fold and roll top edge under lower edge, pressing on rim to seal; flute as desired. Cover edge with 3-inch strip of aluminum foil to prevent excessive browning. Remove foil during last 15 minutes of baking", "Bake 40 to 50 minutes or until crust is brown and juice begins to bubble through slits in crust. Serve warm if desired."]
+        # apple_pie.put()
+
 
 
 class RecipeHandler (webapp2.RequestHandler):
@@ -62,29 +62,6 @@ class RecipeHandler (webapp2.RequestHandler):
         recipes=jinja_current_dir.get_template("templates/results.html")
         html=recipes.render({})
         self.response.write(html)
-# class FoodHandler(webapp2.RequestHandler):
-#     def get(self):
-#         start_template = jinja_current_dir.get_template("templates/welcome.html")
-#         self.response.write(start_template.render())
-#
-#     def post(self):
-#         the_fav_food = self.request.get('user-fav-food')
-#
-#         #put into database (optional)
-#         food_record = Food(food_name = the_fav_food)
-#         food_record.put()
-#
-#         #pass to the template via a dictionary
-#         variable_dict = {'fav_food_for_view': the_fav_food}
-#         end_template = jinja_current_dir.get_template("templates/results.html")
-#         self.response.write(end_template.render(variable_dict))
-
-# class ShowFoodHandler(webapp2.RequestHandler):
-#     def get(self):
-#         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
-#         fav_foods = Food.query().order(-Food.food_name).fetch(3)
-#         dict_for_template = {'top_fav_foods': fav_foods}
-#         self.response.write(food_list_template.render(dict_for_template))
 
 
 class InfoHandler(webapp2.RequestHandler):
@@ -93,12 +70,12 @@ class InfoHandler(webapp2.RequestHandler):
         # fav_foods = Food.query().order(-Food.food_name).fetch(3)
         # dict_for_template = {'top_fav_foods': fav_foods}
         # self.response.write(food_list_template.render(dict_for_template))
-        html = food_list_template.render({
-        'food_calories': self.response.,
-        'food_fats': self.response.,
-        'food_sodium': self.response.,
-        'food_carbs': self.response.,
-        )}
+        # html = food_list_template.render({
+        # 'food_calories': self.response.,
+        # 'food_fats': self.response.,
+        # 'food_sodium': self.response.,
+        # 'food_carbs': self.response.,
+        # )}
           recipe_template=jinja_current_dir.get_template("templates/results.html")
           rendered_recipe=recipe_template.render({
           # 'recipe_picture': recipe_picture
@@ -108,7 +85,6 @@ class InfoHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/nutrition', InfoHandler),
-    ('/', FoodHandler),
     ('/recipes', RecipeHandler)
 
 ], debug=True)
