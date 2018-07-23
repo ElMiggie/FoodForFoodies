@@ -31,8 +31,8 @@ jinja_current_dir = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        randomFoodList = ["Apple", "Peaches"]
-        foodIndex = random.randint(0, 1)
+        randomFoodList = ["Apple", "Peaches", "Pomegranate"]
+        foodIndex = random.randint(0, 2)
         foods = models.Food.query().fetch()
         start_template = jinja_current_dir.get_template("templates/welcome.html")
         self.response.write(start_template.render({
@@ -47,8 +47,10 @@ class MainHandler(webapp2.RequestHandler):
         def post(self):
             apple = models.Food(food_name = "Apple", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
             peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phrini")
+            pomegranate = models.Food(food_name = "Pomegranate", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scalops with Pomegranate Brown Butter", recipe3Name = "Indo-European Pomegranate Molasses", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
             apple.put()
             peaches.put()
+            pomegranate.put()
 
 # class FoodHandler(webapp2.RequestHandler):
 #     def get(self):
