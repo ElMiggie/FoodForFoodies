@@ -23,20 +23,20 @@
   </head>
     <body>
     <h1>Recipes</h1>
-    <p> Here is the Picture of the Food: <p>
+    <p> Here is the Picture of the Food: </p>
       <!-- <p> {{recipe_picture}}</p> -->
        <img id="website-img" src="static/applepie.jpeg" alt="Picture of Recipe"/>
-    <h4> Ingredients: <h4>
+    <h4> Ingredients: </h4>
       <ul>
-        {% for items in ingredients_array %}
-          <li> {{apple_pie.ingredients}} </li>
-      </ul>
-        {% endfor %}
-      <h4> Directions: <h4>
-        <ol>
-          {% for items in directions_array %}
-        <li> {{apple_pie.directions}}</li>
-        </ol>
+        {% for item in ingredients_array %}
+          <li> {{item}} </li>
           {% endfor %}
+      </ul>
+      <h4> Directions: </h4>
+        <ol>
+          {% for item in directions_array %}
+        <li> {{item}}</li>
+        {% endfor %}
+        </ol>
   </body>
 </html>
