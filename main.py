@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+### give eah food a number and randomly pick a number and pull that id info
 import webapp2
 import random
 import os
@@ -31,8 +33,9 @@ class MainHandler(webapp2.RequestHandler):
         start_template = jinja_current_dir.get_template("Templates/welcome.html")
         self.response.write(start_template.render())
 
-        randomFoodList = ["apple"]
+        randomFoodList = ["apple", "peaches", "spaghetti"]
         foodOfDay = random.choice(randomFoodList)
+
 
 # class FoodHandler(webapp2.RequestHandler):
 #     def get(self):
@@ -58,8 +61,17 @@ class MainHandler(webapp2.RequestHandler):
 #         dict_for_template = {'top_fav_foods': fav_foods}
 #         self.response.write(food_list_template.render(dict_for_template))
 
+# class RecipeHandler(webapp2.RequestHandler):
+#     def get(self):
+#           recipe_template=jinja_current_dir.get_template("templates/results.html")
+#           rendered_recipe=recipe_template.render({
+#           'recipe_picture':
+#           })
+#           self.response.write(rendered_recipe)
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     # ('/', FoodHandler),
-    # ('/showfavs', ShowFoodHandler)
+    # ('/showfavs', ShowFoodHandler),
+    # ('/recipes', RecipeHandler)
 ], debug=True)
