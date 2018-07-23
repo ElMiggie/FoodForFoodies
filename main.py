@@ -85,7 +85,7 @@ class InfoHandler(webapp2.RequestHandler):
         'food_fats': "0",
         'food_sodium' : "0",
         'food_carbs': "0",
-        )}
+        })
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
