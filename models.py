@@ -28,6 +28,12 @@ class Food(ndb.Model):
  #    ingredients=ndb.ListProperty(required=True)
  #   directions=ndb.ListProperty(required=True)
 
+<<<<<<< HEAD
+=======
+ class Recipe (ndb.Model):
+    ingredients=ndb.ListProperty(required=True)
+    directions=ndb.ListProperty(required=True)
+>>>>>>> 12cc19c5eb7f5d65e4d83d8eea2d2efbdd9bfb56
 class Nutrition(ndb.Model):
     calories = ndb.IntegerProperty(required=True)
     fats = ndb.IntegerProperty(required=True)
