@@ -53,6 +53,11 @@ class MainHandler(webapp2.RequestHandler):
         apple_pie.put()
         )
 
+class RecipeHandler (webapp2.RequestHandler):
+    def get (self):
+        recipes=jinja_current_dir.get_template("templates/results.html")
+        html=recipes.render({})
+        self.response.write(html)
 # class FoodHandler(webapp2.RequestHandler):
 #     def get(self):
 #         start_template = jinja_current_dir.get_template("templates/welcome.html")
