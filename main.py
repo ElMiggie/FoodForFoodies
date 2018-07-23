@@ -82,10 +82,10 @@ class InfoHandler(webapp2.RequestHandler):
         # dict_for_template = {'top_fav_foods': fav_foods}
         # self.response.write(food_list_template.render(dict_for_template))
         html = food_list_template.render({
-        'food_calories':0,
-        'food_fats': 0,
-        'food_sodium' : 0,
-        'food_carbs': 0,
+        'food_calories': "0",
+        'food_fats': "0",
+        'food_sodium' : "0",
+        'food_carbs': "0",
         )}
 
 app = webapp2.WSGIApplication([
