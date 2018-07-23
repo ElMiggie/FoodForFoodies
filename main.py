@@ -61,13 +61,14 @@ class MainHandler(webapp2.RequestHandler):
 #         dict_for_template = {'top_fav_foods': fav_foods}
 #         self.response.write(food_list_template.render(dict_for_template))
 
-# class RecipeHandler(webapp2.RequestHandler):
-#     def get(self):
-#           recipe_template=jinja_current_dir.get_template("templates/results.html")
-#           rendered_recipe=recipe_template.render({
-#           'recipe_picture':
-#           })
-#           self.response.write(rendered_recipe)
+
+class RecipeHandler(webapp2.RequestHandler):
+    def get(self):
+          recipe_template=jinja_current_dir.get_template("templates/results.html")
+          rendered_recipe=recipe_template.render({
+          # 'recipe_picture': recipe_picture
+          })
+          self.response.write(rendered_recipe)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
