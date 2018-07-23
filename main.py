@@ -55,9 +55,6 @@ class RandomFoodHandler(webapp2.RequestHandler):
 
 
 
-
-
-
 # class FoodHandler(webapp2.RequestHandler):
 #     def get(self):
 #         start_template = jinja_current_dir.get_template("templates/welcome.html")
