@@ -44,14 +44,11 @@ class MainHandler(webapp2.RequestHandler):
         'recipe5Name': foods[foodIndex].recipe5Name,
         }))
 
-class RandomFoodHandler(webapp2.RequestHandler):
-    def get(self):
-        apple = models.Food(food_name = "Apple", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
-        peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phrini")
-        apple.put()
-        peaches.put()
-
-
+        def post(self):
+            apple = models.Food(food_name = "Apple", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
+            peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phrini")
+            apple.put()
+            peaches.put()
 
 # class FoodHandler(webapp2.RequestHandler):
 #     def get(self):
@@ -70,43 +67,31 @@ class RandomFoodHandler(webapp2.RequestHandler):
 #         end_template = jinja_current_dir.get_template("templates/results.html")
 #         self.response.write(end_template.render(variable_dict))
 
-# class ShowFoodHandler(webapp2.RequestHandler):
-#     def get(self):
-#         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
-#         fav_foods = Food.query().order(-Food.food_name).fetch(3)
-#         dict_for_template = {'top_fav_foods': fav_foods}
-#         self.response.write(food_list_template.render(dict_for_template))
+class InfoHandler(webapp2.RequestHandler):
+    def get(self):
+        food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
+        # fav_foods = Food.query().order(-Food.food_name).fetch(3)
+        # dict_for_template = {'top_fav_foods': fav_foods}
+        # self.response.write(food_list_template.render(dict_for_template))
+        html = food_list_template.render({
+        'food_calories': self.response.,
+        'food_fats': self.response.,
+        'food_sodium': self.response.,
+        'food_carbs': self.response.,
+        )}
 
-#
-# class InfoHandler(webapp2.RequestHandler):
-#     def get(self):
-#         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
-#         # fav_foods = Food.query().order(-Food.food_name).fetch(3)
-#         # dict_for_template = {'top_fav_foods': fav_foods}
-#         # self.response.write(food_list_template.render(dict_for_template))
-#         html = food_list_template.render({
-#         'food_calories': self.response.,
-#         'food_fats': self.response.,
-#         'food_sodium': self.response.,
-#         'food_carbs': self.response.,
-#         )}
-#
-# app = webapp2.WSGIApplication([
-#     ('/', FoodHandler),
-#     ('/nutrition', ShowFoodHandler)
-#
-#           recipe_template=jinja_current_dir.get_template("templates/results.html")
-#           rendered_recipe=recipe_template.render({
-#           # 'recipe_picture': recipe_picture
-#           })
-#           self.response.write(rendered_recipe)
+
+
+          recipe_template=jinja_current_dir.get_template("templates/results.html")
+          rendered_recipe=recipe_template.render({
+          # 'recipe_picture': recipe_picture
+          })
+          self.response.write(rendered_recipe)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/random', RandomFoodHandler)
-    # ('/nutrition', InfoHandler),
-    # ('/', FoodHandler),
-    # ('/showfavs', ShowFoodHandler),
-    # ('/recipes', RecipeHandler)
+    ('/nutrition', InfoHandler),
+    ('/', FoodHandler),
+    ('/recipes', RecipeHandler)
 
 ], debug=True)
