@@ -3,5 +3,11 @@
   height: 50px;
   margin-left: 90%;
   background-color: yellow;
-  border-radius: 20px;
+  border-radius: 25px;
+}
+
+#generic_title {
+  font-size: 80px;
+  margin-left: 7%;
+  text-decoration: underline;
 }

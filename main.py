@@ -64,6 +64,7 @@ class RandomFoodHandler(webapp2.RequestHandler):
 
 class RecipeEntryHandler(webapp2.RequestHandler):
     def get(self):
+        pass
 
 
 class RecipeHandler (webapp2.RequestHandler):
