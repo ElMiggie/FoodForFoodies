@@ -35,8 +35,6 @@ class MainHandler(webapp2.RequestHandler):
         randomFoodList = ["Apples", "Peaches", "Pomegranates"]
         foodImages = ["static/apple.jpg", "static/peaches.jpg", "static/pomegranate.jpg"]
 
-
-
         foodIndex = random.randint(0, 2)
         foods = models.Food.query().fetch()
         start_template = jinja_current_dir.get_template("templates/welcome.html")
@@ -48,6 +46,7 @@ class MainHandler(webapp2.RequestHandler):
             'recipe4Name': foods[foodIndex].recipe4Name,
             'recipe5Name': foods[foodIndex].recipe5Name,
             'food_image_url': foodImages[foodIndex]
+
         })
         self.response.write(html)
 
@@ -91,7 +90,6 @@ class InfoEntryHandler(webapp2.RequestHandler):
 
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
-
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
         #models.Nutrutition.query().filter(models.nutrition.food_name=="apple_pie").fetch()
