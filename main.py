@@ -74,7 +74,7 @@ class RecipeHandler (webapp2.RequestHandler):
         recipestuff=models.Recipe.query().filter(models.Recipe.food_name=="apple_pie").fetch()
         recipes=jinja_current_dir.get_template("templates/results.html")
         html=recipes.render({
-        # "search-input":self.request.get()
+        #"search-input":self.request.get()
         "recipes":recipestuff,
         "directions_array": recipestuff
         })
@@ -94,7 +94,7 @@ class InfoHandler(webapp2.RequestHandler):
 
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
-        "search_food" : self.request.get("search_food")
+        #"search_food" : self.request.get("search_food")
         #models.Nutrutition.query().filter(models.nutrition.food_name=="apple_pie").fetch()
         apple_pie = food(name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
         #food_query = model.Nutrition.query().order()
