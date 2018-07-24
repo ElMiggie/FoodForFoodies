@@ -79,6 +79,7 @@ class RecipeHandler (webapp2.RequestHandler):
         "directions_array": models.Recipe.query().filter(models.Recipe.food_name=="apple_pie").fetch()
         })
         self.response.write(html)
+
 class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
         food = models.Nutrition
@@ -90,9 +91,10 @@ class InfoEntryHandler(webapp2.RequestHandler):
 
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
+
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
-        apple_pie = food(calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+         # apple_pie = food(calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
 
 
         #food_query = model.Nutrition.query().order()
