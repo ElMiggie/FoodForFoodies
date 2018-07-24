@@ -72,20 +72,24 @@ class RecipeHandler (webapp2.RequestHandler):
         "directions_array": directions_array
         })
         self.response.write(html)
-# class InfoEntryHandler(webapp2.RequestHandler):
-#     def get(self):
-#         food = models.Nutrition
-#         apple_pie = food(name = "Apple Pie", calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
-#         apple_pie.put()
+class InfoEntryHandler(webapp2.RequestHandler):
+    def get(self):
+        food = models.Nutrition
+####Apple
+        apple_pie = food(name = "Apple Pie", calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+        apple_empanadas = food(name = "Apple Empanadas", calories = "230", fats ="7g", sodium = "200mg", carbs = "40g" )
+        apple_pie.put()
+        apple_empanadas.put()
+
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
-        apple_pie = food(name= "Apple Pie", calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+        #apple_pie = food(name= "Apple Pie", calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
         #food_query = model.Nutrition.query().order()
         #person_query = model.Facebook.query().filter(model.Nutrition.name == 'raw_input()')
         #all_food = person_query.fetch()
-        #info = models.Nutrition.query().fetch()
+        ###info = models.Nutrition.query().fetch()
         html = food_list_template.render({
 
         'food_name': apple_pie.name,
@@ -102,7 +106,7 @@ app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/random', RandomFoodHandler),
     ('/nutrition', InfoHandler),
-    #('/nutritionentry',InfoEntryHandler),
+    ('/nutritionentry',InfoEntryHandler),
     ('/recipes', RecipeHandler),
     ('/recipeentry', RecipeEntryHandler)
     ], debug=True)
