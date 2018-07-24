@@ -92,10 +92,8 @@ class InfoEntryHandler(webapp2.RequestHandler):
 
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
-
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
-        "search_food" : self.request.get("search_food")
         #models.Nutrutition.query().filter(models.nutrition.food_name=="apple_pie").fetch()
         apple_pie = food(name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
         #food_query = model.Nutrition.query().order()
@@ -103,7 +101,7 @@ class InfoHandler(webapp2.RequestHandler):
         #all_food = person_query.fetch()
         ###info = models.Nutrition.query().fetch()
         html = food_list_template.render({
-
+        "search_food": self.request.get("search_food"),
         'food_name': apple_pie.name,
         'food_calories': apple_pie.calories,
         'food_fats': apple_pie.fats,
@@ -112,7 +110,7 @@ class InfoHandler(webapp2.RequestHandler):
 
         })
         self.response.write(html)
-        apple_pie.put()
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
