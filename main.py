@@ -74,8 +74,7 @@ class RecipeHandler (webapp2.RequestHandler):
         recipestuff=models.Recipe.query().filter(models.Recipe.food_name=="apple_pie").fetch()
         recipes=jinja_current_dir.get_template("templates/results.html")
         html=recipes.render({
-        "search-input":self.request.get()
-        "imagesrc": "static/apple_pie.jpeg",
+        # "search-input":self.request.get()
         "recipes":recipestuff,
         "directions_array": recipestuff
         })
