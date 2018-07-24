@@ -33,6 +33,7 @@ class Recipe(ndb.Model):
 
 
 class Nutrition(ndb.Model):
+    name = ndb.StringProperty(required=True)
     calories = ndb.StringProperty(required=True)
     fats = ndb.StringProperty(required=True)
     carbs = ndb.StringProperty(required=True)
