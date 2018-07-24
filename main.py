@@ -57,9 +57,9 @@ class RandomFoodHandler(webapp2.RequestHandler):
         pomegranates = models.Food(food_name = "Pomegranates", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Indo-European Pomegranate Molasses", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
         zucchini = models.Food(food_name = "Zucchini", recipe1Name = "1", recipe2Name = "2", recipe3Name = "3", recipe4Name = "4", recipe5Name = "5")
 
-        apple.put()
+        apples.put()
         peaches.put()
-        pomegranate.put()
+        pomegranates.put()
         zucchini.put()
 
 class RecipeEntryHandler(webapp2.RequestHandler):
