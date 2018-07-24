@@ -64,11 +64,7 @@ class RandomFoodHandler(webapp2.RequestHandler):
 
 class RecipeEntryHandler(webapp2.RequestHandler):
     def get(self):
-        directions_array=["Heat oven to 425F. Prepare Double-Crust Pastry", "Mix sugar, flour, cinnamon, nutmeg and salt in large bowl. Stir in apples. Turn into pastry-lined pie plate. Dot with butter. Trim overhanging edge of pastry 1/2 inch from rim of plate", "Roll other round of pastry. Fold into fourths and cut slits so steam can escape. Unfold top pastry over filling; trim overhanging edge 1 inch from rim of plate. Fold and roll top edge under lower edge, pressing on rim to seal; flute as desired. Cover edge with 3-inch strip of aluminum foil to prevent excessive browning. Remove foil during last 15 minutes of baking", "Bake 40 to 50 minutes or until crust is brown and juice begins to bubble through slits in crust. Serve warm if desired."]
-        ingredients_array=["1/3 to 1/2 cup sugar", "1/4 cup Gold Medal all-purpose flour", "1/2 teaspoon ground cinnamon", "1/2 teaspoon ground nutmeg", "1/8 teaspoon salt", "8 cups thinly sliced peeled tart apples (8 medium)", "2 tablespoons butter or margarine"]
-        apple_pie= models.Recipe(food_name="apple_pie", ingredients=ingredients_array,
-        directions=directions_array)
-        apple_pie.put()
+
 
 class RecipeHandler (webapp2.RequestHandler):
     def get (self):
@@ -85,32 +81,43 @@ class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
         food = models.Nutrition
 ####Apple
-        apple_pie_info = food(name = "Apple Pie", calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
-        apple_empanadas_info = food(name = "Apple Empanadas", calories = "230", fats ="7g", sodium = "200mg", carbs = "40g" )
+        apple_pie_info = food(food_name = "Apple Pie", calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+        apple_empanadas_info = food(food_name = "Apple Empanadas", calories = "230", fats ="7g", sodium = "200mg", carbs = "40g" )
+        danish_apple_pie_info = food(food_name = "Danish Apple Pie", calories = "380", fats = "15g", sodium = "262mg", carbs = "58g")
+        apple_slaw_info = food(food_name = "Apple Slaw", calories = "125", fats = "0g", sodium = "0mg", carbs = "0g")
+        southAfrica_apple_tart_info = food(food_name = "South African Apple Tart", calories = "332", fats = "20.5g", sodium = "5.3mg", carbs = "39g")
         apple_pie_info.put()
         apple_empanadas_info.put()
+        danish_apple_pie_info.put()
+        apple_slaw_info.put()
+        southAfrica_apple_tart_info.put()
 
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
         #"search_food" : self.request.get("search_food")
-        #models.Nutrutition.query().filter(models.nutrition.food_name=="apple_pie").fetch()
-        apple_pie = food(name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+        #apple_pie = food(food_name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
         #food_query = model.Nutrition.query().order()
         #person_query = model.Facebook.query().filter(model.Nutrition.name == 'raw_input()')
         #all_food = person_query.fetch()
         ###info = models.Nutrition.query().fetch()
-        html = food_list_template.render({
-        "search_food": self.request.get("search_food"),
-        'food_name': apple_pie.name,
-        'food_calories': apple_pie.calories,
-        'food_fats': apple_pie.fats,
-        'food_sodium' : apple_pie.sodium,
-        'food_carbs': apple_pie.carbs,
+        requestedFood = self.request.get("search_food")
+        nutritionInfoList = food.query().filter(models.Nutrition.food_name== requestedFood).fetch()
+        if nutritionInfoList:
+            nutritionInfo = nutritionInfoList[0]
+            html = food_list_template.render({
+            "search_food": nutritionInfo.food_name,
+            'food_name': nutritionInfo.food_name,
+            'food_calories': nutritionInfo.calories,
+            'food_fats': nutritionInfo.fats,
+            'food_sodium' : nutritionInfo.sodium,
+            'food_carbs': nutritionInfo.carbs,
+            })
+            self.response.write(html)
+        else:
+            self.response.write("Not Found!")
 
-        })
-        self.response.write(html)
 
 
 app = webapp2.WSGIApplication([
