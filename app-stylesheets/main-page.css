@@ -1,6 +1,8 @@
 #title {
   background-image: url(/static/food_header.jpg);
-  margin: 0px;
+  width: 100%;
+  margin-left: -2%;
+  margin-right: -2%;
   background-size: cover;
   text-align: right;
   height: 350px;
@@ -8,7 +10,7 @@
 }
 
 #body {
-  background-color: lightgray;
+  background-color: #FCF4D9;
 }
 
 .websiteName {
@@ -30,19 +32,22 @@
 
 .header {
   text-align: center;
-  margin-top: 8%;
+  margin-top: 2%;
   font-size: 50px
 }
 
 #randsection {
-  background-color: darkgray;
-  height: 800px;
+  background-color: #8ED2C9;
+  height: 700px;
+  width: 1200px;
   margin-top: 5%;
+  border: solid thick black;
+  margin-bottom: 5%;
+  margin-left: 7%;
 }
 
 .randrecipes {
-  color: ;
-  font-family: Helvetica;
+  font-family: inherit;
   font-weight: 100;
   height: 50px;
   margin-right: 3%;
@@ -85,10 +90,11 @@
 }
 
 #randomImage {
-  height: 500px;
-  width: 700px;
-  margin-left: 10%;
-  margin-top: -40%;
+  height: 450px;
+  width: 675px;
+  margin-left: 7%;
+  margin-top: -60%;
+  margin-bottom: 7%;
   align-items: center;
 
 }
