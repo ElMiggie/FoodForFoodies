@@ -25,17 +25,21 @@
     <h1>Recipes</h1>
     <p> Here is the Picture of the Food: </p>
       <!-- <p> {{recipe_picture}}</p> -->
-       <img id="website-img" src="static/applepie.jpeg" alt="Picture of Recipe"/>
+       <img id="website-img" src={{imagesrc}} alt="Picture of Recipe"/>
     <h4> Ingredients: </h4>
       <ul>
-        {% for item in ingredients_array %}
-          <li> {{item}} </li>
+        {% for recipe in recipes %}
+           {% for ingredient in recipe.ingredients %}
+          <li>  {{ingredient}} </li>
+            {% endfor %}
           {% endfor %}
       </ul>
       <h4> Directions: </h4>
         <ol>
-          {% for item in directions_array %}
-        <li> {{item}}</li>
+          {% for recipe in recipes %}
+            {% for directions in recipe.directions %}
+        <li> {{directions}}</li>
+            {% endfor %}
         {% endfor %}
         </ol>
   </body>
