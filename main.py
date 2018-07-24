@@ -79,6 +79,7 @@ class RecipeHandler (webapp2.RequestHandler):
         "directions_array": models.Recipe.query().filter(models.Recipe.food_name=="apple_pie").fetch()
         })
         self.response.write(html)
+
 class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
         food = models.Nutrition
@@ -90,10 +91,17 @@ class InfoEntryHandler(webapp2.RequestHandler):
 
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
+
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
+<<<<<<< HEAD
         #models.Nutrutition.query().filter(models.nutrition.food_name=="apple_pie").fetch()
         apple_pie = food(name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+=======
+         # apple_pie = food(calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+
+
+>>>>>>> 03183dda82bfaf9bc1373fb6c6ab2e84ee2d9242
         #food_query = model.Nutrition.query().order()
         #person_query = model.Facebook.query().filter(model.Nutrition.name == 'raw_input()')
         #all_food = person_query.fetch()
