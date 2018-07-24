@@ -22,6 +22,7 @@ import os
 import jinja2
 import models
 
+
 #remember, you can get this by searching for jinja2 google app engine
 jinja_current_dir = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -32,6 +33,10 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_current_dir.get_template("Templates/welcome.html")
         randomFoodList = ["Apples", "Peaches", "Pomegranates"]
+        foodImages = ["static/apple.jpg", "static/peaches.jpg", "static/pomegranate.jpg"]
+
+
+
         foodIndex = random.randint(0, 2)
         foods = models.Food.query().fetch()
         start_template = jinja_current_dir.get_template("templates/welcome.html")
@@ -41,15 +46,17 @@ class MainHandler(webapp2.RequestHandler):
             'recipe2Name': foods[foodIndex].recipe2Name,
             'recipe3Name': foods[foodIndex].recipe3Name,
             'recipe4Name': foods[foodIndex].recipe4Name,
-            'recipe5Name': foods[foodIndex].recipe5Name
+            'recipe5Name': foods[foodIndex].recipe5Name,
+            'food_image_url': foodImages[foodIndex]
         })
         self.response.write(html)
+
 
 class RandomFoodHandler(webapp2.RequestHandler):
     def get(self):
         apple = models.Food(food_name = "Apple", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
         peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phrini")
-        pomegranate = models.Food(food_name = "Pomegranate", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scalops with Pomegranate Brown Butter", recipe3Name = "Indo-European Pomegranate Molasses", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
+        pomegranate = models.Food(food_name = "Pomegranate", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Indo-European Pomegranate Molasses", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
 
         apple.put()
         peaches.put()
