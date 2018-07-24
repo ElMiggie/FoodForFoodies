@@ -19,13 +19,16 @@
 <html>
   <head>
     <title>Food For Foodies: Recipes</title>
-    <link rel="stylesheet" type="text/css" href="app-stylesheets/boring-style.css">
+    <link rel="stylesheet" type="text/css" href="app-stylesheets/recipes.css">
   </head>
     <body>
-    <h1>Recipes</h1>
-    <p> Here is the Picture: </p>
+
+      <a href='/' >
+        <img src="static/home.png" id='home_link'>
+      </a>
+    <h1 id="generic_title">Recipes</h1>
       <!-- <p> {{recipe_picture}}</p> -->
-       <img id="website-img" src="/static/applepie.jpeg" alt="Picture of Recipe"/>
+       <img id="website-img" src="/static/applepie.jpg" alt="Picture of Recipe"/>
     <h4> Ingredients: </h4>
       <ul>
         {% for recipe in recipes %}

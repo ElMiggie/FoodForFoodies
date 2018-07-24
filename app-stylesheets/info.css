@@ -4,6 +4,7 @@
   margin-left: 90%;
   background-color: yellow;
   border-radius: 25px;
+  margin-top: -1%;
 }
 
 #website-img {
@@ -11,12 +12,15 @@
   height: 600px;
   margin-top: -10%;
   margin-left: 5%;
+  margin-bottom: 20%;
 }
 
 #generic_title {
   font-size: 80px;
   margin-left: 7%;
   text-decoration: underline;
+  margin-top: -5%;
+  margin-bottom: 7%;
 }
 
 #food_title {
@@ -28,7 +32,14 @@
 }
 
 .listOfNutrition {
-  margin-top: -30%;
+  margin-top: -50%;
   font-size: 30px;
   margin-left: 60%;
+}
+
+#website_name {
+  margin-left: 77%;
+  font-style: italic;
+  color: darkgray;
+  margin-top: 3%;
 }
