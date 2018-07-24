@@ -82,24 +82,25 @@ class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
         food = models.Nutrition
 ####Apple
-        apple_info = food(food_name = "Apple", calories = "95", fats ="0.2 g", sodium = "2 mg", carbs = "25 g" )
-        apple_pie_info = food(food_name = "Apple Pie", calories = "230", fats ="10 g", sodium = "170 mg", carbs = "33 g" )
-        apple_empanadas_info = food(food_name = "Apple Empanadas", calories = "230", fats ="7 g", sodium = "200 mg", carbs = "40 g" )
-        danish_apple_pie_info = food(food_name = "Danish Apple Pie", calories = "380", fats = "15 g", sodium = "262 mg", carbs = "58 g")
-        apple_slaw_info = food(food_name = "Apple Slaw", calories = "125", fats = "0 g", sodium = "0 mg", carbs = "0 g")
-        southAfrica_apple_tart_info = food(food_name = "South African Apple Tart", calories = "332", fats = "20.5 g", sodium = "5.3 mg", carbs = "39 g")
+        apple_info = food(name_of_food="apple", food_name = "Apple", calories = "95", fats ="0.2 g", sodium = "2 mg", carbs = "25 g" )
+        apple_pie_info = food(name_of_food="apple pie", food_name = "Apple Pie", calories = "230", fats ="10 g", sodium = "170 mg", carbs = "33 g" )
+        apple_empanadas_info = food(name_of_food="apple empanadas", food_name = "Apple Empanadas", calories = "230", fats ="7 g", sodium = "200 mg", carbs = "40 g" )
+        danish_apple_pie_info = food(name_of_food="danish apple pie", food_name = "Danish Apple Pie", calories = "380", fats = "15 g", sodium = "262 mg", carbs = "58 g")
+        apple_slaw_info = food(name_of_food="apple slaw", food_name = "Apple Slaw", calories = "125", fats = "0 g", sodium = "0 mg", carbs = "0 g")
+        southAfrica_apple_tart_info = food(name_of_food="south african apple tart", food_name = "South African Apple Tart", calories = "332", fats = "20.5 g", sodium = "5.3 mg", carbs = "39 g")
 
+        apple_info.put()
         apple_pie_info.put()
         apple_empanadas_info.put()
         danish_apple_pie_info.put()
         apple_slaw_info.put()
         southAfrica_apple_tart_info.put()
 ####peaches
-        peach_info = food(food_name = "Peach", calories = "59", fats ="0.4 g", sodium = "0 mg", carbs = "14 g" )
-        postre_chaja_peach_meringue_cake_info = food(food_name = "Postre Chaja Peach Meringue Cake", calories = "422", fats ="28.3 g", sodium = "158.5 mg", carbs = "38.9 g" )
-        peach_cobbler_info = food(food_name = "Peach Cobbler", calories = "250", fats ="10 g", sodium = "150 mg", carbs = "38 g" )
-        gooey_peach_dumpling_info = food(food_name = "Gooey Peach Dumplings", calories = "154.7", fats ="5.5 g", sodium = "313.7 mg", carbs = "24.8 g" )
-        peach_chicken_info = food(food_name = "Peach Chicken", calories = "840", fats ="29 g", sodium = "1280 mg", carbs = "89 mg" )
+        peach_info = food(name_of_food="peach", food_name = "Peach", calories = "59", fats ="0.4 g", sodium = "0 mg", carbs = "14 g" )
+        postre_chaja_peach_meringue_cake_info = food(name_of_food="postre chaja peach meringue cake", food_name = "Postre Chaja Peach Meringue Cake", calories = "422", fats ="28.3 g", sodium = "158.5 mg", carbs = "38.9 g" )
+        peach_cobbler_info = food(name_of_food="peach cobbler", food_name = "Peach Cobbler", calories = "250", fats ="10 g", sodium = "150 mg", carbs = "38 g" )
+        gooey_peach_dumpling_info = food(name_of_food="gooey peach dumpling", food_name = "Gooey Peach Dumplings", calories = "154.7", fats ="5.5 g", sodium = "313.7 mg", carbs = "24.8 g" )
+        peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = "840", fats ="29 g", sodium = "1280 mg", carbs = "89 mg" )
 
         peach_info.put()
         postre_chaja_peach_meringue_cake_info.put()
@@ -111,14 +112,8 @@ class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
-        #"search_food" : self.request.get("search_food")
-        #apple_pie = food(food_name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
-        #food_query = model.Nutrition.query().order()
-        #person_query = model.Facebook.query().filter(model.Nutrition.name == 'raw_input()')
-        #all_food = person_query.fetch()
-        ###info = models.Nutrition.query().fetch()
         requestedFood = (self.request.get("search_food")).lower()
-        nutritionInfoList = food.query().filter(models.Nutrition.food_name== requestedFood).fetch()
+        nutritionInfoList = food.query().filter(models.Nutrition.name_of_food == requestedFood).fetch()
         if nutritionInfoList:
             nutritionInfo = nutritionInfoList[0]
             html = food_list_template.render({
