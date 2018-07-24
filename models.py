@@ -24,7 +24,8 @@ class Food(ndb.Model):
   recipe4Name = ndb.StringProperty(required=True)
   recipe5Name = ndb.StringProperty(required=True)
 
-
+class Search(ndb.Model)
+    search_food = ndb.StringProperty(required=True)
 
 class Recipe(ndb.Model):
    food_name=ndb.StringProperty(required=True)
