@@ -21,11 +21,11 @@
     <title>Food For Foodies</title>
     <link rel="stylesheet" href="app-stylesheets/main-page.css">
   </head>
-  <body>
+  <body id="body">
     <div id="title">
-      <h3 class="menu"> Menu: </h3>
       <h1 class="websiteName"> Food for </h1>
       <h1 class="websiteName"> Foodies</h1>
+<<<<<<< HEAD
 
     </div>
     <!-- <a href ='/'> -->
@@ -42,3 +42,26 @@
       <p class="randrecipes"><a href = '/recipes'> Europe: {{ recipe3Name }} </a></p>
       <p class="randrecipes"><a href = '/recipes'> Asia: {{ recipe4Name }} </a></p>
 <p class="randrecipes"><a href = '/recipes'> Africa: {{ recipe5Name }} </a></p>
+=======
+    </div>
+    <div class="search_bar">
+      <form method=POST action="/">
+      Search for your favorite foods here:<br>
+      <input type="text" name="search_food" id="bar">
+      <input type="image" src="static/MagnifyingGlass.png" alt="Search" id="MagnifyingGlass" width="70" height="50">
+    </form>
+    </div>
+    <hr>
+    <div id="randsection">
+      <h1 class="header">Food of the day: {{ food_name }}</h1>
+      <p class="randomsection">{{ food_name }} Around the World:</p>
+
+      <div class="container">
+        <p class="randrecipes"><a href = '/recipes'> South America: {{ recipe1Name }} </a></p>
+        <p class="randrecipes"><a href = '/recipes'> North America: {{ recipe2Name }} </a></p>
+        <p class="randrecipes"><a href = '/recipes'> Europe: {{ recipe3Name }} </a></p>
+        <p class="randrecipes"><a href = '/recipes'> Asia: {{ recipe4Name }} </a></p>
+        <p class="randrecipes"><a href = '/recipes'> Africa: {{ recipe5Name }} </a></p>
+      </div>
+    </div>
+>>>>>>> 5e774521b3453728ab0c54cfc837939aefe28f0c
