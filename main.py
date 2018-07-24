@@ -31,35 +31,36 @@ jinja_current_dir = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        start_template = jinja_current_dir.get_template("Templates/welcome.html")
-        randomFoodList = ["Apples", "Peaches", "Pomegranates"]
-        foodImages = ["static/apple.jpg", "static/peaches.jpg", "static/pomegranate.jpg"]
+        start_template = jinja_current_dir.get_template("templates/welcome.html")
+        randomFoodList = ["Apples", "Peaches", "Pomegranates", "Zucchini"]
+        foodImages = ["static/apple.jpg", "static/peaches.jpg", "static/pomegranate.jpg", "static/zucchini.jpg"]
 
-        foodIndex = random.randint(0, 2)
-        foods = models.Food.query().fetch()
+        foodIndex = random.randint(0, 3)
+        foods = models.Food.query().filter(models.Food.food_name==randomFoodList[foodIndex]).fetch()
         start_template = jinja_current_dir.get_template("templates/welcome.html")
         html = start_template.render({
             'food_name': randomFoodList[foodIndex],
-            'recipe1Name': foods[foodIndex].recipe1Name,
-            'recipe2Name': foods[foodIndex].recipe2Name,
-            'recipe3Name': foods[foodIndex].recipe3Name,
-            'recipe4Name': foods[foodIndex].recipe4Name,
-            'recipe5Name': foods[foodIndex].recipe5Name,
+            'recipe1Name': foods[0].recipe1Name,
+            'recipe2Name': foods[0].recipe2Name,
+            'recipe3Name': foods[0].recipe3Name,
+            'recipe4Name': foods[0].recipe4Name,
+            'recipe5Name': foods[0].recipe5Name,
             'food_image_url': foodImages[foodIndex]
-
         })
         self.response.write(html)
 
 
 class RandomFoodHandler(webapp2.RequestHandler):
     def get(self):
-        apple = models.Food(food_name = "Apple", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
+        apples = models.Food(food_name = "Apples", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
         peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phrini")
-        pomegranate = models.Food(food_name = "Pomegranate", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Indo-European Pomegranate Molasses", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
+        pomegranates = models.Food(food_name = "Pomegranates", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Indo-European Pomegranate Molasses", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
+        zucchini = models.Food(food_name = "Zucchini", recipe1Name = "1", recipe2Name = "2", recipe3Name = "3", recipe4Name = "4", recipe5Name = "5")
 
         apple.put()
         peaches.put()
         pomegranate.put()
+        zucchini.put()
 
 class RecipeEntryHandler(webapp2.RequestHandler):
     def get(self):

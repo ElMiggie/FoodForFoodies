@@ -17,13 +17,17 @@
 <html>
   <head>
     <title>Nutritional Facts: {{food_name}}</title>
-    <link rel="stylesheet" type="text/css" href="app-stylesheets/boring-style.css">
+    <link rel="stylesheet" type="text/css" href="app-stylesheets/info.css">
   </head>
   <body "Nutrition Body">
+    <a href='/' >
+      <img src="static/home.png" id='home_link'>
+    </a>
     <!-- <form action="/" -->
-    <h1> Nutritional Facts for {{search_food}} </h1>
+    <h1 id="generic_title"> Nutrition </h1>
+    <h1 id="food_title"> {{search_food}} </h1>
         <img id="website-img" src="static/applepie.jpg" alt="Picture of Food"/>
-      <ul>
+      <ul class="listOfNutrition">
         <li>Calories: {{food_calories}}</li>
         <li>Fat: {{food_fats}}</li>
         <li>Sodium: {{food_sodium}}</li>
