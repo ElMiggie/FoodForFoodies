@@ -75,9 +75,8 @@ class RecipeHandler (webapp2.RequestHandler):
         recipes=jinja_current_dir.get_template("templates/results.html")
         html=recipes.render({
         # "search-input":self.request.get()
-        # "imagesrc": "static/apple_pie.jpg",
-        # "recipes":recipestuff,
-        # "directions_array": recipestuff
+        "recipes":recipestuff,
+        "directions_array": recipestuff
         })
         self.response.write(html)
 
