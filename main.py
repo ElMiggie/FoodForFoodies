@@ -84,32 +84,43 @@ class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
         food = models.Nutrition
 ####Apple
-        apple_pie_info = food(name = "Apple Pie", calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
-        apple_empanadas_info = food(name = "Apple Empanadas", calories = "230", fats ="7g", sodium = "200mg", carbs = "40g" )
+        apple_pie_info = food(food_name = "Apple Pie", calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+        apple_empanadas_info = food(food_name = "Apple Empanadas", calories = "230", fats ="7g", sodium = "200mg", carbs = "40g" )
+        danish_apple_pie_info = food(food_name = "Danish Apple Pie", calories = "380", fats = "15g", sodium = "262mg", carbs = "58g")
+        apple_slaw_info = food(food_name = "Apple Slaw", calories = "125", fats = "0g", sodium = "0mg", carbs = "0g")
+        southAfrica_apple_tart_info = food(food_name = "South African Apple Tart", calories = "332", fats = "20.5g", sodium = "5.3mg", carbs = "39g")
         apple_pie_info.put()
         apple_empanadas_info.put()
+        danish_apple_pie_info.put()
+        apple_slaw_info.put()
+        southAfrica_apple_tart_info.put()
 
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
         #"search_food" : self.request.get("search_food")
-        #models.Nutrutition.query().filter(models.nutrition.food_name=="apple_pie").fetch()
-        apple_pie = food(name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
+        #apple_pie = food(food_name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
         #food_query = model.Nutrition.query().order()
         #person_query = model.Facebook.query().filter(model.Nutrition.name == 'raw_input()')
         #all_food = person_query.fetch()
         ###info = models.Nutrition.query().fetch()
-        html = food_list_template.render({
-        "search_food": self.request.get("search_food"),
-        'food_name': apple_pie.name,
-        'food_calories': apple_pie.calories,
-        'food_fats': apple_pie.fats,
-        'food_sodium' : apple_pie.sodium,
-        'food_carbs': apple_pie.carbs,
+        requestedFood = self.request.get("search_food")
+        nutritionInfoList = food.query().filter(models.Nutrition.food_name== requestedFood).fetch()
+        if nutritionInfoList:
+            nutritionInfo = nutritionInfoList[0]
+            html = food_list_template.render({
+            "search_food": nutritionInfo.food_name,
+            'food_name': nutritionInfo.food_name,
+            'food_calories': nutritionInfo.calories,
+            'food_fats': nutritionInfo.fats,
+            'food_sodium' : nutritionInfo.sodium,
+            'food_carbs': nutritionInfo.carbs,
+            })
+            self.response.write(html)
+        else:
+            self.response.write("Not Found!")
 
-        })
-        self.response.write(html)
 
 
 app = webapp2.WSGIApplication([
