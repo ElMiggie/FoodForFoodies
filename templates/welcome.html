@@ -31,15 +31,16 @@
     <div class="search_bar">
     <form action="/nutrition">
       Search for your favorite foods here:<br>
+      <div class="container">
       <input type="text" name="search_food" id="bar">
-      <input type="image" src="static/MagnifyingGlass.png" alt="Search" id="MagnifyingGlass" width="90" height="70">
+      <input type="image" src="static/MagnifyingGlass.png" alt="Search" id="MagnifyingGlass" width="90" height="75">
+    </div>
     </form>
     </div>
     <div id="randsection">
       <h1 class="header">Food of the day: {{ food_name }}</h1>
       <p class="randomsection">{{ food_name }} Around the World:</p>
 
-      <div class="container">
         <p id="SouthAmerica" class="randrecipes">South America: </p>
           <div id="recipeNames"><a href = '/recipes'>{{ recipe1Name }} </a></div>
         <p id="NorthAmerica" class="randrecipes"> North America: </p>
@@ -51,6 +52,6 @@
         <p id="Africa" class="randrecipes">Africa: </p>
           <div id="recipeNames"><a href = '/recipes'>{{ recipe5Name }} </a></div>
         <img id="randomImage" src={{ food_image_url }} alt={{ food_name }}>
-      </div>
+    
     </div>
 </html>
