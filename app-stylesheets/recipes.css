@@ -11,7 +11,7 @@
   font-size: 80px;
   margin-left: 7%;
   text-decoration: underline;
-  margin-top: -5%;
+  margin-top: 1%;
 }
 
 #website_name {
@@ -19,4 +19,46 @@
   font-style: italic;
   color: darkgray;
   margin-top: 3%;
+}
+
+#website-img {
+  height: 500px;
+  width: 550px;
+  margin-left: 55%;
+  margin-top: -2%;
+}
+
+#ingredients_head {
+  font-size: 55px;
+  margin-top: -32%;
+  font-style: italic;
+  margin-left: 2%;
+}
+
+#ingredients {
+  font-size: 25px;
+  margin-top: -2%;
+  margin-left: 2%;
+}
+
+#directions_head {
+  font-size: 55px;
+  margin-top: 7%;
+  font-style: italic;
+  margin-left: 2%;
+}
+
+#directions {
+  font-size: 25px;
+  margin-top: -1%;
+  margin-bottom: 5%;
+  margin-left: 2%;
+}
+
+#top_section {
+  background-color: #FCF4D9
+}
+
+.body {
+  background-color: lightgray;
 }
