@@ -21,6 +21,7 @@ import random
 import os
 import jinja2
 import models
+import recipes
 
 
 #remember, you can get this by searching for jinja2 google app engine
@@ -64,11 +65,12 @@ class RandomFoodHandler(webapp2.RequestHandler):
 
 class RecipeEntryHandler(webapp2.RequestHandler):
     def get(self):
-
+        recipes.get_recipes_directions()
 
 class RecipeHandler (webapp2.RequestHandler):
     def get (self):
-        recipestuff=models.Recipe.query().filter(models.Recipe.food_name=="apple_pie").fetch()
+        # recipe_name=models.Food.query().filter(models.Food.)
+        recipestuff=models.Recipe.query().filter(models.Recipe.food_name=="apple_slaw").fetch()
         recipes=jinja_current_dir.get_template("templates/results.html")
         html=recipes.render({
         #"search-input":self.request.get()
