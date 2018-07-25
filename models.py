@@ -28,6 +28,7 @@ class Recipe(ndb.Model):
    food_name=ndb.StringProperty(required=True)
    ingredients=ndb.StringProperty(repeated=True)
    directions=ndb.StringProperty(repeated=True)
+   picture=ndb.StringProperty(required=True)
 
 
 class Nutrition(ndb.Model):

@@ -7,9 +7,9 @@
   margin-top: -1%;
 }
 
-#website-img {
-  width: 750px;
-  height: 550px;
+#randomImage {
+  width: 650px;
+  height: 450px;
   margin-top: -10%;
   margin-left: 5%;
   margin-bottom: 20%;
@@ -19,27 +19,47 @@
   font-size: 80px;
   margin-left: 7%;
   text-decoration: underline;
-  margin-top: -5%;
+  margin-top: 1%;
   margin-bottom: 7%;
+  color: #D87002;
 }
 
 #food_title {
   font-size: 65px;
   text-align: right;
   margin-top: -1%;
-  margin-right: 15%;
+  margin-right: 19%;
   font-style: italic;
+  color: #D87002;
 }
 
 .listOfNutrition {
-  margin-top: -50%;
+  margin-top: -40%;
   font-size: 30px;
   margin-left: 60%;
+  color: darkblue;
 }
 
 #website_name {
   margin-left: 77%;
   font-style: italic;
-  color: darkgray;
+  color: #5B5B5B;
   margin-top: 3%;
+}
+
+.top_section {
+  background-color: #FCF4D9
+}
+
+#nutritionBody {
+  background-color: #8ED2C9;
+}
+
+#recipe_link {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 40px;
+}
+#linkColor {  
+  color: darkblue;
 }
