@@ -46,10 +46,14 @@ class MainHandler(webapp2.RequestHandler):
             'recipe3Name': foods[0].recipe3Name,
             'recipe4Name': foods[0].recipe4Name,
             'recipe5Name': foods[0].recipe5Name,
-            'food_image_url': foodImages[foodIndex]
+            'food_image_url': foodImages[foodIndex],
+            "goto1": recipes/foods[0].recipe1Name,
+            "goto2": recipes/foods[0].recipe2Name,
+            "goto3": recipes/foods[0].recipe3Name,
+            "goto4": recipes/foods[0].recipe4Name,
+            "goto5": recipes/foods[0].recipe5Name, 
         })
         self.response.write(html)
-
 
 class RandomFoodHandler(webapp2.RequestHandler):
     def get(self):
@@ -74,7 +78,7 @@ class RecipeHandler (webapp2.RequestHandler):
         # nameofrecipe=self.request.get(recipe1Name)
         # recipe_name=models.Food.query().filter(models.Food.)
         # nameoffood=recipes.get_link_url(self.request.url)
-        recipestuff=models.Recipe.query().filter(models.Recipe.food_name==recipe_name).fetch()
+        recipestuff=models.Recipe.query().filter(models.Recipe.name_displayed==recipe_name).fetch()
         recipeinfo=recipestuff[0]
         recipestemplate=jinja_current_dir.get_template("templates/results.html")
         html=recipestemplate.render({
@@ -87,9 +91,9 @@ class RecipeHandler (webapp2.RequestHandler):
         "directions_array": recipestuff
         })
         self.response.write(html)
-class RecipeLinksHandler(webapp2.RequestHandler):
-    def get(self, recipe_name):
-        self.response.write("Hello " + recipe_name)
+# class RecipeLinksHandler(webapp2.RequestHandler):
+#     def get(self, recipe_name):
+#         self.response.write("Hello " + recipe_name)
 
 class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
