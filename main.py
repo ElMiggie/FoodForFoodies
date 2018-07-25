@@ -34,7 +34,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_current_dir.get_template("templates/welcome.html")
         randomFoodList = ["Apples", "Peaches", "Pomegranates", "Zucchini", "Shrimp"]
-        foodImages = ["static/apple.jpg", "static/peaches.jpg", "static/pomegranate.jpg", "static/zucchini.jpg", "static/shrimp.jpg"]
+        foodImages = ["static/apple.jpg", "static/peaches.jpg", "static/pomegranate.jpg", "static/zucchini.png", "static/shrimp.jpg"]
 
         foodIndex = random.randint(0, 4)
         foods = models.Food.query().filter(models.Food.food_name==randomFoodList[foodIndex]).fetch()
