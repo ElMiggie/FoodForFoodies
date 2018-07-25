@@ -112,10 +112,7 @@ class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
-<<<<<<< HEAD
-    
-=======
->>>>>>> 85d26d719ccf34ff7996abcb1112b32d2e406509
+
         requestedFood = (self.request.get("search_food")).lower()
         nutritionInfoList = food.query().filter(models.Nutrition.name_of_food == requestedFood).fetch()
         if nutritionInfoList:
