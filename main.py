@@ -70,11 +70,11 @@ class RecipeEntryHandler(webapp2.RequestHandler):
         recipes.get_recipes_directions()
 
 class RecipeHandler (webapp2.RequestHandler):
-    def get (self):
+    def get (self, recipe_name):
         # nameofrecipe=self.request.get(recipe1Name)
         # recipe_name=models.Food.query().filter(models.Food.)
-        nameoffood=recipes.get_link_url(self.request.url)
-        recipestuff=models.Recipe.query().filter(models.Recipe.food_name==nameoffood).fetch()
+        # nameoffood=recipes.get_link_url(self.request.url)
+        recipestuff=models.Recipe.query().filter(models.Recipe.food_name==recipe_name).fetch()
         recipeinfo=recipestuff[0]
         recipestemplate=jinja_current_dir.get_template("templates/results.html")
         html=recipestemplate.render({
@@ -87,6 +87,9 @@ class RecipeHandler (webapp2.RequestHandler):
         "directions_array": recipestuff
         })
         self.response.write(html)
+class RecipeLinksHandler(webapp2.RequestHandler):
+    def get(self, recipe_name):
+        self.response.write("Hello " + recipe_name)
 
 class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
@@ -175,5 +178,6 @@ app = webapp2.WSGIApplication([
     ('/nutrition', InfoHandler),
     ('/nutritionentry',InfoEntryHandler),
     #('/recipes', RecipeHandler),
-    ('/recipeentry', RecipeEntryHandler)
+    ('/recipeentry', RecipeEntryHandler),
+    ("/recipes/(.*)", RecipeHandler)
     ], debug=True)

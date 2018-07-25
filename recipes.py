@@ -86,17 +86,17 @@ def get_recipes_directions ():
 
     apple_tart.put()
 
-def get_link_url (url):
-    if url=="/recipes/firstrecipe":
-            namefood="apple_pie"
-    if url=="/recipes/secondrecipe":
-            namefood="apple_empanadas"
-    if url=="/recipes/thirdrecipe":
-            namefood="danish_apple_pie"
-    if url=="/recipes/fourthrecipe":
-            namefood="apple_slaw"
-    if url=="/recipes/fifthrecipe":
-            namefood="apple_tart"
-    else:
-            
-    return namefood
+# def get_link_url (url):
+#     if url=="/recipes/firstrecipe":
+#         namefood="apple_pie"
+#     elif url=="/recipes/secondrecipe":
+#         namefood="apple_empanadas"
+#     elif url=="/recipes/thirdrecipe":
+#         namefood="danish_apple_pie"
+#     elif url=="/recipes/fourthrecipe":
+#         namefood="apple_slaw"
+#     elif url=="/recipes/fifthrecipe":
+#         namefood="apple_tart"
+#     else:
+#         namefood="nothing"
+#     return namefood
