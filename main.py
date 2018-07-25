@@ -111,6 +111,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
+        foodImageList = {"apple":"static/apple.jpg", "apple pie":"static/applepie.jpeg" , "peach":"static/peaches.jpg"}
         food = models.Nutrition
 
         requestedFood = (self.request.get("search_food")).lower()
@@ -124,6 +125,7 @@ class InfoHandler(webapp2.RequestHandler):
             'food_fats': nutritionInfo.fats,
             'food_sodium' : nutritionInfo.sodium,
             'food_carbs': nutritionInfo.carbs,
+            'food_image_url': foodImageList[requestedFood]
             })
             self.response.write(html)
         else:
