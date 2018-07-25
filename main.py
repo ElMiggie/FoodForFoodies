@@ -116,7 +116,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
-        foodImageList = {"apple":"static/apple.jpg", "apple pie":"static/applepie.jpeg" , "peach":"static/peaches.jpg"}
+        foodImageList = {"apple":"static/apple.jpg", "apple pie":"static/applepie.jpg" , "peach":"static/peaches.jpg"}
         food = models.Nutrition
         requestedFood = (self.request.get("search_food")).lower()
         nutritionInfoList = food.query().filter(models.Nutrition.name_of_food == requestedFood).fetch()
