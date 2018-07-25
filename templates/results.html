@@ -19,28 +19,34 @@
 <html>
   <head>
     <title>Food For Foodies: Recipes</title>
-    <link rel="stylesheet" type="text/css" href="app-stylesheets/boring-style.css">
+    <link rel="stylesheet" type="text/css" href="app-stylesheets/recipes.css">
   </head>
-    <body>
-    <h1>Recipes</h1>
-    <p> Here is the Picture: </p>
+    <body class="body">
+      <div id="top_section">
+      <h1 id="website_name"> Food for Foodies </h1>
+      <a href='/' >
+        <img src="static/home.png" id='home_link'>
+      </a>
+    </div>
+    <h1 id="generic_title">Recipes: {{ search_food }}</h1>
       <!-- <p> {{recipe_picture}}</p> -->
-       <img id="website-img" src="/static/applepie.jpeg" alt="Picture of Recipe"/>
-    <h4> Ingredients: </h4>
-      <ul>
+       <img id="website-img" src="/static/applepie.jpg" alt="Picture of Recipe"/>
+    <h4 id="ingredients_head"> Ingredients: </h4>
+      <ul id="ingredients">
         {% for recipe in recipes %}
            {% for ingredient in recipe.ingredients %}
           <li>  {{ingredient}} </li>
             {% endfor %}
           {% endfor %}
       </ul>
-      <h4> Directions: </h4>
-        <ol>
+      <h4 id="directions_head"> Directions: </h4>
+        <ol id="directions">
           {% for recipe in recipes %}
             {% for directions in recipe.directions %}
         <li> {{directions}}</li>
             {% endfor %}
         {% endfor %}
         </ol>
+      <h1 id="nutrition_link"><a href='/nutrition' id="linkColor" type=text> Check out the {{ search_food }} nutrition info here! </a></h1>
   </body>
 </html>

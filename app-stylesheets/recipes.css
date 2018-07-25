@@ -1,0 +1,75 @@
+#home_link {
+  width: 50px;
+  height: 50px;
+  margin-left: 90%;
+  background-color: yellow;
+  border-radius: 25px;
+  margin-top: -1%;
+}
+
+#generic_title {
+  font-size: 80px;
+  margin-left: 7%;
+  text-decoration: underline;
+  margin-top: 1%;
+}
+
+#website_name {
+  margin-left: 77%;
+  font-style: italic;
+  color: #5B5B5B;
+  margin-top: 3%;
+}
+
+#website-img {
+  height: 500px;
+  width: 550px;
+  margin-left: 55%;
+  margin-top: -2%;
+}
+
+#ingredients_head {
+  font-size: 55px;
+  margin-top: -32%;
+  font-style: italic;
+  margin-left: 2%;
+}
+
+#ingredients {
+  font-size: 25px;
+  margin-top: -2%;
+  margin-left: 2%;
+}
+
+#directions_head {
+  font-size: 55px;
+  margin-top: 7%;
+  font-style: italic;
+  margin-left: 2%;
+}
+
+#directions {
+  font-size: 25px;
+  margin-top: -1%;
+  margin-bottom: 5%;
+  margin-left: 2%;
+}
+
+#top_section {
+  background-color: #FCF4D9
+}
+
+.body {
+  background-color: lightgray;
+}
+
+#nutrition_link {
+  text-align: center;
+  margin-top: 6%;
+  font-size: 40px;
+  margin-bottom: 5%;
+}
+
+#linkColor {
+  color: darkblue;
+}
