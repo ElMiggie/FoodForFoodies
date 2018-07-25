@@ -69,8 +69,7 @@
 <section class="performance-facts">
   <header class="performance-facts__header">
     <h1 class="performance-facts__title">Nutrition Facts</h1>
-    <p>Serving Size 1/2 cup (about 82g)
-    <p>Serving Per Container 8</p>
+    <p>Serving Size {{servingSize}}</p>
   </header>
   <table class="performance-facts__table">
     <thead>
@@ -88,40 +87,40 @@
         </th>
         <td>
           Calories from Fat
-          130
+          {{calFromFat}}
         </td>
       </tr>
-      <tr class="thick-row">
+      <!-- <tr class="thick-row">
         <td colspan="3" class="small-info">
           <b>% Daily Value*</b>
         </td>
-      </tr>
+      </tr> -->
       <tr>
         <th colspan="2">
           <b>Total Fat</b>
-          {{food_fats}}
+          {{food_fats}} g
         </th>
-        <td>
+        <!-- <td>
           <b>22%</b>
-        </td>
+        </td> -->
       </tr>
       <tr>
         <td class="blank-cell">
         </td>
         <th>
           Saturated Fat
-          9g
+          {{satFat}} g
         </th>
-        <td>
+        <!-- <td>
           <b>22%</b>
-        </td>
+        </td> -->
       </tr>
       <tr>
         <td class="blank-cell">
         </td>
         <th>
           Trans Fat
-          0g
+          {{transFat}} g
         </th>
         <td>
         </td>
@@ -129,47 +128,47 @@
       <tr>
         <th colspan="2">
           <b>Cholesterol</b>
-          55mg
+          {{cholesterol}} mg
         </th>
-        <td>
+        <!-- <td>
           <b>18%</b>
-        </td>
+        </td> -->
       </tr>
       <tr>
         <th colspan="2">
           <b>Sodium</b>
           {{food_sodium}}
         </th>
-        <td>
+        <!-- <td>
           <b>2%</b>
-        </td>
+        </td> -->
       </tr>
       <tr>
         <th colspan="2">
           <b>Total Carbohydrate</b>
           {{food_carbs}}
         </th>
-        <td>
+        <!-- <td>
           <b>6%</b>
-        </td>
+        </td> -->
       </tr>
       <tr>
         <td class="blank-cell">
         </td>
         <th>
           Dietary Fiber
-          1g
+          {{dietaryFiber}} g
         </th>
-        <td>
+        <!-- <td>
           <b>4%</b>
-        </td>
+        </td> -->
       </tr>
       <tr>
         <td class="blank-cell">
         </td>
         <th>
           Sugars
-          14g
+          {{sugars}} g
         </th>
         <td>
         </td>
@@ -177,7 +176,7 @@
       <tr class="thick-end">
         <th colspan="2">
           <b>Protein</b>
-          3g
+          {{protein}} g
         </th>
         <td>
         </td>
@@ -190,21 +189,21 @@
       <tr>
         <td colspan="2">
           Vitamin A
-          10%
+          {{vitaminA}} %
         </td>
         <td>
           Vitamin C
-          0%
+          {{vitaminC}} %
         </td>
       </tr>
       <tr class="thin-end">
         <td colspan="2">
           Calcium
-          10%
+          {{calcium}} %
         </td>
         <td>
           Iron
-          6%
+          {{iron}} %
         </td>
       </tr>
     </tbody>
