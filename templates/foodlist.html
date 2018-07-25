@@ -27,17 +27,44 @@
     </a>
   </div>
     <!-- <form action="/" -->
-    <h1 id="generic_title">{{search_food}} </h1>
-    <h1 id="food_title"> Nutrition </h1>
+    <h1 id="generic_title"> Nutrition </h1>
+    <h1 id="food_title"> {{search_food}} </h1>
         <img id="randomImage" src={{ food_image_url }} alt={{ food_name }}>
 <!-- trying to set up dynamic images -->
       <ul class="listOfNutrition">
-        <li>Calories: {{food_calories}}</li>
-        <li>Fat: {{food_fats}}</li>
-        <li>Sodium: {{food_sodium}}</li>
-        <li>Carbohydrates: {{food_carbs}}</li>
+        {% if  food_calories > 300 %}
+          <li id="red">Calories: {{food_calories}}</li>
+        {% elif food_calories > 150 %}
+          <li>Calories: {{food_calories}}</li>
+        {% else %}
+          <li id="green">Calories: {{food_calories}}</li>
+        {% endif %}
+
+        {% if food_fats > 8 %}
+          <li id="red">Fat: {{food_fats}} g </li>
+        {% elif food_fats > 5 %}
+          <li>Fat: {{food_fats}} g </li>
+        {% else %}
+          <li id="green">Fat: {{food_fats}} g </li>
+        {% endif %}
+
+        {% if food_sodium > 300 %}
+          <li id="red">Sodium: {{food_sodium}} mg </li>
+        {% elif food_sodium > 150 %}
+          <li>Sodium: {{food_sodium}} mg </li>
+        {% else %}
+          <li id="green">Sodium: {{food_sodium}} mg </li>
+        {% endif %}
+
+        {% if  food_carbs > 300 %}
+          <li id="red">Carbohydrates: {{food_carbs}} g </li>
+        {% elif food_carbs > 150 %}
+          <li>Carbohydrates: {{food_carbs}} g </li>
+        {% else %}
+          <li id="green">Carbohydrates: {{food_carbs}} g </li>
+        {% endif %}
+<!-- Adjust limits according to macro -->
       </ul>
-    <h1 id="recipe_link"><a href='/recipes' id="linkColor" type=text> Check out some {{ search_food }} recipes here! </a></h1>
   <!-- </form> -->
   </body>
 </html>

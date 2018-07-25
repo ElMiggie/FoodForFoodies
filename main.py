@@ -67,19 +67,19 @@ class RecipeEntryHandler(webapp2.RequestHandler):
     def get(self):
         recipes.get_recipes_directions()
 
-class RecipeHandler (webapp2.RequestHandler):
-    def get (self):
-        # recipe_name=models.Food.query().filter(models.Food.)
-        recipestuff=models.Recipe.query().filter(models.Recipe.food_name=="apple_pie").fetch()
-        recipeimage=recipestuff[0]
-        recipes=jinja_current_dir.get_template("templates/results.html")
-        html=recipes.render({
-        "imagesource": recipeimage.picture
-        #"search-input":self.request.get()
-        "recipes":recipestuff,
-        "directions_array": recipestuff
-        })
-        self.response.write(html)
+# class RecipeHandler (webapp2.RequestHandler):
+#     def get (self):
+#         # recipe_name=models.Food.query().filter(models.Food.)
+#         recipestuff=models.Recipe.query().filter(models.Recipe.food_name=="apple_pie").fetch()
+#         recipeimage=recipestuff[0]
+#         recipes=jinja_current_dir.get_template("templates/results.html")
+#         html=recipes.render({
+#         "imagesource": recipeimage.picture
+#         #"search-input":self.request.get()
+#         "recipes":recipestuff,
+#         "directions_array": recipestuff
+#         })
+#         self.response.write(html)
 
 class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
@@ -88,59 +88,59 @@ class InfoEntryHandler(webapp2.RequestHandler):
         apple_info = food(name_of_food="apple", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25 )
         apples_info = food(name_of_food="apples", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25 )
         apple_pie_info = food(name_of_food="apple pie", food_name = "Apple Pie", calories = 230, fats = 10, sodium = 170, carbs = 33 )
-        # apple_empanadas_info = food(name_of_food="apple empanadas", food_name = "Apple Empanadas", calories = "230", fats ="7 g", sodium = "200 mg", carbs = "40 g" )
-        # danish_apple_cake_info = food(name_of_food="danish apple cake", food_name = "Danish Apple Cake", calories = "380", fats = "15 g", sodium = "262 mg", carbs = "58 g")
-        # apple_slaw_info = food(name_of_food="apple slaw", food_name = "Apple Slaw", calories = "125", fats = "0 g", sodium = "0 mg", carbs = "0 g")
-        # southAfrica_apple_tart_info = food(name_of_food="south african apple tart", food_name = "South African Apple Tart", calories = "332", fats = "20.5 g", sodium = "5.3 mg", carbs = "39 g")
+        apple_empanadas_info = food(name_of_food="apple empanadas", food_name = "Apple Empanadas", calories = 230, fats =7, sodium = 200, carbs = 40 )
+        danish_apple_cake_info = food(name_of_food="danish apple cake", food_name = "Danish Apple Cake", calories = 380, fats = 15, sodium = 262, carbs = 58 )
+        apple_slaw_info = food(name_of_food="apple slaw", food_name = "Apple Slaw", calories = 125, fats = 0 , sodium = 0, carbs = 0 )
+        southAfrica_apple_tart_info = food(name_of_food="south african apple tart", food_name = "South African Apple Tart", calories = 332, fats = 20.5, sodium = 5.3, carbs = 39 )
 
         apple_info.put()
         apple_pie_info.put()
-        # apple_empanadas_info.put()
-        # danish_apple_cake_info.put()
-        # apple_slaw_info.put()
-        # southAfrica_apple_tart_info.put()
+        apple_empanadas_info.put()
+        danish_apple_cake_info.put()
+        apple_slaw_info.put()
+        southAfrica_apple_tart_info.put()
 ####peaches
-        # peach_info = food(name_of_food="peach", food_name = "Peach", calories = "59", fats ="0.4 g", sodium = "0 mg", carbs = "14 g" )
-        # postre_chaja_peach_meringue_cake_info = food(name_of_food="postre chaja peach meringue cake", food_name = "Postre Chaja Peach Meringue Cake", calories = "422", fats ="28.3 g", sodium = "158.5 mg", carbs = "38.9 g" )
-        # peach_cobbler_info = food(name_of_food="peach cobbler", food_name = "Peach Cobbler", calories = "250", fats ="10 g", sodium = "150 mg", carbs = "38 g" )
-        # gooey_peach_dumpling_info = food(name_of_food="gooey peach dumpling", food_name = "Gooey Peach Dumplings", calories = "154.7", fats ="5.5 g", sodium = "313.7 mg", carbs = "24.8 g" )
-        # peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = "840", fats ="29 g", sodium = "1280 mg", carbs = "9 g" )
+        peach_info = food(name_of_food="peach", food_name = "Peach", calories = 59, fats =0.4, sodium = 0, carbs = 14 )
+        postre_chaja_peach_meringue_cake_info = food(name_of_food="postre chaja peach meringue cake", food_name = "Postre Chaja Peach Meringue Cake", calories = 422, fats =28.3, sodium = 158.5, carbs = 38.9 )
+        peach_cobbler_info = food(name_of_food="peach cobbler", food_name = "Peach Cobbler", calories = 250, fats =10, sodium = 150, carbs = 38 )
+        gooey_peach_dumpling_info = food(name_of_food="gooey peach dumpling", food_name = "Gooey Peach Dumplings", calories = 154.7, fats =5.5, sodium = 313.7, carbs = 24.8 )
+        peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = 840 , fats = 29, sodium = 1280, carbs = 9 )
 
-        # peach_info.put()
-        # postre_chaja_peach_meringue_cake_info.put()
-        # peach_cobbler_info.put()
-        # gooey_peach_dumpling_info.put()
-        # peach_chicken_info.put()
+        peach_info.put()
+        postre_chaja_peach_meringue_cake_info.put()
+        peach_cobbler_info.put()
+        gooey_peach_dumpling_info.put()
+        peach_chicken_info.put()
 ####Zucchini
         zucchini_info = food(name_of_food="zucchini", food_name = "Zucchini", calories = 33, fats = 0.6, sodium = 16, carbs = 6 )
 
         zucchini_info.put()
 ####Pizza
-        # cheese_pizza_info = food(name_of_food="cheese pizza", food_name = "Cheese Pizza", calories = "277", fats ="10", sodium = "565", carbs = "36" )
-        # pepperoni_pizza_info = food(name_of_food="pepperoni pizza", food_name = "Pepperoni Pizza ", calories = "549", fats ="21 g", sodium = "1,538", carbs = "64g" )
+        cheese_pizza_info = food(name_of_food="cheese pizza", food_name = "Cheese Pizza", calories = 277, fats =10, sodium = 565, carbs = 36 )
+        pepperoni_pizza_info = food(name_of_food="pepperoni pizza", food_name = "Pepperoni Pizza ", calories = 549, fats =21, sodium = 1538, carbs = 64 )
 
-        # cheese_pizza_info.put()
-        # pepperoni_pizza_info.put()
+        cheese_pizza_info.put()
+        pepperoni_pizza_info.put()
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         foodImageList = {
-        "apple":"static/apple.jpg",
-        "apples":"static/apple.jpg",
-        "apple pie":"static/applepie.jpeg",
-        # "apple empanadas":"static/appleempanadas.##",
-        # "danish apple cake":"static/danishapplecake.##",
-        # "apple slaw":"static/appleslaw.##",
-        # "south africa apple tart": "static/southafricaappletart.##",
+        "apple":"static/apples.png",
+        "apples":"static/apples.png",
+        "apple pie":"static/applepie.png",
+        "apple empanadas":"static/appleempanadas.png",
+        "danish apple cake":"static/danishapplecake.png",
+        "apple slaw":"static/appleslaw.png",
+        "south africa apple tart": "static/southafricaappletart.png",
 ####peach
-        "peach":"static/peaches.jpg",
-        # "postre chaja peach meringue cake":"static/postrepeachmeringuecake.##",
-        # "peach cobbler":"static/peachcobbler.##",
-        # "gooey peach dumpling":"static/gooeypeachdumpling.##",
-        # "peach chicken":"static/peach chicken.##",
+        "peach":"static/peaches.png",
+        "postre chaja peach meringue cake":"static/postrepeachmeringuecake.png",
+        "peach cobbler":"static/peachcobbler.png",
+        "gooey peach dumpling":"static/gooeypeachdumpling.png",
+        "peach chicken":"static/peach chicken.png",
 ####Pizza
         "cheese pizza":"static/cheesepizza.png",
-        # "pepperoni pizza":"static/pepperonipizza.##",
+        "pepperoni pizza":"static/pepperonipizza.png",
         }
 
         food = models.Nutrition
@@ -168,6 +168,6 @@ app = webapp2.WSGIApplication([
     ('/random', RandomFoodHandler),
     ('/nutrition', InfoHandler),
     ('/nutritionentry',InfoEntryHandler),
-    ('/recipes', RecipeHandler),
+    #('/recipes', RecipeHandler),
     ('/recipeentry', RecipeEntryHandler)
     ], debug=True)

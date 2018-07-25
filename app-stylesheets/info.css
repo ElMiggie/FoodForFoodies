@@ -60,6 +60,14 @@
   margin-top: 20%;
   font-size: 40px;
 }
-#linkColor {  
+#linkColor {
   color: darkblue;
+}
+
+#red{
+  color: red;
+}
+
+#green{
+  color: green;
 }
