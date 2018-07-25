@@ -47,11 +47,11 @@ class MainHandler(webapp2.RequestHandler):
             'recipe4Name': foods[0].recipe4Name,
             'recipe5Name': foods[0].recipe5Name,
             'food_image_url': foodImages[foodIndex],
-            "goto1": recipes/foods[0].recipe1Name,
-            "goto2": recipes/foods[0].recipe2Name,
-            "goto3": recipes/foods[0].recipe3Name,
-            "goto4": recipes/foods[0].recipe4Name,
-            "goto5": recipes/foods[0].recipe5Name, 
+            # "goto1": foods[0].recipe1Name,
+            # "goto2": recipes/foods[0].recipe2Name,
+            # "goto3": recipes/foods[0].recipe3Name,
+            # "goto4": recipes/foods[0].recipe4Name,
+            # "goto5": recipes/foods[0].recipe5Name,
         })
         self.response.write(html)
 
@@ -79,7 +79,11 @@ class RecipeHandler (webapp2.RequestHandler):
         # recipe_name=models.Food.query().filter(models.Food.)
         # nameoffood=recipes.get_link_url(self.request.url)
         recipestuff=models.Recipe.query().filter(models.Recipe.name_displayed==recipe_name).fetch()
-        recipeinfo=recipestuff[0]
+        if recipestuff:
+            recipeinfo=recipestuff[0]
+        else:
+            self.response.write('Not Found')
+            return
         recipestemplate=jinja_current_dir.get_template("templates/results.html")
         html=recipestemplate.render({
         "recipename": recipeinfo.name_displayed,

@@ -22,7 +22,7 @@ def get_recipes_directions ():
     "1/2 teaspoon ground nutmeg", "1/8 teaspoon salt", "8 cups thinly sliced peeled tart apples (8 medium)",
      "2 tablespoons butter or margarine"]
 
-    apple_pie= models.Recipe(name_displayed="Apple Pie", food_name="apple_pie", ingredients=ingredients_array,
+    apple_pie= models.Recipe(name_displayed="All-American Apple Pie", food_name="apple_pie", ingredients=ingredients_array,
     directions=directions_array, picture="/static/applepie.jpeg")
 
     apple_pie.put()
@@ -69,7 +69,7 @@ def get_recipes_directions ():
     "Bake cake for one hour. Cover loosely with foil and bake another 15-20 minutes or until set in the center. Check to see if a toothpick inserted in the center comes out clean.",
     "Cool on a baking rack before removing outer ring. Serve warm or at room temperature with a dollop of whipped cream or ice cream. Enjoy!"]
 
-    danish_apple_pie=models.Recipe(name_displayed="Danish Apple Pie", food_name="danish_apple_pie", ingredients=ingredients3_array, directions=directions3_array, picture="/static/danishapplepie.jpg")
+    danish_apple_pie=models.Recipe(name_displayed="Danish Apple Cake", food_name="danish_apple_pie", ingredients=ingredients3_array, directions=directions3_array, picture="/static/danishapplepie.jpg")
 
     danish_apple_pie.put()
 
@@ -91,7 +91,7 @@ def get_recipes_directions ():
     "Mix slightly and add the milk little by little", "Add the batter in prepared baking dish and place the apples on top.",
     "Bake for 30-40 minutes until light brown.", "Heat the Tin Cream in a saucepan with the sugar until sugar is completely dissolved. Pour over warm apple tart."]
 
-    apple_tart=models.Recipe(name_displayed="Apple Tart", food_name="apple_tart", ingredients=ingredients5_array, directions=directions5_array, picture="/static/appletart.jpg")
+    apple_tart=models.Recipe(name_displayed="South African Apple Tart", food_name="apple_tart", ingredients=ingredients5_array, directions=directions5_array, picture="/static/appletart.jpg")
 
     apple_tart.put()
 
