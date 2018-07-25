@@ -19,14 +19,16 @@
     <title>Nutritional Facts: {{food_name}}</title>
     <link rel="stylesheet" type="text/css" href="app-stylesheets/info.css">
   </head>
-  <body "Nutrition Body">
+  <body id="nutritionBody">
+    <div class="top_section">
     <h1 id="website_name"> Food for Foodies </h1>
     <a href='/' >
       <img src="static/home.png" id='home_link'>
     </a>
+  </div>
     <!-- <form action="/" -->
-    <h1 id="generic_title"> Nutrition </h1>
-    <h1 id="food_title"> {{search_food}} </h1>
+    <h1 id="generic_title">{{search_food}} </h1>
+    <h1 id="food_title"> Nutrition </h1>
         <img id="randomImage" src={{ food_image_url }} alt={{ food_name }}>
 <!-- trying to set up dynamic images -->
       <ul class="listOfNutrition">
@@ -35,6 +37,7 @@
         <li>Sodium: {{food_sodium}}</li>
         <li>Carbohydrates: {{food_carbs}}</li>
       </ul>
+    <h1 id="recipe_link"><a href='/recipes' id="linkColor" type=text> Check out some {{ search_food }} recipes here! </a></h1>
   <!-- </form> -->
   </body>
 </html>

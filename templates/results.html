@@ -28,7 +28,7 @@
         <img src="static/home.png" id='home_link'>
       </a>
     </div>
-    <h1 id="generic_title">Recipes: {{ recipe_name }}</h1>
+    <h1 id="generic_title">Recipes: {{ search_food }}</h1>
       <!-- <p> {{recipe_picture}}</p> -->
        <img id="website-img" src="/static/applepie.jpg" alt="Picture of Recipe"/>
     <h4 id="ingredients_head"> Ingredients: </h4>
@@ -47,5 +47,6 @@
             {% endfor %}
         {% endfor %}
         </ol>
+      <h1 id="nutrition_link"><a href='/nutrition' id="linkColor" type=text> Check out the {{ search_food }} nutrition info here! </a></h1>
   </body>
 </html>
