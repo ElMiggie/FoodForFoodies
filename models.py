@@ -25,6 +25,7 @@ class Food(ndb.Model):
   recipe5Name = ndb.StringProperty(required=True)
 
 class Recipe(ndb.Model):
+   name_displayed=ndb.StringProperty(required=True)
    food_name=ndb.StringProperty(required=True)
    ingredients=ndb.StringProperty(repeated=True)
    directions=ndb.StringProperty(repeated=True)
