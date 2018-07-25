@@ -25,12 +25,12 @@
       <div id="top_section">
       <h1 id="website_name"> Food for Foodies </h1>
       <a href='/' >
-        <img src={{imagesource}} id='home_link'>
+        <img src="/static/home.png" id='home_link'>
       </a>
     </div>
-    <h1 id="generic_title">Recipes: {{ search_food }}</h1>
+    <h1 id="generic_title">Recipe for {{recipename}}</h1>
       <!-- <p> {{recipe_picture}}</p> -->
-       <img id="website-img" src="/static/applepie.jpg" alt="Picture of Recipe"/>
+       <img id="website-img" src={{imagesource}} alt="Picture of Recipe"/>
     <h4 id="ingredients_head"> Ingredients: </h4>
       <ul id="ingredients">
         {% for recipe in recipes %}
