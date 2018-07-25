@@ -46,7 +46,7 @@ def get_recipes_directions ():
     "In a saucepan cook the apples with the sugar, cinnamon and nutmeg on medium heat. Cook for about 5-7 minutes until apples are soft and translucent.",
     "Let it cool off and sprinkle with powdered sugar"]
 
-    apple_empanadas=models.Recipe(name_displayed="Apple Empanadas", food_name="apple_empanadas", ingredients=ingredients2_array, directions=directions2_array, picture="/static/appleempanadas.jpg")
+    apple_empanadas=models.Recipe(name_displayed="Apple Empanadas", food_name="apple_empanadas", ingredients=ingredients2_array, directions=directions2_array, picture="/static/appleempanadas.png")
 
 
     apple_empanadas.put()
@@ -95,25 +95,25 @@ def get_recipes_directions ():
 
     apple_tart.put()
 
-     ingredients6_array=["1 pound frozen raw shrimp", "3 tablespoons achiote oil orolive oil", "1 large onion, chopped", "4 cloves garlic, chopped", "1 tablespoon aji amarillo chili pepper paste",
-     "1 teaspoon cumin", "1 package Sazon Goya with azafron (saffron)", "1 teaspoon salt",
-     "2 tomatoes, chopped", "3 cups rice", "1/2 cup white wine", "2 cups frozen green peas (optional)", "Salt and pepper, to taste", "2 tablespoons minced cilantro", "Juice of 1 lime"]
+    ingredients6_array=["1 pound frozen raw shrimp", "3 tablespoons achiote oil orolive oil", "1 large onion, chopped", "4 cloves garlic, chopped", "1 tablespoon aji amarillo chili pepper paste",
+    "1 teaspoon cumin", "1 package Sazon Goya with azafron (saffron)", "1 teaspoon salt",
+    "2 tomatoes, chopped", "3 cups rice", "1/2 cup white wine", "2 cups frozen green peas (optional)", "Salt and pepper, to taste", "2 tablespoons minced cilantro", "Juice of 1 lime"]
 
-     directions6_array=["Bring a pot of salted water to a boil. Add the shrimp and cook for 2 minutes, until they just turn pink.", "Remove the shrimp from the water with a slotted spoon and place shrimp in a bowl of ice water.", "Put the oil in a skillet over medium heat.",
-     "Add the chopped onion and garlic and cook until translucent and fragrant.", "Add the aji amarillo paste, cumin, Sazon Goya, salt and tomatoes to the onions and garlic.", "Continue cooking for several minutes more, until the onions are soft and golden.",
-     "Add the rice and white wine and cook until the liquid is dissolved, stirring frequently.", "Add 2 to 3 cups of the shrimp cooking water to the rice.", "Cover and simmer over low heat until the rice has absorbed the water and is fully cooked, about 15 minutes. Add more liquid if needed.",
-     "Just before the rice is done, add frozen peas if desired.", "Taste the mixture and season with salt and pepper as desired.", "Remove from the heat and add the cooked shrimp.", "Garnish with minced cilantro and lime juice.]
+    directions6_array=["Bring a pot of salted water to a boil. Add the shrimp and cook for 2 minutes, until they just turn pink.", "Remove the shrimp from the water with a slotted spoon and place shrimp in a bowl of ice water.", "Put the oil in a skillet over medium heat.",
+    "Add the chopped onion and garlic and cook until translucent and fragrant.", "Add the aji amarillo paste, cumin, Sazon Goya, salt and tomatoes to the onions and garlic.", "Continue cooking for several minutes more, until the onions are soft and golden.",
+    "Add the rice and white wine and cook until the liquid is dissolved, stirring frequently.", "Add 2 to 3 cups of the shrimp cooking water to the rice.", "Cover and simmer over low heat until the rice has absorbed the water and is fully cooked, about 15 minutes. Add more liquid if needed.",
+    "Just before the rice is done, add frozen peas if desired.", "Taste the mixture and season with salt and pepper as desired.", "Remove from the heat and add the cooked shrimp.", "Garnish with minced cilantro and lime juice."]
 
-     shrimp_paella=models.Recipe(name_displayed="Peruvian Shrimp Paella", food_name="shrimp_paella", ingredients=ingredients6_array, directions=directions6_array, picture="/static/shrimppaella.png")
+    shrimp_paella=models.Recipe(name_displayed="Peruvian Shrimp Paella", food_name="shrimp_paella", ingredients=ingredients6_array, directions=directions6_array, picture="/static/shrimppaella.png")
 
-     ingredients7_array=["24 jumbo raw shrimp (about 2 pounds), peeled, deveined, and tails removed", "6 to 7 strips of bacon", "1 cup of Louisiana Hot Sauce (not Tabasco sauce)""]
+    ingredients7_array=["24 jumbo raw shrimp (about 2 pounds), peeled, deveined, and tails removed", "6 to 7 strips of bacon", "1 cup of Louisiana Hot Sauce (not Tabasco sauce)"]
 
-     direction7_array=["Preheat the oven to 400 degrees F.", "Peel and devein the shrimp, remove the tails (if desired)", "Line a baking sheet with parchment paper and arrange bacon on the sheet. Bake the bacon until half-cooked (about 6 minutes). Remove from oven and let the bacon cool and slice each piece in half and then half the bacon pieces again.",
-     "Wrap each bacon slice tightly around the center of each shrimp and secure with a toothpick.", "Arrange the shrimp back on baking sheet and bake until the bacon is cooked through and crispy, approximately 6 minutes. The shrimp will have also turned pink.", "Once cooked, transfer the shrimp to a large bowl and gently toss with the Louisiana Hot Sauce until each piece is well coated."]
+    direction7_array=["Preheat the oven to 400 degrees F.", "Peel and devein the shrimp, remove the tails (if desired)", "Line a baking sheet with parchment paper and arrange bacon on the sheet. Bake the bacon until half-cooked (about 6 minutes). Remove from oven and let the bacon cool and slice each piece in half and then half the bacon pieces again.",
+    "Wrap each bacon slice tightly around the center of each shrimp and secure with a toothpick.", "Arrange the shrimp back on baking sheet and bake until the bacon is cooked through and crispy, approximately 6 minutes. The shrimp will have also turned pink.", "Once cooked, transfer the shrimp to a large bowl and gently toss with the Louisiana Hot Sauce until each piece is well coated."]
 
-     buffalo_shrimp=models.Recipe(name_displayed="Bacon Wrapped Buffalo Shrimp", food_name="buffalo_shrimp", ingredients=ingredients7_array, directions=direction7_array, picture="/static/buffalo_shrimp.png")
+    buffalo_shrimp=models.Recipe(name_displayed="Bacon Wrapped Buffalo Shrimp", food_name="buffalo_shrimp", ingredients=ingredients7_array, directions=direction7_array, picture="/static/buffalo_shrimp.png")
 
-     
+
 
 
 # def get_link_url (url):
