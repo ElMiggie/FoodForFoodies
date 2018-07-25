@@ -95,8 +95,12 @@ class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
         food = models.Nutrition
 ####Apple
-        apple_info = food(name_of_food="apple", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25 )
-        apples_info = food(name_of_food="apples", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25 )
+        apple_info = food(name_of_food="apple", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
+        protein= 0, vitaminA= 10, vitaminC= 8, calcium= 20, iron= 45 )
+
+        apples_info = food(name_of_food="apples", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
+        protein= 0, vitaminA= 10, vitaminC= 8, calcium= 20, iron= 45 )
+##########Inputing the new nutrition facts
         apple_pie_info = food(name_of_food="apple pie", food_name = "Apple Pie", calories = 230, fats = 10, sodium = 170, carbs = 33 )
         apple_empanadas_info = food(name_of_food="apple empanadas", food_name = "Apple Empanadas", calories = 230, fats =7, sodium = 200, carbs = 40 )
         danish_apple_cake_info = food(name_of_food="danish apple cake", food_name = "Danish Apple Cake", calories = 380, fats = 15, sodium = 262, carbs = 58 )
