@@ -75,13 +75,13 @@ class RecipeHandler (webapp2.RequestHandler):
         recipestuff=models.Recipe.query().filter(models.Recipe.food_name=="apple_pie").fetch()
         recipeimage=recipestuff[0]
         recipes=jinja_current_dir.get_template("templates/results.html")
-        html=recipes.render({
-        "imagesource": recipeimage.picture
-        #"search-input":self.request.get()
-        "recipes":recipestuff,
-        "directions_array": recipestuff
-        })
-        self.response.write(html)
+        # html=recipes.render({
+        # "imagesource": recipeimage.picture
+        # #"search-input":self.request.get()
+        # "recipes":recipestuff,
+        # "directions_array": recipestuff
+        # })
+        # self.response.write(html)
 
 class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):

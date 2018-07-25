@@ -92,13 +92,14 @@
 }
 
 #randomImage {
-  height: 450px;
-  width: 675px;
+  height: 550px;
+  width: 650px;
   margin-left: 7%;
-  margin-top: -60%;
+  margin-top: -47%;
   margin-bottom: 7%;
   align-items: center;
-
+  border-radius: 1200px;
+  border: 5px solid black;
 }
 
 
