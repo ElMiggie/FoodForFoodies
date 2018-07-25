@@ -73,21 +73,11 @@ class RecipeHandler (webapp2.RequestHandler):
     def get (self):
         # nameofrecipe=self.request.get(recipe1Name)
         # recipe_name=models.Food.query().filter(models.Food.)
-        self.request.url
-        if self.request.url=="/recipes/firstrecipe":
-                namefood=apple_pie
-        if self.request.url=="/recipes/secondrecipe":
-                namefood=apple_empanadas
-        if self.request.url=="/recipes/thirdrecipe":
-                namefood="danish_apple_pie"
-        if self.request.url=="/recipes/fourthrecipe":
-                namefood="apple_slaw"
-        if self.request.url=="/recipes/fifthrecipe":
-                namefood="apple_tart"
-        recipestuff=models.Recipe.query().filter(models.Recipe.food_name=="apple_slaw").fetch()
+        nameoffood=recipes.get_link_url(self.request.url)
+        recipestuff=models.Recipe.query().filter(models.Recipe.food_name==nameoffood).fetch()
         recipeinfo=recipestuff[0]
-        recipes=jinja_current_dir.get_template("templates/results.html")
-        html=recipes.render({
+        recipestemplate=jinja_current_dir.get_template("templates/results.html")
+        html=recipestemplate.render({
         "recipename": recipeinfo.name_displayed,
         # BELOW IS THE LINE FOR THE RECIPEINFO THE CORRECT VERSION
         # "recipename": recipeinfo.name_displayed,
