@@ -8,16 +8,16 @@
 }
 
 #randomImage {
-  width: 650px;
-  height: 550px;
-  margin-top: -10%;
-  margin-left: 5%;
+  width: 750px;
+  height: 650px;
+  margin-top: -1%;
+  margin-left: 45%;
   margin-bottom: 20%;
 
 }
 
 #generic_title {
-  font-size: 80px;
+  font-size: 90px;
   margin-left: 7%;
   text-decoration: underline;
   margin-top: 1%;
@@ -26,7 +26,7 @@
 }
 
 #food_title {
-  font-size: 65px;
+  font-size: 80px;
   text-align: right;
   margin-top: -1%;
   margin-right: 19%;
@@ -53,13 +53,13 @@
   margin-left: 5%;
 }
 
-/* #nutritionBody {
+ #nutritionBody {
   background-color: #8ED2C9;
-} */
+}
 
 #recipe_link {
   text-align: center;
-  margin-top: 25%;
+  margin-top: -20%;
   font-size: 40px;
 }
 #linkColor {
@@ -82,7 +82,6 @@
   margin: 20px;
 }
 body {
-  font-size: small;
   line-height: 1.4;
 }
 p {
@@ -91,13 +90,16 @@ p {
 
 .performance-facts {
   border: 1px solid black;
-  margin: 20px;
+  margin-top: -1100px;
+  margin-left: 110px;
   float: left;
   width: 280px;
   padding: 0.5rem;
+  background-color: white;
   table {
     border-collapse: collapse;
   }
+
 }
 .performance-facts__title {
   font-weight: bold;
@@ -188,4 +190,9 @@ p {
 }
 .thin-end {
   border-bottom: 1px solid black;
+}
+
+#nurtrition_table {
+  background-color: white;
+  margin-top: -50%;
 }
