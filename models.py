@@ -35,7 +35,7 @@ class Recipe(ndb.Model):
 class Nutrition(ndb.Model):
     name_of_food = ndb.StringProperty(required=True)
     food_name = ndb.StringProperty(required=True)
-    calories = ndb.StringProperty(required=True)
-    fats = ndb.StringProperty(required=True)
-    carbs = ndb.StringProperty(required=True)
-    sodium = ndb.StringProperty(required=True)
+    calories = ndb.FloatProperty(required=True)
+    fats = ndb.FloatProperty(required=True)
+    carbs = ndb.FloatProperty(required=True)
+    sodium = ndb.FloatProperty(required=True)

@@ -9,7 +9,7 @@
 
 #randomImage {
   width: 650px;
-  height: 450px;
+  height: 550px;
   margin-top: -10%;
   margin-left: 5%;
   margin-bottom: 20%;
@@ -34,7 +34,7 @@
 }
 
 .listOfNutrition {
-  margin-top: -40%;
+  margin-top: -50%;
   font-size: 30px;
   margin-left: 60%;
   color: darkblue;
@@ -57,9 +57,17 @@
 
 #recipe_link {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 25%;
   font-size: 40px;
 }
-#linkColor {  
+#linkColor {
   color: darkblue;
+}
+
+#red{
+  color: red;
+}
+
+#green{
+  color: green;
 }
