@@ -21,24 +21,26 @@
     <title>Food For Foodies: Recipes</title>
     <link rel="stylesheet" type="text/css" href="app-stylesheets/recipes.css">
   </head>
-    <body>
+    <body class="body">
+      <div id="top_section">
       <h1 id="website_name"> Food for Foodies </h1>
       <a href='/' >
         <img src="static/home.png" id='home_link'>
       </a>
-    <h1 id="generic_title">Recipes</h1>
+    </div>
+    <h1 id="generic_title">Recipes: {{ recipe_name }}</h1>
       <!-- <p> {{recipe_picture}}</p> -->
        <img id="website-img" src="/static/applepie.jpg" alt="Picture of Recipe"/>
-    <h4> Ingredients: </h4>
-      <ul>
+    <h4 id="ingredients_head"> Ingredients: </h4>
+      <ul id="ingredients">
         {% for recipe in recipes %}
            {% for ingredient in recipe.ingredients %}
           <li>  {{ingredient}} </li>
             {% endfor %}
           {% endfor %}
       </ul>
-      <h4> Directions: </h4>
-        <ol>
+      <h4 id="directions_head"> Directions: </h4>
+        <ol id="directions">
           {% for recipe in recipes %}
             {% for directions in recipe.directions %}
         <li> {{directions}}</li>

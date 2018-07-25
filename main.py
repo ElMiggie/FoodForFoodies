@@ -111,12 +111,7 @@ class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
         food = models.Nutrition
-        #"search_food" : self.request.get("search_food")
-        #apple_pie = food(food_name = "Apple Pie" , calories = "230", fats ="10g", sodium = "170mg", carbs = "33g" )
-        #food_query = model.Nutrition.query().order()
-        #person_query = model.Facebook.query().filter(model.Nutrition.name == 'raw_input()')
-        #all_food = person_query.fetch()
-        ###info = models.Nutrition.query().fetch()
+    
         requestedFood = (self.request.get("search_food")).lower()
         nutritionInfoList = food.query().filter(models.Nutrition.food_name== requestedFood).fetch()
         if nutritionInfoList:
