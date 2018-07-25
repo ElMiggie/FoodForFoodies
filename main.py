@@ -150,7 +150,6 @@ class InfoHandler(webapp2.RequestHandler):
         "pepperoni pizza":"static/pepperonipizza.png",
         }
 
-        foodImageList = {"apple":"static/apple.jpg", "apple pie":"static/applepie.jpg" , "peach":"static/peaches.jpg"}
         food = models.Nutrition
         requestedFood = (self.request.get("search_food")).lower()
         nutritionInfoList = food.query().filter(models.Nutrition.name_of_food == requestedFood).fetch()
