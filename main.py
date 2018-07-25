@@ -33,10 +33,10 @@ jinja_current_dir = jinja2.Environment(
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_current_dir.get_template("templates/welcome.html")
-        randomFoodList = ["Apples", "Peaches", "Pomegranates", "Zucchini"]
-        foodImages = ["static/apple.jpg", "static/peaches.jpg", "static/pomegranate.jpg", "static/zucchini.jpg"]
+        randomFoodList = ["Apples", "Peaches", "Pomegranates", "Zucchini", "Shrimp"]
+        foodImages = ["static/apple.jpg", "static/peaches.jpg", "static/pomegranate.jpg", "static/zucchini.jpg", "static/shrimp.jpg"]
 
-        foodIndex = random.randint(0, 3)
+        foodIndex = random.randint(0, 4)
         foods = models.Food.query().filter(models.Food.food_name==randomFoodList[foodIndex]).fetch()
         start_template = jinja_current_dir.get_template("templates/welcome.html")
         html = start_template.render({
@@ -56,12 +56,14 @@ class RandomFoodHandler(webapp2.RequestHandler):
         apples = models.Food(food_name = "Apples", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
         peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phrini")
         pomegranates = models.Food(food_name = "Pomegranates", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Indo-European Pomegranate Molasses", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
-        zucchini = models.Food(food_name = "Zucchini", recipe1Name = "1", recipe2Name = "2", recipe3Name = "3", recipe4Name = "4", recipe5Name = "5")
+        zucchini = models.Food(food_name = "Zucchini", recipe1Name = "Corn and Zucchini Salad", recipe2Name = "Zucchini Stuffed with Lady Peas", recipe3Name = "Stuffed Italian Zucchini Boats", recipe4Name = "Spicy Asian Zucchini", recipe5Name = "Moroccan Chickpea and Zucchini Salad")
+        shrimp = models.Food(food_name = "Shrimp", recipe1Name = "Peurvian Shrimp Paella", recipe2Name = "Bacon-Wrapped Buffalo Shrimp", recipe3Name = "Croatian Shrimp (Skampi Na Buzara)", recipe4Name = "Chinese Shrimp Stir Fry", recipe5Name = "Piri-Piri Style Shrimp")
 
         apples.put()
         peaches.put()
         pomegranates.put()
         zucchini.put()
+        shrimp.put()
 
 class RecipeEntryHandler(webapp2.RequestHandler):
     def get(self):
@@ -129,7 +131,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
-        foodImageList = {"apple":"static/apple.jpg", "apple pie":"static/applepie.jpeg" , "peach":"static/peaches.jpg"}
+        foodImageList = {"apple":"static/apple.jpg", "apple pie":"static/applepie.jpg" , "peach":"static/peaches.jpg"}
         food = models.Nutrition
         requestedFood = (self.request.get("search_food")).lower()
         nutritionInfoList = food.query().filter(models.Nutrition.name_of_food == requestedFood).fetch()
