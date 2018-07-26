@@ -134,7 +134,7 @@ def get_recipes_directions ():
     direction7_array=["Preheat the oven to 400 degrees F.", "Peel and devein the shrimp, remove the tails (if desired)", "Line a baking sheet with parchment paper and arrange bacon on the sheet. Bake the bacon until half-cooked (about 6 minutes). Remove from oven and let the bacon cool and slice each piece in half and then half the bacon pieces again.",
     "Wrap each bacon slice tightly around the center of each shrimp and secure with a toothpick.", "Arrange the shrimp back on baking sheet and bake until the bacon is cooked through and crispy, approximately 6 minutes. The shrimp will have also turned pink.", "Once cooked, transfer the shrimp to a large bowl and gently toss with the Louisiana Hot Sauce until each piece is well coated."]
 
-    buffalo_shrimp=models.Recipe(name_displayed="Bacon Wrapped Buffalo Shrimp", food_name="buffalo_shrimp", ingredients=ingredients7_array, directions=direction7_array, picture="/static/buffalo_shrimp.png")
+    buffalo_shrimp=models.Recipe(name_displayed="Bacon-Wrapped Buffalo Shrimp", food_name="buffalo_shrimp", ingredients=ingredients7_array, directions=direction7_array, picture="/static/buffalo_shrimp.png")
     buffalo_shrimp.put()
 
     ingredients8_array=["3 pounds head-on large shrimp or 1 1/2 pounds tail-on large shrimp", "1/2 cup olive oil", "1/4 cup fresh breadcrumbs", "1 tablespoon (or to taste) minced garlic",
@@ -280,7 +280,7 @@ def get_recipes_directions ():
     "Heat a medium skillet over medium high heat, add the olive oil. When the oil is hot, stir in the zucchini mixture and cook down until it's given up most of it's liquid, about 5-6 minutes. Add the chopped tomato and cook a few minutes more. Remove from heat and set aside.",
     "Tear the bread into small chunks and add them to the food processor along with the parsley. Pulse 3-5 times until coarsely chopped and transfer to the zucchini mixture. Add the mozzarella and basil, stir to combine.", "Lightly coat the interior of each zucchini half with a little olive oil."]
 
-    zucchini_boats=models.Recipe(name_displayed="Stuffed Italian Zucchini Boats", food_name="zucchini_boats", ingredients=ingredients23_array, directions=directions23_array, picture="/staitc/zucchini_boats.jpg")
+    zucchini_boats=models.Recipe(name_displayed="Stuffed Italian Zucchini Boats", food_name="zucchini_boats", ingredients=ingredients23_array, directions=directions23_array, picture="/static/zucchini_boats.jpg")
     zucchini_boats.put()
 
     ingredients24_array=["1 large or two small zucchini, cut into long strips", "Sesame oil", "1/4 cup soy sauce (Tamari if gluten free)", "2 Tablespoons sriracha sauce", "1 teaspoon honey", "2 Tablespoons sesame seeds" ,"2 green onions, sliced", "Salt"]
@@ -291,8 +291,8 @@ def get_recipes_directions ():
     asian_zucchini=models.Recipe(name_displayed="Spicy Asian Zucchini", food_name="asian_zucchini", ingredients=ingredients24_array, directions=directions24_array, picture="/static/asian_zucchini.jpeg")
     asian_zucchini.put()
 
-    ingredients25_array=["240g chickpeas (canned. if uncooked, soak overnight then boil until soft)", "240g zucchini(courgettes)" ,"1teaspoon garlic, minced" ,"10ml lemon juice", "1teaspoon vinegar, white wine" ,"2teaspoons olive oil", "2teaspoons honeys", "1teaspoon mixed spice, paste (actually calls for spice paste take note of recipe below)"
-    "1teaspoon cayenne pepper", "1teaspoon paprika", "1teaspoon garlic powder", "1teaspoonpeppercorn, ground", "1teaspoon cinnamon", "1teaspoon ground cumin", "1teaspoon fresh lemon juice", "5teaspoons olive oil"]
+    ingredients25_array=["240g chickpeas (canned. if uncooked, soak overnight then boil until soft)", "240g zucchini(courgettes)" ,"1teaspoon garlic, minced" ,"10ml lemon juice", "1teaspoon vinegar, white wine" ,"2teaspoons olive oil", "2teaspoons honeys", "1teaspoon mixed spice", "paste (actually calls for spice paste take note of recipe below)",
+    "1 teaspoon cayenne pepper", "1 teaspoon paprika", "1 teaspoon garlic powder", "1 teaspoon peppercorn, ground", "1 teaspoon cinnamon", "1 teaspoon ground cumin", "1 teaspoon fresh lemon juice", "5 teaspoons olive oil"]
 
     directions25_array=["Blanch and refresh zucchini. Combine all ingredients and toss together.", "Spice paste: Combine all the spice paste ingredients and fry to develop flavours. Refrigerate."]
 
