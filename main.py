@@ -146,8 +146,8 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 12, vitaminA= 10, vitaminC= 45, calcium= 6, iron= 10 )
         zucchini_stuffed_peas_info = food(name_of_food="zucchini stuffed peas", food_name = "Zucchini Stuffed Peas", calories = 150, fats = 4, sodium = 552, carbs = 25, servingSize = "350 g", calFromFat= 16, satFat= 1, transFat= 0, cholesterol= 3, dietaryFiber= 6, sugars= 0,
         protein= 6, vitaminA= 0, vitaminC= 0, calcium= 55, iron= 2 )
-        stuffed_italian_zucchini_boats_info = food(name_of_food="stuffed italian zucchini boats", food_name = "Stuffed Zucchini Boats", calories = 596, fats = 31, sodium = 1605, carbs = 45, servingSize = "1 boat", calFromFat= , satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
-        protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
+        # stuffed_italian_zucchini_boats_info = food(name_of_food="stuffed italian zucchini boats", food_name = "Stuffed Zucchini Boats", calories = 596, fats = 31, sodium = 1605, carbs = 45, servingSize = "1 boat", calFromFat= , satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        # protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         spicy_asian_zucchini_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         moroccan_chickenpea_salad_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
@@ -168,17 +168,17 @@ class InfoEntryHandler(webapp2.RequestHandler):
         cheese_pizza_info.put()
         pepperoni_pizza_info.put()
 ####shrimp
-        shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        peruvian_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        peruvian_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        bacon_wrapped_buffalo_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        bacon_wrapped_buffalo_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        croatian_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        croatian_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        chinese_shrimp_stir_fry_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        chinese_shrimp_stir_fry_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        piri_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        piri_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
 
         shrimp_info.put()
