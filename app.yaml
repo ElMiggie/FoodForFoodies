@@ -29,7 +29,7 @@ handlers:
 - url: /recipes/(.*)
   static_dir: app-stylesheets
 
-- url: /info/(.*)
+- url: /nutrition/(.*)
   static_dir: app-stylesheets
 
 - url: /info/(.*)

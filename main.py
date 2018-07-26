@@ -251,7 +251,7 @@ app = webapp2.WSGIApplication([
     ('/random', RandomFoodHandler),
     ('/nutrition', InfoHandler),
     ('/nutritionentry',InfoEntryHandler),
-    ('/info/(.*)', InfoHandlerforLinks),
+    # ('/nutrition/(.*)', InfoHandlerforLinks),
     #('/recipes', RecipeHandler),
     ('/recipeentry', RecipeEntryHandler),
     ("/recipes/(.*)", RecipeHandler)
