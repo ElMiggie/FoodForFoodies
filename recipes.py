@@ -45,7 +45,7 @@ def get_recipes_directions ():
      "2 tablespoons butter or margarine"]
 
     apple_pie= models.Recipe(name_displayed="All-American Apple Pie", food_name="apple_pie", ingredients=ingredients_array,
-    directions=directions_array, picture="/static/applepie.jpeg")
+    directions=directions_array, picture="/static/applepie.png")
 
     apple_pie.put()
 
@@ -91,7 +91,7 @@ def get_recipes_directions ():
     "Bake cake for one hour. Cover loosely with foil and bake another 15-20 minutes or until set in the center. Check to see if a toothpick inserted in the center comes out clean.",
     "Cool on a baking rack before removing outer ring. Serve warm or at room temperature with a dollop of whipped cream or ice cream. Enjoy!"]
 
-    danish_apple_pie=models.Recipe(name_displayed="Danish Apple Cake", food_name="danish_apple_pie", ingredients=ingredients3_array, directions=directions3_array, picture="/static/danishapplepie.jpg")
+    danish_apple_pie=models.Recipe(name_displayed="Danish Apple Cake", food_name="danish_apple_pie", ingredients=ingredients3_array, directions=directions3_array, picture="/static/danishapplecake.png")
 
     danish_apple_pie.put()
 
@@ -102,7 +102,7 @@ def get_recipes_directions ():
 
     directions4_array=["Combine dressing ingredients in a small bowl & set aside", "Toss with slaw ingredients", "Allow to sit for at least 1 hour before serving"]
 
-    apple_slaw=models.Recipe(name_displayed="Apple Slaw", food_name="apple_slaw", ingredients=ingredients4_array, directions=directions4_array, picture="/static/appleslaw.jpg")
+    apple_slaw=models.Recipe(name_displayed="Apple Slaw", food_name="apple_slaw", ingredients=ingredients4_array, directions=directions4_array, picture="/static/appleslaw.png")
 
     apple_slaw.put()
 
@@ -113,7 +113,7 @@ def get_recipes_directions ():
     "Mix slightly and add the milk little by little", "Add the batter in prepared baking dish and place the apples on top.",
     "Bake for 30-40 minutes until light brown.", "Heat the Tin Cream in a saucepan with the sugar until sugar is completely dissolved. Pour over warm apple tart."]
 
-    apple_tart=models.Recipe(name_displayed="South African Apple Tart", food_name="apple_tart", ingredients=ingredients5_array, directions=directions5_array, picture="/static/appletart.jpg")
+    apple_tart=models.Recipe(name_displayed="South African Apple Tart", food_name="apple_tart", ingredients=ingredients5_array, directions=directions5_array, picture="/static/southafricanappletart.png")
 
     apple_tart.put()
 
@@ -206,7 +206,7 @@ def get_recipes_directions ():
     "Take 1/4 cup of hot milk & mix it into the rice mixture.", "Add the rice paste to the boiling milk slowly & continue stirring making sure it does not burn at the bottom.", "Cook until milk has reduced & rice is cooked.", "Add sugar & cardamom to the mixture & continue cooking for about 4 minutes on low heat then turn off heat.", "Fold in the pureed peach mixture, do not stir only fold it in & dish into little desert bowls.",
     "Refrigerate for 2 hours & then garnish with sliced almond, peach slices & mint leaves.", "Discover more African and Caribbean recipes on Demand Africa"]
 
-    peach_phirini=models.Recipe(name_displayed="Peach Phirini", food_name="peach_phirini", ingredients=ingredients15_array, directions=directions15_array, picture="/static/")
+    peach_phirini=models.Recipe(name_displayed="Peach Phirini", food_name="peach_phirini", ingredients=ingredients15_array, directions=directions15_array, picture="/static/peach_phirini.jpg")
     peach_phirini.put()
 
     ingredients16_array=["3 cups of pomegranate juice, about 24 fl ounces or 710ml", "1/4 to 1/2 cup simple syrup, adjust based your preference or use your favorite sweetener", "Juice from 2 limes", "1 oz or 2 tbs of tequila, add more for an adult version or to use in the sparkling pomegranate cocktail or omit completely for a child friendly dessert", "Fresh pomegranate arils to garnish"]
@@ -224,7 +224,7 @@ def get_recipes_directions ():
     "In a small skillet, melt the butter over medium-high heat and cook, stirring, until browned and smells nutty, 4 to 5 minutes. Stir in the pomegranate seeds and juice and keep warm.", "Heat a grill over high. Season the scallops with salt and pepper and, working in batches, grill the scallops, turning once, until charred, about 3 minutes. Transfer the scallops to a plate and keep warm.",
     "To serve, pour the vinaigrette over the salad and toss to combine. Arrange the salad on a serving platter, top with scallops, and spoon the pomegranate sauce over the top."]
 
-    scallops_pomegranate=models.Recipe(name_displayed="Grilled Scallops with Pomegranate Brown Butter", food_name="scallops_pomegranate", ingredients=ingredients17_array, directions=directions17_array, picture="/static/scallops_pomegranate")
+    scallops_pomegranate=models.Recipe(name_displayed="Grilled Scallops with Pomegranate Brown Butter", food_name="scallops_pomegranate", ingredients=ingredients17_array, directions=directions17_array, picture="/static/scallops_pomegranate.jpg")
     scallops_pomegranate.put()
 
     ingredients18_array=["1/2 cup fresh or bottled pomegranate juice", "1/4 cup red-wine vinegar", "2 tablespoons honey", "1/2 cup extra-virgin olive oil or sunflower oil", "Salt and pepper", "Pomegranate seeds, for garnish", "1 tablespoon chopped chives, for garnish"]
