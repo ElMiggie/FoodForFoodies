@@ -99,7 +99,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
         food = models.Nutrition
 ####Apple
-        apple_info = food(name_of_food="apple", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 medium apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
+        apple_info = food(name_of_food="apple", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 medium apple", calFromFat= 0.0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
         protein= 0, vitaminA= 2, vitaminC= 14, calcium= 1, iron= 1 )
 
         apples_info = food(name_of_food="apples", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 medium apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
@@ -189,6 +189,18 @@ class InfoHandler(webapp2.RequestHandler):
             'food_fats': nutritionInfo.fats,
             'food_sodium' : nutritionInfo.sodium,
             'food_carbs': nutritionInfo.carbs,
+            'servingSize':nutritionInfo.servingSize,
+            'calFromFat':nutritionInfo.servingSize,
+            'satFat':nutritionInfo.satFat,
+            'transFat':nutritionInfo.transFat,
+            'cholesterol':nutritionInfo.cholesterol,
+            'dietaryFiber':nutritionInfo.dietaryFiber,
+            'sugars':nutritionInfo.sugars,
+            'protein':nutritionInfo.protein,
+            'vitaminA':nutritionInfo.vitaminA,
+            'vitaminC':nutritionInfo.vitaminC,
+            'calcium':nutritionInfo.calcium,
+            'iron':nutritionInfo.iron,
             'food_image_url': foodImageList[requestedFood]
             })
             self.response.write(html)
