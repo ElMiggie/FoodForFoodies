@@ -146,12 +146,12 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 12, vitaminA= 10, vitaminC= 45, calcium= 6, iron= 10 )
         zucchini_stuffed_peas_info = food(name_of_food="zucchini stuffed peas", food_name = "Zucchini Stuffed Peas", calories = 150, fats = 4, sodium = 552, carbs = 25, servingSize = "350 g", calFromFat= 16, satFat= 1, transFat= 0, cholesterol= 3, dietaryFiber= 6, sugars= 0,
         protein= 6, vitaminA= 0, vitaminC= 0, calcium= 55, iron= 2 )
-        stuffed_italian_zucchini_boats_info = food(name_of_food="stuffed italian zucchini boats", food_name = "Stuffed Zucchini Boats", calories = 596, fats = 31, sodium = 1605, carbs = 45, servingSize = "1 boat", calFromFat= , satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
-        protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        spicy_asian_zucchini_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
-        protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        moroccan_chickenpea_salad_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
-        protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
+        stuffed_italian_zucchini_boats_info = food(name_of_food="stuffed italian zucchini boats", food_name = "Stuffed Zucchini Boats", calories = 596, fats = 31, sodium = 1605, carbs = 45, servingSize = "1 boat", calFromFat= 122, satFat= 10, transFat= 0, cholesterol= 141, dietaryFiber= 6, sugars= 16,
+        protein= 35, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
+        spicy_asian_zucchini_info = food(name_of_food="spicy asian zucchini", food_name = "Spicy Asian Zucchini", calories = 250, fats = 10, sodium = 0, carbs = 3, servingSize = "1 cup", calFromFat= 40, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 0, sugars= 0,
+        protein= 19, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
+        moroccan_chickpea_salad_info = food(name_of_food="moroccan chickpea salad", food_name = "Moroccan Chickpea Salad", calories = 174, fats = 10, sodium = 278, carbs = 18, servingSize = "1/2 cup", calFromFat= 40, satFat= 1, transFat= 0, cholesterol= 0, dietaryFiber= 4, sugars= 0,
+        protein= 4, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
 
         zucchini_info.put()
         corn_and_zucchini_salad_info.put()
@@ -170,7 +170,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
 ####shrimp
         shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        peruvian_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        peruvian_shrimp_paella_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         bacon_wrapped_buffalo_shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
@@ -223,10 +223,21 @@ class InfoHandler(webapp2.RequestHandler):
         "postre chaja peach meringue cake":"static/postrepeachmeringuecake.png",
         "peach cobbler":"static/peachcobbler.png",
         "gooey peach dumpling":"static/gooeypeachdumpling.png",
-        "peach chicken":"static/peach chicken.png",
+        "peach chicken":"static/peach_chicken.png",
+        "peach phirni":"static/peach_phirini.jpg",
 ####Pizza
         "cheese pizza":"static/cheesepizza.png",
         "pepperoni pizza":"static/pepperonipizza.png",
+####zucchini
+        "zucchini":"static/zucchini.png",
+        "corn and zucchini salad":"static/corn_zucchini.jpg",
+        "zucchini stuffed peas":"static/zucchini_stuffed_peas.jpg",
+        "stuffed italian zucchini boats":"static/zucchini_boats.jpg",
+        "spicy asian zucchini":"static/asian_zucchini.jpeg",
+        "moroccan chickpea salad":"static/chickpea_zucchini.jpg",
+####shrimp
+        "shrimp":"static/shrimp.png",
+        "peruvian shrimp paella":"static/"
         }
 
         food = models.Nutrition
