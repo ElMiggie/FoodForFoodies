@@ -24,6 +24,12 @@ import models
 # 19=pomegranate and onions
 # 20=pomegranate and squash
 
+# 21=corn and zucchini Salad
+# 22=Zucchini lady peas
+# 23=italian zucchini Boats
+# 24=spicy asian zucchini
+# 25=chickpea and zucchini salad
+
 
 def get_recipes_directions ():
     directions_array=["Heat oven to 425F. Prepare Double-Crust Pastry",
@@ -246,17 +252,53 @@ def get_recipes_directions ():
     squash_pomegranate=models.Recipe(name_displayed="Squash and Pomegranate Salad", food_name="squash_pomegranate", ingredients=ingredients20_array, directions=directions20_array, picture="/static/squash_pomegranate.jpg")
     squash_pomegranate.put()
 
-# def get_link_url (url):
-#     if url=="/recipes/firstrecipe":
-#         namefood="apple_pie"
-#     elif url=="/recipes/secondrecipe":
-#         namefood="apple_empanadas"
-#     elif url=="/recipes/thirdrecipe":
-#         namefood="danish_apple_pie"
-#     elif url=="/recipes/fourthrecipe":
-#         namefood="apple_slaw"
-#     elif url=="/recipes/fifthrecipe":
-#         namefood="apple_tart"
-#     else:
-#         namefood="nothing"
-#     return namefood
+    ingredients21_array=["5 ears of corn, shucked", "1 tablespoon unsalted butter", "2 cups 1/4-inch diced zucchini", "1/2 teaspoon kosher salt", "1/4 cup finely chopped red onion",
+    "1 1/2 tablespoons apple cider vinegar", "2 tablespoons extra virgin olive oil", "1/2 teaspoon ground black pepper", "1/2 cup chopped fresh cilantro or basil"]
+
+    directions21_array=["Prepare a large bowl of ice water and set aside. Bring a large pot of water to a boil. Add the corn to the boiling water, cover, and remove from the heat. Let stand 3 to 5 minutes. Drain and immerse the corn in the ice water to stop the cooking. When cool, cut the kernels off the cob, cutting close to the cob. Place the kernels in a large bowl.",
+    "In a small skillet over medium heat, melt the butter. Add the zucchini and a pinch of salt and cook, stirring, until tender, about 4 minutes. Add the zucchini to the bowl with the corn.",
+    "Add to the bowl the red onion, vinegar, oil, remaining salt, and pepper. Just before serving, toss in the herbs. Taste, adjust the seasoning as needed, and serve cold or at room temperature."]
+
+    corn_zucchini=models.Recipe(name_displayed="Corn and Zucchini Salad", food_name="corn_zucchini", ingredients=ingredients21_array, directions=directions21_array, picture="/static/corn_zucchini.jpg")
+    corn_zucchini.put()
+
+    ingredients22_array=["8 medium-size zucchini", "2 tablespoons butter", "1/2 small yellow onion, chopped", "1 1/2 cups cooked Lady Peas", "4 ounces chopped fresh mushrooms","1 large tomato, chopped", "1/2 teaspoon minced garlic",
+    "2 teaspoons kosher salt, divided", "1 teaspoon black pepper, divided", "2 tablespoons chopped fresh basil", "1 cup (4 oz.) finely shredded Parmesan cheese, divided", "1/2 cup Japanese breadcrumbs"]
+
+    directions22_array=["Preheat oven to 375. Cut zucchini in half lengthwise; scoop pulp into a bowl, leaving 1/4-inch shells intact. Chop pulp. Microwave zucchini shells in a microwave-safe dish covered with plastic wrap at HIGH 4 minutes; transfer to a foil-lined jelly-roll pan", "Melt 2 Tbsp. butter in a skillet over medium heat; add chopped zucchini pulp, onion, next 4 ingredients, 1 1/2 tsp. salt, and 1/2 tsp. pepper, and cook 10 minutes. Stir in basil and 3/4 cup cheese",
+    "Divide mixture among shells. Stir together breadcrumbs, melted 1 Tbsp. butter, and remaining cheese, salt, and pepper; sprinkle over stuffed shells.", "Bake at 375 for 20 minutes or until thoroughly heated."]
+
+    zucchini_stuffed_peas=models.Recipe(name_displayed="Zucchini Stuffed with Lady Peas", food_name="zucchini_stuffed_peas", ingredients=ingredients22_array, directions=directions22_array, picture="/static/zucchini_stuffed_peas.jpg")
+    zucchini_stuffed_peas.put()
+
+    ingredients23_array=["4 smallish zucchini - about 4-5 inches long", "2 cloves garlic", "1 cup onions roughly chopped", "1/2 cup canadian bacon or ham finely minced" ,"1/2 teaspoon fennel seed" ,"pinch of red pepper flakes" ,"1/4 teaspoon salt", "4 tablespoons olive oil divided
+    "1/2 cup tomato finely chopped" ,"1 slice bread I used a dense piece of whole wheat" ,"2 tablespoons parsley chopped" ,"2 tablespoons basil chiffonade + extra for serving", "1/4 cup part-skim mozzarellashredded + extra for sprinkling" ,"sprinkle of parmesan cheese optional"]
+
+    directions23_array=["Preheat the oven to 375. Spray a baking sheet with cooking spray and set aside.", "Slice the zucchini lengthwise down the middle. Use a melon-baller to carefully scoop the flesh out of the zucchini and transfer to a mini prep food chopper. Pulse several times until the zucchini flesh is finely chopped. Transfer to a bowl.",
+    "Add the onions to the food processor and pulse until they are about the size consistency of the zucchini. Transfer to the same bowl as zucchini and add the minced canadian bacon.",
+    "Crush the fennel seed either by using a mortar and pestle, a spice grinder, or place a piece of plastic wrap on a cutting board, add the fennel to the center and fold the plastic wrap over it. Use a rolling pin or mallet to crush the fennel seed. Add crushed fennel to the zucchini mixture, along with red pepper flakes, black pepper and salt.",
+    "Heat a medium skillet over medium high heat, add the olive oil. When the oil is hot, stir in the zucchini mixture and cook down until it's given up most of it's liquid, about 5-6 minutes. Add the chopped tomato and cook a few minutes more. Remove from heat and set aside.",
+    "Tear the bread into small chunks and add them to the food processor along with the parsley. Pulse 3-5 times until coarsely chopped and transfer to the zucchini mixture. Add the mozzarella and basil, stir to combine.", "Lightly coat the interior of each zucchini half with a little olive oil."]
+
+    zucchini_boats=models.Recipe(name_displayed="Stuffed Italian Zucchini Boats", food_name="zucchini_boats", ingredients=ingredients23_array, directions=directions23_array, picture="/staitc/zucchini_boats.jpg")
+    zucchini_boats.put()
+
+    ingredients24_array=["1 large or two small zucchini, cut into long strips", "Sesame oil", "1/4 cup soy sauce (Tamari if gluten free)", "2 Tablespoons sriracha sauce", "1 teaspoon honey", "2 Tablespoons sesame seeds" ,"2 green onions, sliced", "Salt"]
+
+    directions24_array=["Heat 2 teaspoons of sesame oil in a large skillet over medium high heat. Add the zucchini (you may have to saute them in batches depending on the size of your skillet and how much zucchini you have). Sprinkle with salt and pepper and saute until browned and tender. Remove from heat. Repeat with remaining zucchini if needed.",
+    "Whisk together the soy sauce, sriracha, and honey. Pour the mixture over the sauteed zucchini (again, you may not need to use all the sauce depending on how much zucchini you have. Taste as you go). Toss to combine. To serve, sprinkle the zucchini with sesame seeds and green onions. This side dish is tasty warm or at room temperature."]
+
+    asian_zucchini=models.Recipe(name_displayed="Spicy Asian Zucchini", food_name="asian_zucchini", ingredients=ingredients24_array, directions=directions24_array, picture="/static/asian_zucchini.jpeg")
+    asian_zucchini.put()
+
+    ingredients25_array=["240g chickpeas (canned. if uncooked, soak overnight then boil until soft)", "240g zucchini(courgettes)" ,"1teaspoon garlic, minced" ,"10ml lemon juice", "1teaspoon vinegar, white wine" ,"2teaspoons olive oil", "2teaspoons honeys", "1teaspoon mixed spice, paste (actually calls for spice paste take note of recipe below)"
+    "1teaspoon cayenne pepper", "1teaspoon paprika", "1teaspoon garlic powder", "1teaspoonpeppercorn, ground", "1teaspoon cinnamon", "1teaspoon ground cumin", "1teaspoon fresh lemon juice", "5teaspoons olive oil"]
+
+    directions25_array=["Blanch and refresh zucchini. Combine all ingredients and toss together.", "Spice paste: Combine all the spice paste ingredients and fry to develop flavours. Refrigerate."]
+
+    chickpea_zucchini=models.Recipe(name_displayed="Moroccan Chickpea and Zucchini Salad", food_name="chickpea_zucchini", ingredients=ingredients25_array, directions=directions25_array, picture="/static/chickpea_zucchini.jpg")
+    chickpea_zucchini.put()
+
+
+
+    #
