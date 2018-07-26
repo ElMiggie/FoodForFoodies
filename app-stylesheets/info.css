@@ -29,7 +29,7 @@
   font-size: 80px;
   text-align: right;
   margin-top: -1%;
-  margin-right: 19%;
+  margin-right: 40%;
   font-style: italic;
   color: #D87002;
 }
@@ -83,6 +83,7 @@
 }
 body {
   line-height: 1.4;
+  font-size: large;
 }
 p {
   margin: 0;
@@ -90,10 +91,10 @@ p {
 
 .performance-facts {
   border: 1px solid black;
-  margin-top: -1100px;
-  margin-left: 110px;
+  margin-top: -1150px;
+  margin-left: 130px;
   float: left;
-  width: 280px;
+  width: 300px;
   padding: 0.5rem;
   background-color: white;
   table {
@@ -103,7 +104,7 @@ p {
 }
 .performance-facts__title {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0 0 0.25rem 0;
 }
 .performance-facts__header {
@@ -144,7 +145,7 @@ p {
   }
 }
 .small-info {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .performance-facts__table--small {
