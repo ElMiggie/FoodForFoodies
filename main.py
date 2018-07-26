@@ -92,6 +92,7 @@ class RecipeHandler (webapp2.RequestHandler):
         "imagesource": recipeinfo.picture,
         #"search-input":self.request.get()
         "recipes":recipestuff,
+        "search_food": recipe_name,
         "directions_array": recipestuff
         })
         self.response.write(html)
@@ -183,13 +184,50 @@ class InfoHandler(webapp2.RequestHandler):
         else:
             self.response.write("Not Found!")
 
-
-
+class InfoHandlerforLinks (webapp2.RequestHandler):
+    def get(self, search_food):
+        food_list_template = jinja_current_dir.get_template("templates/foodlist.html")
+        foodImageList = {
+        "apple":"static/apples.png",
+        "apples":"static/apples.png",
+        "apple pie":"static/applepie.png",
+        "apple empanadas":"static/appleempanadas.png",
+        "danish apple cake":"static/danishapplecake.png",
+        "apple slaw":"static/appleslaw.png",
+        "south africa apple tart": "static/southafricaappletart.png",
+####peach
+        "peach":"static/peaches.png",
+        "postre chaja peach meringue cake":"static/postrepeachmeringuecake.png",
+        "peach cobbler":"static/peachcobbler.png",
+        "gooey peach dumpling":"static/gooeypeachdumpling.png",
+        "peach chicken":"static/peach chicken.png",
+####Pizza
+        "cheese pizza":"static/cheesepizza.png",
+        "pepperoni pizza":"static/pepperonipizza.png",
+        }
+        food = models.Nutrition
+        requestedFood = search_food
+        nutritionInfoList = food.query().filter(models.Nutrition.food_name== requestedFood).fetch()
+        if nutritionInfoList:
+            nutritionInfo = nutritionInfoList[0]
+            html = food_list_template.render({
+            "search_food": nutritionInfo.food_name,
+            'food_name': nutritionInfo.food_name,
+            'food_calories': nutritionInfo.calories,
+            'food_fats': nutritionInfo.fats,
+            'food_sodium' : nutritionInfo.sodium,
+            'food_carbs': nutritionInfo.carbs,
+            'food_image_url': foodImageList[requestedFood]
+            })
+            self.response.write(html)
+        else:
+            self.response.write("Not Found!")
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/random', RandomFoodHandler),
     ('/nutrition', InfoHandler),
     ('/nutritionentry',InfoEntryHandler),
+    ('/info/(.*)', InfoHandlerforLinks)
     #('/recipes', RecipeHandler),
     ('/recipeentry', RecipeEntryHandler),
     ("/recipes/(.*)", RecipeHandler)
