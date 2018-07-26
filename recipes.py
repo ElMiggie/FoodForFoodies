@@ -205,7 +205,7 @@ def get_recipes_directions ():
     pomegranate_granita.put()
 
     ingredients17_array=["5 tbsp. olive oil", "5 tbsp. hazelnut oil", "2 tbsp. tarragon vinegar or champagne vinegar", "1 tsp. Dijon mustard", "Kosher salt and freshly ground black pepper", "3 heads red endive (about 8 oz.)", "3 heads yellow endive (about 8 oz.)", "1 cup loosely-packed flat-leaf parsley leaves",
-    "1 tbsp. finely chopped tarragon", "2 sticks unsalted butter", "1 cup pomegranate seeds", "3 tbsp. pomegranate juice", "1 1⁄2 lbs. scallops (about 16)"]
+    "1 tbsp. finely chopped tarragon", "2 sticks unsalted butter", "1 cup pomegranate seeds", "3 tbsp. pomegranate juice", "1 1/2 lbs. scallops (about 16)"]
 
     directions17_array=["In a small bowl, whisk the hazelnut and olive oils with the vinegar and Dijon mustard, and season the vinaigrette with salt and pepper.", "Meanwhile, thinly slice 2 heads of each red and yellow endive and place in a large bowl along with the parsley and tarragon and season with salt and pepper. Separate the leaves of the remaining red and yellow endives, halve crosswise, and add to the bowl.",
     "In a small skillet, melt the butter over medium-high heat and cook, stirring, until browned and smells nutty, 4 to 5 minutes. Stir in the pomegranate seeds and juice and keep warm.", "Heat a grill over high. Season the scallops with salt and pepper and, working in batches, grill the scallops, turning once, until charred, about 3 minutes. Transfer the scallops to a plate and keep warm.",
