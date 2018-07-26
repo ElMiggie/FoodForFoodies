@@ -189,17 +189,17 @@ class InfoEntryHandler(webapp2.RequestHandler):
         chinese_shrimp_stir_fry_info.put()
         piri_shrimp_info.put()
 ####pomegranate
-        pomegranate_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        pomegranate_info = food(name_of_food="pomegranate", food_name = "Pomegranate", calories = 72, fats = 1, sodium = 3, carbs = 16, servingSize = "1/2 cup", calFromFat= 4, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 3,
+        protein= 1.5, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 1 )
+        pomegranate_granita_info = food(name_of_food="pomegranate granita", food_name = "Pomegranate Granate", calories = 135, fats = 1, sodium = 5, carbs = 16, servingSize = "1 cup", calFromFat= 4, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 3,
+        protein= 3, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 1 )
+        grilled_scallops_info = food(name_of_food="grilled pomegranate and scallops", food_name = "Grilled Pomegranate and Scallops", calories = 256, fats = 18, sodium = 374, carbs = 20, servingSize = "3 g", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 60, dietaryFiber= 3, sugars= 8,
+        protein= 15, vitaminA= 7, vitaminC= 3, calcium= 6, iron= 1 )
+        pomegranate_vinaigrette_info = food(name_of_food="pomegranate vinaigrette", food_name = "Pomegranate Vinaigrette", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        pomegranate_granita_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        pomegranate_onion_info = food(name_of_food="pomogrante onion", food_name = "Pomegranate Onion", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        grilled_scallops_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
-        protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        pomegranate_vinaigrette_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
-        protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        pomegranate_onion_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
-        protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        squash_pomegranate_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        squash_pomegranate_info = food(name_of_food="squash pomogrante", food_name = "Squash Pomegranate", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
 
         pomegranate_info.put()
