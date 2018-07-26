@@ -154,12 +154,6 @@ def get_recipes_directions ():
     ingredients11_array=["4 egg whites", "1/2teaspoon cream of tartar", "1cup sugar", "1pinch salt", "1/2teaspoon vanilla", "1 Sponge cake recipe, baked in two 9-inch cake pans", "6 or 7 peaches",
     "1cup sugar", "1cup water", "1teaspoon vanilla", "1pinch salt"]
 
-    directions11_array=["Preheat oven to 200F.", "Prepare the meringue: Beat the egg whites and cream of tartar until stiff peaks start to form. Gradually add the sugar and continue to beat until peaks are very stiff and sugar is dissolved. Beat in the vanilla and a pinch of salt.",
-
-    "Bake meringue pieces for at least and hour and a half, until they are dry and completely crispy. Keep meringues in an airtight container or closed oven until ready to use.", "Prepare sponge cake recipe or angel food cake in two 9 inch cake pans and bake. Cool completely in pans, then remove carefully.",
-    "Peel and slice peaches, and place sliced peaches in a stainer over a bowl. Toss peach slices with 1-2 tablespoons of sugar. Let peaches rest for about 20 minutes, reserving the peach juice that drains into the bowl.", "Bring 1 cup water, 1 cup sugar, and reserved peach juice to a boil, and simmer until sugar is dissolved. Remove from heat and let cool. Stir in vanilla, pinch of salt, and optional rum or vodka, if desired.",
-    "Stir 2 tablespoons sugar into the whipping cream and whip until medium stiff peaks form. Stir vanilla into the whipped cream, and refrigerate until ready to assemble cake.", "To assemble cake: Flip sponge cakes upside down and brush each cake generously with the peach syrup, soaking the cakes."]
-
     peach_meringuecake=models.Recipe(name_displayed="Postre Chaja Peach Meringue Cake", food_name="peach_meringuecake", ingredients=ingredients11_array, directions=directions11_array, picture="/static/peach_meringuecake.jpg")
     peach_meringuecake.put()
 
