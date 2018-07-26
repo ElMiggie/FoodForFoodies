@@ -136,7 +136,7 @@ def get_recipes_directions ():
 
     directions8_array=["3 pounds head-on large shrimp or 1 1/2 pounds tail-on large shrimp", "1/2 cup olive oil", "1/4 cup fresh breadcrumbs", "1 tablespoon (or to taste) minced garlic", "1/4 cup finely chopped parsley", "1 (14-ounce) can undrained peeled tomatoes, broken up", "1 teaspoon Vegeta seasoning", "2 cups dry white wine", "Salt and pepper to taste"]
 
-    croatian_shrimp=models.Recipe(name_displayed="Croatian Shrimp (Skampi Na Buzara)", food_name="croatian_shrimp", ingredients=ingrediants8_array, directions=directions8_array, picture="/static/croatian_shrimp.jpg")
+    croatian_shrimp=models.Recipe(name_displayed="Croatian Shrimp (Skampi Na Buzara)", food_name="croatian_shrimp", ingredients=ingredients8_array, directions=directions8_array, picture="/static/croatian_shrimp.jpg")
     croatian_shrimp.put()
 
     ingredients9_array=["2 tablespoons oyster sauce", "2 tablespoon soy sauce", "2 tablespoons fresh cilantro minced (optional)", "2 teaspoons cornstarch", "1 pound shrimp peeled and deveined (tails left intact optional)", "2 tablespoons cooking oil divided", "3 green onion chopped (white and light green parts)",
@@ -160,6 +160,13 @@ def get_recipes_directions ():
     ingredients11_array=["4 egg whites", "1/2teaspoon cream of tartar", "1cup sugar", "1pinch salt", "1/2teaspoon vanilla", "1 Sponge cake recipe, baked in two 9-inch cake pans", "6 or 7 peaches",
     "1cup sugar", "1cup water", "1teaspoon vanilla", "1pinch salt"]
 
+    directions11_array=["Preheat oven to 200F.", "Prepare the meringue: Beat the egg whites and cream of tartar until stiff peaks start to form. Gradually add the sugar and continue to beat until peaks are very stiff and sugar is dissolved. Beat in the vanilla and a pinch of salt.",
+    "Bake meringue pieces for at least and hour and a half, until they are dry and completely crispy. Keep meringues in an airtight container or closed oven until ready to use.", "Prepare sponge cake recipe or angel food cake in two 9 inch cake pans and bake. Cool completely in pans, then remove carefully.",
+    "Peel and slice peaches, and place sliced peaches in a stainer over a bowl. Toss peach slices with 1-2 tablespoons of sugar. Let peaches rest for about 20 minutes, reserving the peach juice that drains into the bowl.", "Bring 1 cup water, 1 cup sugar, and reserved peach juice to a boil, and simmer until sugar is dissolved. Remove from heat and let cool. Stir in vanilla, pinch of salt, and optional rum or vodka, if desired.",
+    "Stir 2 tablespoons sugar into the whipping cream and whip until medium stiff peaks form. Stir vanilla into the whipped cream, and refrigerate until ready to assemble cake.", "To assemble cake: Flip sponge cakes upside down and brush each cake generously with the peach syrup, soaking the cakes.",
+    "Place one cake layer right side up on a serving platter. Spread some whipped cream over the cake, then crumble some of the meringue pieces and sprinkle the crumbled meringue (about 1/2 cup) over the whipped cream. Add a generous layer of peach slices (reserving some to decorate the top of the cake), then top with the second cake layer.",
+    "Spread whipped cream around the sides and top of cake. Press meringue kisses or meringue crumbs into side of cake, and decorate top of cake with peach slices, more whipped cream, and/or more pieces of meringue."]
+
     peach_meringuecake=models.Recipe(name_displayed="Postre Chaja Peach Meringue Cake", food_name="peach_meringuecake", ingredients=ingredients11_array, directions=directions11_array, picture="/static/peach_meringuecake.jpg")
     peach_meringuecake.put()
 
@@ -167,7 +174,7 @@ def get_recipes_directions ():
 
     directions12_array=["Melt butter in a 9 x 13 inch pan.", "Mix together flour, sugar, baking powder & salt.", "Stir in milk & egg.", "Pour evenly over melted butter.", "Combine peaches, sugar & spices and spread over batter-DO NOT STIR!", "Bake 35-45 minutes at 350F until batter comes to the top and is golden brown."]
 
-    peach_cobbler=models.Recipe(name_displayed="Peach Cobbler", food_name="peach_cobbler", ingredients=inngredients12_array, directions=directions12_array, picture="/static/peach_cobbler.png")
+    peach_cobbler=models.Recipe(name_displayed="Peach Cobbler", food_name="peach_cobbler", ingredients=ingredients12_array, directions=directions12_array, picture="/static/peach_cobbler.png")
     peach_cobbler.put()
 
     ingredients13_array=["10 peaches, pitted, pealed, and cut into quarters", "1 lb. cottage cheese", "1/2 C. butter", "4 eggs, slightly beaten", "2 T. farina", "1/2 C. flour"]
