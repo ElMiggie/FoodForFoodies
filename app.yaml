@@ -26,6 +26,12 @@ handlers:
 - url: /app-stylesheets
   static_dir: app-stylesheets
 
+- url: /recipes/(.*)
+  static_dir: app-stylesheets
+
+- url: /info/(.*)
+  static_dir: app-stylesheets
+
 - url: /static
   static_dir: static
 
