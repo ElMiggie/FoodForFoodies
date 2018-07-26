@@ -58,7 +58,7 @@ class MainHandler(webapp2.RequestHandler):
 class RandomFoodHandler(webapp2.RequestHandler):
     def get(self):
         apples = models.Food(food_name = "Apples", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
-        peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phrini")
+        peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phirini")
         pomegranates = models.Food(food_name = "Pomegranates", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Pomegranate Vinaigette Salad Dressing", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
         zucchini = models.Food(food_name = "Zucchini", recipe1Name = "Corn and Zucchini Salad", recipe2Name = "Zucchini Stuffed with Lady Peas", recipe3Name = "Stuffed Italian Zucchini Boats", recipe4Name = "Spicy Asian Zucchini", recipe5Name = "Moroccan Chickpea and Zucchini Salad")
         shrimp = models.Food(food_name = "Shrimp", recipe1Name = "Peurvian Shrimp Paella", recipe2Name = "Bacon-Wrapped Buffalo Shrimp", recipe3Name = "Croatian Shrimp (Skampi Na Buzara)", recipe4Name = "Chinese Shrimp Stir Fry", recipe5Name = "Piri-Piri Style Shrimp")
@@ -79,7 +79,11 @@ class RecipeHandler (webapp2.RequestHandler):
         # recipe_name=models.Food.query().filter(models.Food.)
         # nameoffood=recipes.get_link_url(self.request.url)
         recipestuff=models.Recipe.query().filter(models.Recipe.name_displayed==recipe_name).fetch()
-        recipeinfo=recipestuff[0]
+        if recipestuff:
+            recipeinfo=recipestuff[0]
+        else:
+            self.response.write('%s Not Found' % recipe_name)
+            return
         recipestemplate=jinja_current_dir.get_template("templates/results.html")
         html=recipestemplate.render({
         "recipename": recipeinfo.name_displayed,

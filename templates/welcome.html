@@ -25,7 +25,7 @@
     <div id="title">
       <h1 class="websiteName"> Food for </h1>
       <h1 class="websiteName"> Foodies</h1>
-
+      <h3 class="additional"> An Web App to find your favortie foods and explore new ones!<h3>
     </div>
 
     <div class="search_bar">
@@ -33,7 +33,7 @@
       Search for your favorite foods here:<br>
       <div class="container">
       <input type="text" name="search_food" id="bar">
-      <input type="image" src="static/MagnifyingGlass.png" alt="Search" id="MagnifyingGlass" width="90" height="75">
+      <input type="image" src="static/MagnifyingGlass.png" alt="Search" id="MagnifyingGlass" width="90" height="80">
     </div>
     </form>
     </div>
@@ -42,15 +42,15 @@
       <p class="randomsection">{{ food_name }} Around the World:</p>
 
         <p id="SouthAmerica" class="randrecipes">South America: </p>
-          <div id="recipeNames"><a href = "{{ goto1 }}">{{ recipe1Name }} </a></div>
+          <div id="recipeNames"><a href = "/recipes/{{ recipe1Name }}">{{ recipe1Name }} </a></div>
         <p id="NorthAmerica" class="randrecipes"> North America: </p>
-          <div id="recipeNames"><a href = '{{goto2}}'>{{ recipe2Name }} </a></div>
+          <div id="recipeNames"><a href = "/recipes/{{ recipe2Name }}">{{ recipe2Name }} </a></div>
         <p id="Europe" class="randrecipes">Europe: </p>
-          <div id="recipeNames"><a href = '{{goto3}}'>{{ recipe3Name }} </a></div>
+          <div id="recipeNames"><a href ="/recipes/{{ recipe3Name }}" >{{ recipe3Name }} </a></div>
         <p id="Asia" class="randrecipes">Asia: </p>
-          <div id="recipeNames"><a href = '{{goto4}}'>{{ recipe4Name }} </a></div>
+          <div id="recipeNames"><a href = "/recipes/{{ recipe4Name }}">{{ recipe4Name }} </a></div>
         <p id="Africa" class="randrecipes">Africa: </p>
-          <div id="recipeNames"><a href = '{{goto5}}'>{{ recipe5Name }} </a></div>
+          <div id="recipeNames"><a href = "/recipes/{{ recipe5Name }}">{{ recipe5Name }} </a></div>
         <img id="randomImage" src={{ food_image_url }} alt={{ food_name }}>
 
     </div>
