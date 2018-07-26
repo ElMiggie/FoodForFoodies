@@ -144,7 +144,7 @@ def get_recipes_directions ():
 
     ingredients10_array=["3 medium serrano chiles", "4 medium garlic cloves", "1 tablespoon smoked paprika", "1/4 cup freshly squeezed lime juice", "1 tablespoon red wine vinegar", "1/2 cup olive oil", "1 1/2 pounds uncooked, deveined, and peeled shrimp, tails left on", "kosher salt", "1/3 cup roughly chopped fresh cilantro leaves", "Lime wedges", "Cooked white or brown rice"]
 
-    directions10_array=["Heat oven to 500°F and arrange rack in upper third. Place chiles on a baking sheet and roast until blackened and soft, about 10 to 15 minutes. (Alternatively roast them in a dry cast iron skillet over medium heat.) Set chiles aside to cool briefly then trim off stems, cut in half lengthwise, and remove the white ribs and seeds.",
+    directions10_array=["Heat oven to 500F and arrange rack in upper third. Place chiles on a baking sheet and roast until blackened and soft, about 10 to 15 minutes. (Alternatively roast them in a dry cast iron skillet over medium heat.) Set chiles aside to cool briefly then trim off stems, cut in half lengthwise, and remove the white ribs and seeds.",
     "Combine trimmed chiles, garlic, paprika, lime juice, and vinegar in a blender or mini food processor and blend until smooth and combined, about 1 minute. Add olive oil and blend until thoroughly incorporated and marinade thickens slightly. Combine marinade and shrimp in a medium nonreactive bowl and toss to coat. Let marinate 20 minutes to 24 hours in the refrigerator.",
     "Heat a large cast iron skillet over medium-high heat. When heated, add the shrimp and marinated and cook until the shrimp are pink. Season well with salt, toss shrimp with cilantro, and serve with lime wedges over rice."]
 
@@ -155,17 +155,17 @@ def get_recipes_directions ():
     "1cup sugar", "1cup water", "1teaspoon vanilla", "1pinch salt"]
 
     directions11_array=["Preheat oven to 200F.", "Prepare the meringue: Beat the egg whites and cream of tartar until stiff peaks start to form. Gradually add the sugar and continue to beat until peaks are very stiff and sugar is dissolved. Beat in the vanilla and a pinch of salt.",
-    "Cover a baking sheet with parchment paper. Use a pastry bag (or a ziplock bag with one corner cut off) to pipe small dollops of meringue onto the parchment, a little bit smaller than Hershey’s kisses. Or pipe the meringue in strips which can be crumbled once they are cooked and used to decorate the outside of the cake.",
+
     "Bake meringue pieces for at least and hour and a half, until they are dry and completely crispy. Keep meringues in an airtight container or closed oven until ready to use.", "Prepare sponge cake recipe or angel food cake in two 9 inch cake pans and bake. Cool completely in pans, then remove carefully.",
     "Peel and slice peaches, and place sliced peaches in a stainer over a bowl. Toss peach slices with 1-2 tablespoons of sugar. Let peaches rest for about 20 minutes, reserving the peach juice that drains into the bowl.", "Bring 1 cup water, 1 cup sugar, and reserved peach juice to a boil, and simmer until sugar is dissolved. Remove from heat and let cool. Stir in vanilla, pinch of salt, and optional rum or vodka, if desired.",
-    "Stir 2 tablespoons sugar into the whipping cream and whip until medium stiff peaks form. Stir vanilla into the whipped cream, and refrigerate until ready to assemble cake.", "To assemble cake: Flip sponge cakes upside down and brush each cake generously with the peach syrup, soaking the cakes.""]
+    "Stir 2 tablespoons sugar into the whipping cream and whip until medium stiff peaks form. Stir vanilla into the whipped cream, and refrigerate until ready to assemble cake.", "To assemble cake: Flip sponge cakes upside down and brush each cake generously with the peach syrup, soaking the cakes."]
 
     peach_meringuecake=models.Recipe(name_displayed="Postre Chaja Peach Meringue Cake", food_name="peach_meringuecake", ingredients=ingredients11_array, directions=directions11_array, picture="/static/peach_meringuecake.jpg")
     peach_meringuecake.put()
 
-    ingredients12_array=["1⁄2cup melted butter", "1cup flour", "1cup sugar", "2teaspoons baking powder", "1⁄4teaspoon salt", "2⁄3cup room temperature milk", "1room temperature egg", "1(28 ounce) cansliced peaches, drained", "1cup sugar", "1teaspoon cinnamon", "1⁄2teaspoon nutmeg"]
+    ingredients12_array=["1/2cup melted butter", "1cup flour", "1cup sugar", "2teaspoons baking powder", "1/4teaspoon salt", "2/3cup room temperature milk", "1room temperature egg", "1(28 ounce) cansliced peaches, drained", "1cup sugar", "1teaspoon cinnamon", "1/2teaspoon nutmeg"]
 
-    directions12_array=["Melt butter in a 9 x 13 inch pan.", "Mix together flour, sugar, baking powder & salt.", "Stir in milk & egg.", "Pour evenly over melted butter.", "Combine peaches, sugar & spices and spread over batter-DO NOT STIR!", "Bake 35-45 minutes at 350°F until batter comes to the top and is golden brown."]
+    directions12_array=["Melt butter in a 9 x 13 inch pan.", "Mix together flour, sugar, baking powder & salt.", "Stir in milk & egg.", "Pour evenly over melted butter.", "Combine peaches, sugar & spices and spread over batter-DO NOT STIR!", "Bake 35-45 minutes at 350F until batter comes to the top and is golden brown."]
 
     peach_cobbler=models.Recipe(name_displayed="Peach Cobbler", food_name="peach_cobbler", ingredients=inngredients12_array, directions=directions12_array, picture="/static/peach_cobbler.png")
     peach_cobbler.put()
@@ -195,7 +195,7 @@ def get_recipes_directions ():
 
     peach_phirini=models.Recipe(name_displayed="Peach Phirini", food_name="peach_phirini", ingredients=ingredients15_array, directions=directions15_array, picture="/static/")
     peach_phirini.put()
-    
+
 
 # def get_link_url (url):
 #     if url=="/recipes/firstrecipe":
