@@ -174,7 +174,7 @@ def get_recipes_directions ():
 
     directions13_array=["In a large bowl, beat together the cheese and butter until well blended. Add in the eggs, farina and flour and mix until a dough forms. Cut off ping-pong sized pieces of dough and pat to round, 1/4 inch thick pieces. Place a piece of peach in the center of the dough, then seal the edges around the fruit, into a ball.", "Bring a large pot of water to boil. Gently place each dumpling into the water, cover the pot and cook for 10 minutes, or until the dumplings rise to the top.", "Drain, and sprinkle with bread crumbs, melted butter, or chopped nuts"]
 
-    peach_dumplings=models.Recipe(name_displayed="Gooey Peach Dumplings", food_name="peach_dumplings", ingredients=ingredients13_array, directions=directions13_array, picture="/static/peach_dumplings.png"
+    peach_dumplings=models.Recipe(name_displayed="Gooey Peach Dumplings", food_name="peach_dumplings", ingredients=ingredients13_array, directions=directions13_array, picture="/static/peach_dumplings.png")
     peach_dumplings.put()
 
     ingredients14_array=["1 tablespoon canola oil", "4 skinless, boneless chicken breasts, about 1 1/4 pounds", "1/2 teaspoon salt", "1/4 teaspoon pepper", "2 tablespoons brown sugar", "2 tablespoons low-sodium soy sauce", "2 tablespoons rice vinegar",
@@ -185,7 +185,7 @@ def get_recipes_directions ():
     "In the meantime, toast the almonds in a dry skillet over a medium-high heat stirring frequently, until golden brown and fragrant, about 2 minutes.", "Serve the chicken topped with the sauce and sprinkled with the toasted almonds."]
 
     peach_chicken=models.Recipe(name_displayed="Peach Chicken", food_name="peach_chicken", ingredients=ingredients14_array, directions=directions14_array, picture="/static/peach_chicken.jpeg")
-    peach_chickn.put()
+    peach_chicken.put()
 
     ingredients15_array=["1/4 cup rice", "3 cup of milk", "3/4 cup sugar", "1 tin of KOO peach slices", "1/2 tsp corn flour", "1/2 teaspoon cardamom powder"]
 
