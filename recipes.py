@@ -160,18 +160,12 @@ def get_recipes_directions ():
     ingredients11_array=["4 egg whites", "1/2teaspoon cream of tartar", "1cup sugar", "1pinch salt", "1/2teaspoon vanilla", "1 Sponge cake recipe, baked in two 9-inch cake pans", "6 or 7 peaches",
     "1cup sugar", "1cup water", "1teaspoon vanilla", "1pinch salt"]
 
-    directions11_array=["Preheat oven to 200F.", "Prepare the meringue: Beat the egg whites and cream of tartar until stiff peaks start to form. Gradually add the sugar and continue to beat until peaks are very stiff and sugar is dissolved. Beat in the vanilla and a pinch of salt.",
-    "Cover a baking sheet with parchment paper. Use a pastry bag (or a ziplock bag with one corner cut off) to pipe small dollops of meringue onto the parchment, a little bit smaller than Hershey’s kisses. Or pipe the meringue in strips which can be crumbled once they are cooked and used to decorate the outside of the cake.",
-    "Bake meringue pieces for at least and hour and a half, until they are dry and completely crispy. Keep meringues in an airtight container or closed oven until ready to use.", "Prepare sponge cake recipe or angel food cake in two 9 inch cake pans and bake. Cool completely in pans, then remove carefully.",
-    "Peel and slice peaches, and place sliced peaches in a stainer over a bowl. Toss peach slices with 1-2 tablespoons of sugar. Let peaches rest for about 20 minutes, reserving the peach juice that drains into the bowl.", "Bring 1 cup water, 1 cup sugar, and reserved peach juice to a boil, and simmer until sugar is dissolved. Remove from heat and let cool. Stir in vanilla, pinch of salt, and optional rum or vodka, if desired.",
-    "Stir 2 tablespoons sugar into the whipping cream and whip until medium stiff peaks form. Stir vanilla into the whipped cream, and refrigerate until ready to assemble cake.", "To assemble cake: Flip sponge cakes upside down and brush each cake generously with the peach syrup, soaking the cakes.""]
-
     peach_meringuecake=models.Recipe(name_displayed="Postre Chaja Peach Meringue Cake", food_name="peach_meringuecake", ingredients=ingredients11_array, directions=directions11_array, picture="/static/peach_meringuecake.jpg")
     peach_meringuecake.put()
 
-    ingredients12_array=["1⁄2cup melted butter", "1cup flour", "1cup sugar", "2teaspoons baking powder", "1⁄4teaspoon salt", "2⁄3cup room temperature milk", "1room temperature egg", "1(28 ounce) cansliced peaches, drained", "1cup sugar", "1teaspoon cinnamon", "1⁄2teaspoon nutmeg"]
+    ingredients12_array=["1/2 cup melted butter", "1 cup flour", "1 cup sugar", "2 teaspoons baking powder", "1/4teaspoon salt", "2/3cup room temperature milk", "1room temperature egg", "1(28 ounce) cansliced peaches, drained", "1cup sugar", "1teaspoon cinnamon", "1/2teaspoon nutmeg"]
 
-    directions12_array=["Melt butter in a 9 x 13 inch pan.", "Mix together flour, sugar, baking powder & salt.", "Stir in milk & egg.", "Pour evenly over melted butter.", "Combine peaches, sugar & spices and spread over batter-DO NOT STIR!", "Bake 35-45 minutes at 350°F until batter comes to the top and is golden brown."]
+    directions12_array=["Melt butter in a 9 x 13 inch pan.", "Mix together flour, sugar, baking powder & salt.", "Stir in milk & egg.", "Pour evenly over melted butter.", "Combine peaches, sugar & spices and spread over batter-DO NOT STIR!", "Bake 35-45 minutes at 350F until batter comes to the top and is golden brown."]
 
     peach_cobbler=models.Recipe(name_displayed="Peach Cobbler", food_name="peach_cobbler", ingredients=inngredients12_array, directions=directions12_array, picture="/static/peach_cobbler.png")
     peach_cobbler.put()
@@ -180,7 +174,7 @@ def get_recipes_directions ():
 
     directions13_array=["In a large bowl, beat together the cheese and butter until well blended. Add in the eggs, farina and flour and mix until a dough forms. Cut off ping-pong sized pieces of dough and pat to round, 1/4 inch thick pieces. Place a piece of peach in the center of the dough, then seal the edges around the fruit, into a ball.", "Bring a large pot of water to boil. Gently place each dumpling into the water, cover the pot and cook for 10 minutes, or until the dumplings rise to the top.", "Drain, and sprinkle with bread crumbs, melted butter, or chopped nuts"]
 
-    peach_dumplings=models.Recipe(name_displayed="Gooey Peach Dumplings", food_name="peach_dumplings", ingredients=ingredients13_array, directions=directions13_array, picture="/static/peach_dumplings.png"
+    peach_dumplings=models.Recipe(name_displayed="Gooey Peach Dumplings", food_name="peach_dumplings", ingredients=ingredients13_array, directions=directions13_array, picture="/static/peach_dumplings.png")
     peach_dumplings.put()
 
     ingredients14_array=["1 tablespoon canola oil", "4 skinless, boneless chicken breasts, about 1 1/4 pounds", "1/2 teaspoon salt", "1/4 teaspoon pepper", "2 tablespoons brown sugar", "2 tablespoons low-sodium soy sauce", "2 tablespoons rice vinegar",
@@ -191,7 +185,7 @@ def get_recipes_directions ():
     "In the meantime, toast the almonds in a dry skillet over a medium-high heat stirring frequently, until golden brown and fragrant, about 2 minutes.", "Serve the chicken topped with the sauce and sprinkled with the toasted almonds."]
 
     peach_chicken=models.Recipe(name_displayed="Peach Chicken", food_name="peach_chicken", ingredients=ingredients14_array, directions=directions14_array, picture="/static/peach_chicken.jpeg")
-    peach_chickn.put()
+    peach_chicken.put()
 
     ingredients15_array=["1/4 cup rice", "3 cup of milk", "3/4 cup sugar", "1 tin of KOO peach slices", "1/2 tsp corn flour", "1/2 teaspoon cardamom powder"]
 

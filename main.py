@@ -82,7 +82,7 @@ class RecipeHandler (webapp2.RequestHandler):
         if recipestuff:
             recipeinfo=recipestuff[0]
         else:
-            self.response.write('Not Found')
+            self.response.write('%s Not Found' % recipe_name)
             return
         recipestemplate=jinja_current_dir.get_template("templates/results.html")
         html=recipestemplate.render({
