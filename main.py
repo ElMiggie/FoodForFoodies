@@ -237,7 +237,18 @@ class InfoHandler(webapp2.RequestHandler):
         "moroccan chickpea salad":"static/chickpea_zucchini.jpg",
 ####shrimp
         "shrimp":"static/shrimp.png",
-        "peruvian shrimp paella":"static/"
+        "peruvian shrimp paella":"static/shrimppaella.png",
+        "bacon wrapped buffalo shrimp":"static/buffalo_shrimp.png",
+        "croatian shrimp":"static/croatian_shrimp.jpg",
+        "chinese shrimp stir fry":"static/shrimp_stirfry.jpg",
+        "piri shrimp":"static/piri_shrimp.png",
+####pomogranate
+        "pomogranate":"static/pomegranate.png",
+        "pomegranate granita":"static/pomegrante_granita.png",
+        "grilled pomegranate scallops":"static/scallops_pomegranate.jpg",
+        "pomogrante vinaigrette":"static/pomegranate_dressing.jpg",
+        "pomogranate onion":"static/pomegranate_onion.jpg",
+        "squash pomegranate":"static/squash_pomegranate.jpg",
         }
 
         food = models.Nutrition
