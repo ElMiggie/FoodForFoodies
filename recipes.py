@@ -5,11 +5,19 @@ import models
 # 3=danish apple Pie
 # 4=apple Tart
 # 5=apple Slaw
+
 # 6=shrimp Paella
 # 7=bacon buffalo shrimp
 # 8=croatian shrimp
 # 9=shrimp stir fry
 # 10=piri shrimp
+
+# 11=Postre Chaja Peach Meringue Cake
+# 12=Peach Cobbler
+# 13=peach dumpling
+# 14=Peach chicken
+# 15=peach phrini
+
 
 def get_recipes_directions ():
     directions_array=["Heat oven to 425F. Prepare Double-Crust Pastry",
@@ -132,6 +140,7 @@ def get_recipes_directions ():
     "2 tablespoons cooking oil divided", "3 green onion chopped (white and light green parts)", "2-3 garlic cloves finely minced", "2 teaspoons grated fresh ginger use microplane grater"]
 
     shrimp_stirfry=models.Recipe(name_displayed="Chinese Shrimp Stir Fry", food_name="shrimp_stirfry", ingredients=ingredients9_array, directions=directions9_array, picture="/static/shrimp_stirfry.jpg")
+    shrimp_stirfry.put()
 
     ingredients10_array=["3 medium serrano chiles", "4 medium garlic cloves", "1 tablespoon smoked paprika", "1/4 cup freshly squeezed lime juice", "1 tablespoon red wine vinegar", "1/2 cup olive oil", "1 1/2 pounds uncooked, deveined, and peeled shrimp, tails left on", "kosher salt", "1/3 cup roughly chopped fresh cilantro leaves", "Lime wedges", "Cooked white or brown rice"]
 
@@ -140,7 +149,53 @@ def get_recipes_directions ():
     "Heat a large cast iron skillet over medium-high heat. When heated, add the shrimp and marinated and cook until the shrimp are pink. Season well with salt, toss shrimp with cilantro, and serve with lime wedges over rice."]
 
     piri_shrimp=models.Recipe(name_displayed="Piri-Piri Style Shrimp", food_name="piri_shrimp", ingredients=ingredients10_array, directions=directions10_array, picture="/static/piri_shrimp.png")
+    piri_shrimp.put()
 
+    ingredients11_array=["4 egg whites", "1/2teaspoon cream of tartar", "1cup sugar", "1pinch salt", "1/2teaspoon vanilla", "1 Sponge cake recipe, baked in two 9-inch cake pans", "6 or 7 peaches",
+    "1cup sugar", "1cup water", "1teaspoon vanilla", "1pinch salt"]
+
+    directions11_array=["Preheat oven to 200F.", "Prepare the meringue: Beat the egg whites and cream of tartar until stiff peaks start to form. Gradually add the sugar and continue to beat until peaks are very stiff and sugar is dissolved. Beat in the vanilla and a pinch of salt.",
+    "Cover a baking sheet with parchment paper. Use a pastry bag (or a ziplock bag with one corner cut off) to pipe small dollops of meringue onto the parchment, a little bit smaller than Hershey’s kisses. Or pipe the meringue in strips which can be crumbled once they are cooked and used to decorate the outside of the cake.",
+    "Bake meringue pieces for at least and hour and a half, until they are dry and completely crispy. Keep meringues in an airtight container or closed oven until ready to use.", "Prepare sponge cake recipe or angel food cake in two 9 inch cake pans and bake. Cool completely in pans, then remove carefully.",
+    "Peel and slice peaches, and place sliced peaches in a stainer over a bowl. Toss peach slices with 1-2 tablespoons of sugar. Let peaches rest for about 20 minutes, reserving the peach juice that drains into the bowl.", "Bring 1 cup water, 1 cup sugar, and reserved peach juice to a boil, and simmer until sugar is dissolved. Remove from heat and let cool. Stir in vanilla, pinch of salt, and optional rum or vodka, if desired.",
+    "Stir 2 tablespoons sugar into the whipping cream and whip until medium stiff peaks form. Stir vanilla into the whipped cream, and refrigerate until ready to assemble cake.", "To assemble cake: Flip sponge cakes upside down and brush each cake generously with the peach syrup, soaking the cakes.""]
+
+    peach_meringuecake=models.Recipe(name_displayed="Postre Chaja Peach Meringue Cake", food_name="peach_meringuecake", ingredients=ingredients11_array, directions=directions11_array, picture="/static/peach_meringuecake.jpg")
+    peach_meringuecake.put()
+
+    ingredients12_array=["1⁄2cup melted butter", "1cup flour", "1cup sugar", "2teaspoons baking powder", "1⁄4teaspoon salt", "2⁄3cup room temperature milk", "1room temperature egg", "1(28 ounce) cansliced peaches, drained", "1cup sugar", "1teaspoon cinnamon", "1⁄2teaspoon nutmeg"]
+
+    directions12_array=["Melt butter in a 9 x 13 inch pan.", "Mix together flour, sugar, baking powder & salt.", "Stir in milk & egg.", "Pour evenly over melted butter.", "Combine peaches, sugar & spices and spread over batter-DO NOT STIR!", "Bake 35-45 minutes at 350°F until batter comes to the top and is golden brown."]
+
+    peach_cobbler=models.Recipe(name_displayed="Peach Cobbler", food_name="peach_cobbler", ingredients=inngredients12_array, directions=directions12_array, picture="/static/peach_cobbler.png")
+    peach_cobbler.put()
+
+    ingredients13_array=["10 peaches, pitted, pealed, and cut into quarters", "1 lb. cottage cheese", "1/2 C. butter", "4 eggs, slightly beaten", "2 T. farina", "1/2 C. flour"]
+
+    directions13_array=["In a large bowl, beat together the cheese and butter until well blended. Add in the eggs, farina and flour and mix until a dough forms. Cut off ping-pong sized pieces of dough and pat to round, 1/4 inch thick pieces. Place a piece of peach in the center of the dough, then seal the edges around the fruit, into a ball.", "Bring a large pot of water to boil. Gently place each dumpling into the water, cover the pot and cook for 10 minutes, or until the dumplings rise to the top.", "Drain, and sprinkle with bread crumbs, melted butter, or chopped nuts"]
+
+    peach_dumplings=models.Recipe(name_displayed="Gooey Peach Dumplings", food_name="peach_dumplings", ingredients=ingredients13_array, directions=directions13_array, picture="/static/peach_dumplings.png"
+    peach_dumplings.put()
+
+    ingredients14_array=["1 tablespoon canola oil", "4 skinless, boneless chicken breasts, about 1 1/4 pounds", "1/2 teaspoon salt", "1/4 teaspoon pepper", "2 tablespoons brown sugar", "2 tablespoons low-sodium soy sauce", "2 tablespoons rice vinegar",
+    "1/4 cup orange juice", "1 teaspoon freshly grated ginger", "2 cloves garlic, minced", "1/2 cup low-sodium chicken broth", "4 large firm-ripe peaches, cut into 1/4-inch slices, or 2 (10-ounce) packages frozen peaches, (about 4 1/2 cups)", "2 tablespoons sliced almonds"]
+
+    directions14_array=["Heat the oil in a large skillet over a medium-high heat. Season the chicken on both sides with salt and pepper, add to the skillet and cook until browned, about 2 minutes per side. Meanwhile combine the brown sugar, soy sauce, rice vinegar and orange juice in a small bowl and set aside. When the chicken is browned, transfer to a plate and set aside.",
+    "Add the ginger and garlic to the pan and cook, stirring, for 30 seconds. Add the chicken broth, the soy sauce mixture, and the peaches to the pan. Turn the heat up to high and cook, uncovered, for about 6 minutes, stirring occasionally until the sauce is nicely thickened and the peaches soften. Add the chicken back to the pan with the sauce, turn the heat down to moderate-low, cover and cook for about 5 minutes, or until chicken is cooked through.",
+    "In the meantime, toast the almonds in a dry skillet over a medium-high heat stirring frequently, until golden brown and fragrant, about 2 minutes.", "Serve the chicken topped with the sauce and sprinkled with the toasted almonds."]
+
+    peach_chicken=models.Recipe(name_displayed="Peach Chicken", food_name="peach_chicken", ingredients=ingredients14_array, directions=directions14_array, picture="/static/peach_chicken.jpeg")
+    peach_chickn.put()
+
+    ingredients15_array=["1/4 cup rice", "3 cup of milk", "3/4 cup sugar", "1 tin of KOO peach slices", "1/2 tsp corn flour", "1/2 teaspoon cardamom powder"]
+
+    directions15_array=["Wash & soak rice after wash for about 20 minutes", "Drain the water after the soak & blend the rice to fine texture adding milk as needed to make it smooth", "Drain the syrup from the canned peaches, keep a few slices aside for the garnish.", "Puree the remaining peaches with the corn flour in a blender & keep aside.", "Boil milk on medium heat for 8 minutes & let it reduce.",
+    "Take 1/4 cup of hot milk & mix it into the rice mixture.", "Add the rice paste to the boiling milk slowly & continue stirring making sure it does not burn at the bottom.", "Cook until milk has reduced & rice is cooked.", "Add sugar & cardamom to the mixture & continue cooking for about 4 minutes on low heat then turn off heat.", "Fold in the pureed peach mixture, do not stir only fold it in & dish into little desert bowls.",
+    "Refrigerate for 2 hours & then garnish with sliced almond, peach slices & mint leaves.", "Discover more African and Caribbean recipes on Demand Africa"]
+
+    peach_phirini=models.Recipe(name_displayed="Peach Phirini", food_name="peach_phirini", ingredients=ingredients15_array, directions=directions15_array, picture="/static/")
+    peach_phirini.put()
+    
 
 # def get_link_url (url):
 #     if url=="/recipes/firstrecipe":
