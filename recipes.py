@@ -271,7 +271,7 @@ def get_recipes_directions ():
     zucchini_stuffed_peas=models.Recipe(name_displayed="Zucchini Stuffed with Lady Peas", food_name="zucchini_stuffed_peas", ingredients=ingredients22_array, directions=directions22_array, picture="/static/zucchini_stuffed_peas.jpg")
     zucchini_stuffed_peas.put()
 
-    ingredients23_array=["4 smallish zucchini - about 4-5 inches long", "2 cloves garlic", "1 cup onions roughly chopped", "1/2 cup canadian bacon or ham finely minced" ,"1/2 teaspoon fennel seed" ,"pinch of red pepper flakes" ,"1/4 teaspoon salt", "4 tablespoons olive oil divided
+    ingredients23_array=["4 smallish zucchini - about 4-5 inches long", "2 cloves garlic", "1 cup onions roughly chopped", "1/2 cup canadian bacon or ham finely minced" ,"1/2 teaspoon fennel seed" ,"pinch of red pepper flakes" ,"1/4 teaspoon salt", "4 tablespoons olive oil divided"
     "1/2 cup tomato finely chopped" ,"1 slice bread I used a dense piece of whole wheat" ,"2 tablespoons parsley chopped" ,"2 tablespoons basil chiffonade + extra for serving", "1/4 cup part-skim mozzarellashredded + extra for sprinkling" ,"sprinkle of parmesan cheese optional"]
 
     directions23_array=["Preheat the oven to 375. Spray a baking sheet with cooking spray and set aside.", "Slice the zucchini lengthwise down the middle. Use a melon-baller to carefully scoop the flesh out of the zucchini and transfer to a mini prep food chopper. Pulse several times until the zucchini flesh is finely chopped. Transfer to a bowl.",

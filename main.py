@@ -184,7 +184,7 @@ class InfoHandler(webapp2.RequestHandler):
             html = food_list_template.render({
             "search_food": nutritionInfo.food_name,
             'food_name': nutritionInfo.food_name,
-            "recipe_food_name": nutritionInfo.name_of_food,
+            "recipe_food_name": nutritionInfo.food_name,
             'food_calories': nutritionInfo.calories,
             'food_fats': nutritionInfo.fats,
             'food_sodium' : nutritionInfo.sodium,
@@ -236,7 +236,7 @@ class InfoHandlerforLinks (webapp2.RequestHandler):
             html = food_list_template.render({
             "search_food": nutritionInfo.food_name,
             'food_name': nutritionInfo.food_name,
-            "recipe_food_name": nutritionInfo.name_of_food,
+            "recipe_food_name": nutritionInfo.food_name,
             'food_calories': nutritionInfo.calories,
             'food_fats': nutritionInfo.fats,
             'food_sodium' : nutritionInfo.sodium,
