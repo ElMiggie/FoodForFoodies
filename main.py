@@ -184,6 +184,7 @@ class InfoHandler(webapp2.RequestHandler):
             html = food_list_template.render({
             "search_food": nutritionInfo.food_name,
             'food_name': nutritionInfo.food_name,
+            "recipe_food_name": nutritionInfo.name_of_food,
             'food_calories': nutritionInfo.calories,
             'food_fats': nutritionInfo.fats,
             'food_sodium' : nutritionInfo.sodium,
@@ -223,11 +224,12 @@ class InfoHandlerforLinks (webapp2.RequestHandler):
             html = food_list_template.render({
             "search_food": nutritionInfo.food_name,
             'food_name': nutritionInfo.food_name,
+            "recipe_food_name": nutritionInfo.name_of_food,
             'food_calories': nutritionInfo.calories,
             'food_fats': nutritionInfo.fats,
             'food_sodium' : nutritionInfo.sodium,
             'food_carbs': nutritionInfo.carbs,
-            'food_image_url': foodImageList[requestedFood]
+            'food_image_url': foodImageList[nutritionInfo.name_of_food]
             })
             self.response.write(html)
         else:
@@ -237,7 +239,7 @@ app = webapp2.WSGIApplication([
     ('/random', RandomFoodHandler),
     ('/nutrition', InfoHandler),
     ('/nutritionentry',InfoEntryHandler),
-    ('/info/(.*)', InfoHandlerforLinks)
+    ('/info/(.*)', InfoHandlerforLinks),
     #('/recipes', RecipeHandler),
     ('/recipeentry', RecipeEntryHandler),
     ("/recipes/(.*)", RecipeHandler)
