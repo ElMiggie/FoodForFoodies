@@ -46,12 +46,7 @@ class MainHandler(webapp2.RequestHandler):
             'recipe3Name': foods[0].recipe3Name,
             'recipe4Name': foods[0].recipe4Name,
             'recipe5Name': foods[0].recipe5Name,
-            'food_image_url': foodImages[foodIndex],
-            # "goto1": foods[0].recipe1Name,
-            # "goto2": recipes/foods[0].recipe2Name,
-            # "goto3": recipes/foods[0].recipe3Name,
-            # "goto4": recipes/foods[0].recipe4Name,
-            # "goto5": recipes/foods[0].recipe5Name,
+            'food_image_url': foodImages[foodIndex]
         })
         self.response.write(html)
 
@@ -104,17 +99,21 @@ class InfoEntryHandler(webapp2.RequestHandler):
     def get(self):
         food = models.Nutrition
 ####Apple
-        apple_info = food(name_of_food="apple", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
-        protein= 0, vitaminA= 10, vitaminC= 8, calcium= 20, iron= 45 )
+        apple_info = food(name_of_food="apple", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 medium apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
+        protein= 0, vitaminA= 2, vitaminC= 14, calcium= 1, iron= 1 )
 
-        apples_info = food(name_of_food="apples", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
-        protein= 0, vitaminA= 10, vitaminC= 8, calcium= 20, iron= 45 )
-##########Inputing the new nutrition facts
-        apple_pie_info = food(name_of_food="apple pie", food_name = "Apple Pie", calories = 230, fats = 10, sodium = 170, carbs = 33 )
-        apple_empanadas_info = food(name_of_food="apple empanadas", food_name = "Apple Empanadas", calories = 230, fats =7, sodium = 200, carbs = 40 )
-        danish_apple_cake_info = food(name_of_food="danish apple cake", food_name = "Danish Apple Cake", calories = 380, fats = 15, sodium = 262, carbs = 58 )
-        apple_slaw_info = food(name_of_food="apple slaw", food_name = "Apple Slaw", calories = 125, fats = 0 , sodium = 0, carbs = 0 )
-        southAfrica_apple_tart_info = food(name_of_food="south african apple tart", food_name = "South African Apple Tart", calories = 332, fats = 20.5, sodium = 5.3, carbs = 39 )
+        apples_info = food(name_of_food="apples", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 medium apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
+        protein= 0, vitaminA= 2, vitaminC= 14, calcium= 1, iron= 1 )
+        apple_pie_info = food(name_of_food="apple pie", food_name = "Apple Pie", calories = 243, fats = 10, sodium = 111, carbs = 36.8, servingSize = "111 g", calFromFat= 90, satFat= 1.3, transFat= 0, cholesterol= 0, dietaryFiber= 5.1, sugars= 11.7,
+        protein= 4.6, vitaminA= 3, vitaminC= 8, calcium= 1, iron= 9 )
+        apple_empanadas_info = food(name_of_food="apple empanadas", food_name = "Apple Empanadas", calories = 280, fats =13, sodium = 260, carbs = 38, servingSize = " 1 empanada (85g)", calFromFat= 117, satFat= 3.5, transFat= 0, cholesterol= 5, dietaryFiber= 1, sugars= 15,
+        protein= 3, vitaminA= 0, vitaminC= 6, calcium= 4, iron= 8 )
+        danish_apple_cake_info = food(name_of_food="danish apple cake", food_name = "Danish Apple Cake", calories = 150, fats = 6, sodium = 190, carbs = 22, servingSize = "55 g", calFromFat= 24, satFat= 3, transFat= 0, cholesterol= 5, dietaryFiber= 1, sugars= 5,
+        protein= 3, vitaminA= 0, vitaminC= 0, calcium= 2, iron= 4 )
+        apple_slaw_info = food(name_of_food="apple slaw", food_name = "Apple Slaw", calories = 20, fats = 1, sodium = 12, carbs = 2, servingSize = "1 portion", calFromFat= 4, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 1, sugars= 1,
+        protein= 0, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
+        southAfrica_apple_tart_info = food(name_of_food="south african apple tart", food_name = "South African Apple Tart", calories = 300, fats = 16, sodium = 60, carbs = 56, servingSize = "1 tart", calFromFat= 64, satFat= 8, transFat= 0, cholesterol= 85, dietaryFiber= 2, sugars= 26,
+        protein= 6, vitaminA= 9, vitaminC= 4, calcium= 3, iron= 21 )
 
         apple_info.put()
         apple_pie_info.put()
@@ -123,11 +122,16 @@ class InfoEntryHandler(webapp2.RequestHandler):
         apple_slaw_info.put()
         southAfrica_apple_tart_info.put()
 ####peaches
-        peach_info = food(name_of_food="peach", food_name = "Peach", calories = 59, fats =0.4, sodium = 0, carbs = 14 )
-        postre_chaja_peach_meringue_cake_info = food(name_of_food="postre chaja peach meringue cake", food_name = "Postre Chaja Peach Meringue Cake", calories = 422, fats =28.3, sodium = 158.5, carbs = 38.9 )
-        peach_cobbler_info = food(name_of_food="peach cobbler", food_name = "Peach Cobbler", calories = 250, fats =10, sodium = 150, carbs = 38 )
-        gooey_peach_dumpling_info = food(name_of_food="gooey peach dumpling", food_name = "Gooey Peach Dumplings", calories = 154.7, fats =5.5, sodium = 313.7, carbs = 24.8 )
-        peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = 840 , fats = 29, sodium = 1280, carbs = 9 )
+        peach_info = food(name_of_food="peach", food_name = "Peach", calories = 60, fats =0.4, sodium = 0, carbs = 16.7, servingSize = "1 peach", calFromFat= 1.6, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 2.3, sugars= 13,
+        protein= 1.4, vitaminA= 7, vitaminC= 1, calcium= 1, iron= 1 )
+        postre_chaja_peach_meringue_cake_info = food(name_of_food="postre chaja peach meringue cake", food_name = "Postre Chaja Peach Meringue Cake", calories = 490, fats =30, sodium = 19, carbs = 47, servingSize = "100 gram", calFromFat= 120, satFat= 11, transFat= 0, cholesterol= 56, dietaryFiber= 4, sugars= 40,
+        protein= 6, vitaminA= 10, vitaminC= 2, calcium= 6, iron= 12 )
+        peach_cobbler_info = food(name_of_food="peach cobbler", food_name = "Peach Cobbler", calories = 250, fats =10, sodium = 150, carbs = 38, servingSize = "4 oz.", calFromFat= 40, satFat= 5, transFat= 0, cholesterol= 0, dietaryFiber= 1, sugars= 25,
+        protein= 2, vitaminA= 2, vitaminC= 6, calcium= 0, iron= 4 )
+        gooey_peach_dumpling_info = food(name_of_food="gooey peach dumpling", food_name = "Gooey Peach Dumplings", calories = 70, fats =3, sodium = 116, carbs = 12, servingSize = "1 cup", calFromFat= 12, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 0, sugars= 0,
+        protein= 1, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
+        peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = 144 , fats = 2, sodium = 275, carbs = 12, servingSize = "4 oz.", calFromFat= 8, satFat= 1, transFat= 0, cholesterol= 48, dietaryFiber= 1, sugars= 0,
+        protein= 18, vitaminA= 2, vitaminC= 3, calcium= 0, iron= 3 )
 
         peach_info.put()
         postre_chaja_peach_meringue_cake_info.put()
@@ -135,15 +139,21 @@ class InfoEntryHandler(webapp2.RequestHandler):
         gooey_peach_dumpling_info.put()
         peach_chicken_info.put()
 ####Zucchini
-        zucchini_info = food(name_of_food="zucchini", food_name = "Zucchini", calories = 33, fats = 0.6, sodium = 16, carbs = 6 )
+        zucchini_info = food(name_of_food="zucchini", food_name = "Zucchini", calories = 33, fats = 0.6, sodium = 0, carbs = 5, servingSize = "1 medium zucchini", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 2, sugars= 3,
+        protein= 2, vitaminA= 10, vitaminC= 56, calcium= 13, iron= 12 )
 
         zucchini_info.put()
 ####Pizza
-        cheese_pizza_info = food(name_of_food="cheese pizza", food_name = "Cheese Pizza", calories = 277, fats =10, sodium = 565, carbs = 36 )
-        pepperoni_pizza_info = food(name_of_food="pepperoni pizza", food_name = "Pepperoni Pizza ", calories = 549, fats =21, sodium = 1538, carbs = 64 )
+        cheese_pizza_info = food(name_of_food="cheese pizza", food_name = "Cheese Pizza", calories = 232, fats =10, sodium = 551, carbs = 33, servingSize = "1 slice", calFromFat= 40, satFat= 0, transFat= 0, cholesterol= 22, dietaryFiber= 2, sugars= 4,
+        protein= 12, vitaminA= 10, vitaminC= 8, calcium= 25, iron= 10 )
+        pepperoni_pizza_info = food(name_of_food="pepperoni pizza", food_name = "Pepperoni Pizza ", calories = 276, fats =17, sodium = 632, carbs = 32, servingSize = "1 slice", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        protein= 16, vitaminA= 6, vitaminC= 0, calcium= 26, iron= 12 )
 
         cheese_pizza_info.put()
         pepperoni_pizza_info.put()
+####shrimp
+        shrimp_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
 class InfoHandler(webapp2.RequestHandler):
     def get(self):
         food_list_template = jinja_current_dir.get_template("templates/foodlist.html")

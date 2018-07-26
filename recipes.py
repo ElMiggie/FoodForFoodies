@@ -18,6 +18,12 @@ import models
 # 14=Peach chicken
 # 15=peach phrini
 
+# 16=pomegranate Granita
+# 17=pomegranate and scallops
+# 18=pomegranate Dressing
+# 19=pomegranate and onions
+# 20=pomegranate and squash
+
 
 def get_recipes_directions ():
     directions_array=["Heat oven to 425F. Prepare Double-Crust Pastry",
@@ -157,7 +163,7 @@ def get_recipes_directions ():
     peach_meringuecake=models.Recipe(name_displayed="Postre Chaja Peach Meringue Cake", food_name="peach_meringuecake", ingredients=ingredients11_array, directions=directions11_array, picture="/static/peach_meringuecake.jpg")
     peach_meringuecake.put()
 
-    ingredients12_array=["1/2 cup melted butter", "1 cup flour", "1 cup sugar", "2 teaspoons baking powder", "1/4teaspoon salt", "2/3cup room temperature milk", "1room temperature egg", "1(28 ounce) cansliced peaches, drained", "1cup sugar", "1teaspoon cinnamon", "1/2teaspoon nutmeg"]
+    ingredients12_array=["1/2 cup melted butter", "1 cup flour", "1 cup sugar", "2 teaspoons baking powder", "1/4 teaspoon salt", "2/3 cup room temperature milk", "1 room temperature egg", "1(28 ounce) cansliced peaches, drained", "1 cup sugar", "1 teaspoon cinnamon", "1/2 teaspoon nutmeg"]
 
     directions12_array=["Melt butter in a 9 x 13 inch pan.", "Mix together flour, sugar, baking powder & salt.", "Stir in milk & egg.", "Pour evenly over melted butter.", "Combine peaches, sugar & spices and spread over batter-DO NOT STIR!", "Bake 35-45 minutes at 350F until batter comes to the top and is golden brown."]
 
@@ -190,6 +196,48 @@ def get_recipes_directions ():
     peach_phirini=models.Recipe(name_displayed="Peach Phirini", food_name="peach_phirini", ingredients=ingredients15_array, directions=directions15_array, picture="/static/")
     peach_phirini.put()
 
+    ingredients16_array=["3 cups of pomegranate juice, about 24 fl ounces or 710ml", "1/4 to 1/2 cup simple syrup, adjust based your preference or use your favorite sweetener", "Juice from 2 limes", "1 oz or 2 tbs of tequila, add more for an adult version or to use in the sparkling pomegranate cocktail or omit completely for a child friendly dessert", "Fresh pomegranate arils to garnish"]
+
+    directions16_array=["Mix the pomegranate juice, lime juice, simple syrup and tequila.", "Place the mix intro a freezer friendly container.", "Put it in freezer for about 1 hour, then remove it and use a fork to mix it up.", "Put it back in the freezer and repeat an hour later, it will start to get harder so you will need to use the fork to scrape it until it has that crystal granita texture. Repeat one more time.",
+    "Put it back in the freezer, before using it let it stand at room temperature for about 3-5 minutes and then use a fork to scratch it up before serving.", "Garnish with fresh pomegranate arils."]
+
+    pomegranate_granita=models.Recipe(name_displayed="Pomegranate Granita", food_name="pomegranate_granita", ingredients=ingredients16_array, directions=directions16_array, picture="/static/pomegranate_granita.png")
+    pomegranate_granita.put()
+
+    ingredients17_array=["5 tbsp. olive oil", "5 tbsp. hazelnut oil", "2 tbsp. tarragon vinegar or champagne vinegar", "1 tsp. Dijon mustard", "Kosher salt and freshly ground black pepper", "3 heads red endive (about 8 oz.)", "3 heads yellow endive (about 8 oz.)", "1 cup loosely-packed flat-leaf parsley leaves",
+    "1 tbsp. finely chopped tarragon", "2 sticks unsalted butter", "1 cup pomegranate seeds", "3 tbsp. pomegranate juice", "1 1⁄2 lbs. scallops (about 16)"]
+
+    directions17_array=["In a small bowl, whisk the hazelnut and olive oils with the vinegar and Dijon mustard, and season the vinaigrette with salt and pepper.", "Meanwhile, thinly slice 2 heads of each red and yellow endive and place in a large bowl along with the parsley and tarragon and season with salt and pepper. Separate the leaves of the remaining red and yellow endives, halve crosswise, and add to the bowl.",
+    "In a small skillet, melt the butter over medium-high heat and cook, stirring, until browned and smells nutty, 4 to 5 minutes. Stir in the pomegranate seeds and juice and keep warm.", "Heat a grill over high. Season the scallops with salt and pepper and, working in batches, grill the scallops, turning once, until charred, about 3 minutes. Transfer the scallops to a plate and keep warm.",
+    "To serve, pour the vinaigrette over the salad and toss to combine. Arrange the salad on a serving platter, top with scallops, and spoon the pomegranate sauce over the top."]
+
+    scallops_pomegranate=models.Recipe(name_displayed="Grilled Scallops with Pomegranate Brown Butter", food_name="scallops_pomegranate", ingredients=ingredients17_array, directions=directions17_array, picture="/static/scallops_pomegranate")
+    scallops_pomegranate.put()
+
+    ingredients18_array=["1/2 cup fresh or bottled pomegranate juice", "1/4 cup red-wine vinegar", "2 tablespoons honey", "1/2 cup extra-virgin olive oil or sunflower oil", "Salt and pepper", "Pomegranate seeds, for garnish", "1 tablespoon chopped chives, for garnish"]
+
+    directions18_array=["In a medium bowl, mix the pomegranate juice, vinegar, and honey, and let sit for 10 minutes.", "Whisk in the oil and adjust the seasonings.", "Mix in pomegranate seeds and chives, if using. Refrigerate until ready to serve. Stir thoroughly before using."]
+
+    pomegranate_dressing=models.Recipe(name_displayed="Pomegranate Vinaigrette Salad Dressing", food_name="pomegranate_dressing", ingredients=ingredients18_array, directions=directions18_array, picture="/static/pomegranate_dressing.jpg")
+    pomegranate_dressing.put()
+
+    ingredients19_array=["1 large red onion, thinly sliced", "1½ teaspoon sugar", "1 teaspoon ground sumac", "Kosher salt", "3 tablespoons olive oil" ,"1 tablespoon red wine vinegar", "1 teaspoon pomegranate molasses or ½ tsp. honey" ,"4 cups (lightly packed) fresh flat-leaf parsley leaves with tender stems", "1/4 cup pomegranate seeds"]
+
+    directions19_array=["Toss onion, sugar, and sumac in a medium bowl; season with salt and let sit 30 minutes. Add oil, vinegar, and pomegranate molasses and toss to combine; let sit 5 minutes.", "Just before serving, toss in parsley and pomegranate seeds; season with salt."]
+
+    pomegranate_onion=models.Recipe(name_displayed="Pomegranate and Onion Salad", food_name="pomegranate_onion", ingredients=ingredients19_array, directions=directions19_array, picture="/static/pomegranate_onion.jpg")
+    pomegranate_onion.put()
+
+    ingredients20_array=["5 cups peeled, cubed butternut squash and/or sweet potato (I used both)", "1 Tbsp coconut oil (melted)", "1 Tbsp coconut sugar", "1 pinch cayenne pepper (more to taste)", "1 healthy pinch sea salt", "1/2 tsp ground cinnamon", "2 Tbsp maple syrup (more depending or sweetness of squash/potato)", "1 cup raw peanuts"]
+
+    directions20_array=["Preheat oven to 375 degrees F (190 C). If using both sweet potato and butternut squash, spread on different bare baking sheets (as they require different baking times // use more baking sheets, as needed, if increasing batch size).", "To the squash and sweet potato add the coconut oil, sugar, cayenne, salt, cinnamon, and maple syrup and toss to combine.",
+    "Bake the squash for 15-20 minutes, and the sweet potato for 25-30 minutes or until both are fork tender, sweet, and golden brown. Toss occasionally to ensure even baking.",
+    "Add the pecans to a separate baking sheet and bake on a separate rack in the oven for 8 minutes. Then remove and add coconut oil, maple syrup, coconut sugar, cayenne, salt, and cinnamon. Use a spoon to carefully toss until well coated. Then return to the oven and bake for 5 minutes more, or until golden brown and fragrant. Set aside.",
+    "While the vegetables + pecans are roasting, make the pomegranate molasses (if using store bought, skip this step), by adding pomegranate juice to a small saucepan and bringing to a boil over medium high heat. Reduce heat to medium-low and continue simmering until the liquid has reduced into about 1/4 cup. Pour into a serving dish - it will continue to thicken once cooled." ,
+    "To serve, either place the squash and pecans on a serving dish and drizzle with pomegranate molasses OR add the arugula to a serving bowl/platter and drizzle with lemon juice and olive oil, salt and pepper. Toss gently to combine. Then add onion, squash and/or sweet potato, pecans, pomegranate arils, and pomegranate molasses. Enjoy immediately. Best when fresh."]
+
+    squash_pomegranate=models.Recipe(name_displayed="Squash and Pomegranate Salad", food_name="squash_pomegranate", ingredients=ingredients20_array, directions=directions20_array, picture="/static/squash_pomegranate.jpg")
+    squash_pomegranate.put()
 
 # def get_link_url (url):
 #     if url=="/recipes/firstrecipe":
