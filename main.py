@@ -161,12 +161,6 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 4, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
 
 
-        zucchini_info.put()
-        corn_and_zucchini_salad_info.put()
-        zucchini_stuffed_peas_info.put()
-        stuffed_italian_zucchini_boats_info.put()
-        spicy_asian_zucchini_info.put()
-        moroccan_chickenpea_salad_info.put()
 ####Pizza
         cheese_pizza_info = food(name_of_food="cheese pizza", food_name = "Cheese Pizza", calories = 232, fats =10, sodium = 551, carbs = 33, servingSize = "1 slice", calFromFat= 40, satFat= 0, transFat= 0, cholesterol= 22, dietaryFiber= 2, sugars= 4,
         protein= 12, vitaminA= 10, vitaminC= 8, calcium= 25, iron= 10 )
