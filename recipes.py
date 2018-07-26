@@ -44,7 +44,7 @@ def get_recipes_directions ():
     "1/2 teaspoon ground nutmeg", "1/8 teaspoon salt", "8 cups thinly sliced peeled tart apples (8 medium)",
      "2 tablespoons butter or margarine"]
 
-    apple_pie= models.Recipe(name_displayed="All-American Apple Pie", food_name="apple_pie", ingredients=ingredients_array,
+    apple_pie= models.Recipe(name_displayed="Apple Pie", food_name="apple_pie", ingredients=ingredients_array,
     directions=directions_array, picture="/static/applepie.png")
 
     apple_pie.put()
