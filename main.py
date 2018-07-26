@@ -217,7 +217,7 @@ class InfoHandlerforLinks (webapp2.RequestHandler):
         "apple empanadas":"static/appleempanadas.png",
         "danish apple cake":"static/danishapplecake.png",
         "apple slaw":"static/appleslaw.png",
-        "south africa apple tart": "static/southafricaappletart.png",
+        "south african apple tart": "static/southafricaappletart.png",
 ####peach
         "peach":"static/peaches.png",
         "postre chaja peach meringue cake":"static/postrepeachmeringuecake.png",
