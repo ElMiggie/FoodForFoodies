@@ -7,7 +7,9 @@ import models
 # 5=apple Slaw
 # 6=shrimp Paella
 # 7=bacon buffalo shrimp
-
+# 8=croatian shrimp
+# 9=shrimp stir fry
+# 10=piri shrimp
 
 def get_recipes_directions ():
     directions_array=["Heat oven to 425F. Prepare Double-Crust Pastry",
@@ -105,6 +107,7 @@ def get_recipes_directions ():
     "Just before the rice is done, add frozen peas if desired.", "Taste the mixture and season with salt and pepper as desired.", "Remove from the heat and add the cooked shrimp.", "Garnish with minced cilantro and lime juice."]
 
     shrimp_paella=models.Recipe(name_displayed="Peruvian Shrimp Paella", food_name="shrimp_paella", ingredients=ingredients6_array, directions=directions6_array, picture="/static/shrimppaella.png")
+    shrimp_paella.put()
 
     ingredients7_array=["24 jumbo raw shrimp (about 2 pounds), peeled, deveined, and tails removed", "6 to 7 strips of bacon", "1 cup of Louisiana Hot Sauce (not Tabasco sauce)"]
 
@@ -112,8 +115,31 @@ def get_recipes_directions ():
     "Wrap each bacon slice tightly around the center of each shrimp and secure with a toothpick.", "Arrange the shrimp back on baking sheet and bake until the bacon is cooked through and crispy, approximately 6 minutes. The shrimp will have also turned pink.", "Once cooked, transfer the shrimp to a large bowl and gently toss with the Louisiana Hot Sauce until each piece is well coated."]
 
     buffalo_shrimp=models.Recipe(name_displayed="Bacon Wrapped Buffalo Shrimp", food_name="buffalo_shrimp", ingredients=ingredients7_array, directions=direction7_array, picture="/static/buffalo_shrimp.png")
+    buffalo_shrimp.put()
 
+    ingredients8_array=["3 pounds head-on large shrimp or 1 1/2 pounds tail-on large shrimp", "1/2 cup olive oil", "1/4 cup fresh breadcrumbs", "1 tablespoon (or to taste) minced garlic",
+    "1/4 cup finely chopped parsley", "1 (14-ounce) can undrained peeled tomatoes, broken up", "1 teaspoon", "Vegeta seasoning (see Note, below)", "2 cups dry white wine", "Salt and pepper to taste"]
 
+    directions8_array=["3 pounds head-on large shrimp or 1 1/2 pounds tail-on large shrimp", "1/2 cup olive oil", "1/4 cup fresh breadcrumbs", "1 tablespoon (or to taste) minced garlic", "1/4 cup finely chopped parsley", "1 (14-ounce) can undrained peeled tomatoes, broken up", "1 teaspoon Vegeta seasoning", "2 cups dry white wine", "Salt and pepper to taste"]
+
+    croatian_shrimp=models.Recipe(name_displayed="Croatian Shrimp (Skampi Na Buzara)", food_name="croatian_shrimp", ingredients=ingrediants8_array, directions=directions8_array, picture="/static/croatian_shrimp.jpg")
+    croatian_shrimp.put()
+
+    ingredients9_array=["2 tablespoons oyster sauce", "2 tablespoon soy sauce", "2 tablespoons fresh cilantro minced (optional)", "2 teaspoons cornstarch", "1 pound shrimp peeled and deveined (tails left intact optional)", "2 tablespoons cooking oil divided", "3 green onion chopped (white and light green parts)",
+    "2-3 garlic cloves finely minced", "2 teaspoons grated fresh ginger use microplane grater",]
+
+    directions9_array=["2 tablespoons oyster sauce", "2 tablespoon soy sauce", "2 tablespoons fresh cilantro minced (optional)", "2 teaspoons cornstarch", "1 pound shrimp peeled and deveined (tails left intact optional)",
+    "2 tablespoons cooking oil divided", "3 green onion chopped (white and light green parts)", "2-3 garlic cloves finely minced", "2 teaspoons grated fresh ginger use microplane grater"]
+
+    shrimp_stirfry=models.Recipe(name_displayed="Chinese Shrimp Stir Fry", food_name="shrimp_stirfry", ingredients=ingredients9_array, directions=directions9_array, picture="/static/shrimp_stirfry.jpg")
+
+    ingredients10_array=["3 medium serrano chiles", "4 medium garlic cloves", "1 tablespoon smoked paprika", "1/4 cup freshly squeezed lime juice", "1 tablespoon red wine vinegar", "1/2 cup olive oil", "1 1/2 pounds uncooked, deveined, and peeled shrimp, tails left on", "kosher salt", "1/3 cup roughly chopped fresh cilantro leaves", "Lime wedges", "Cooked white or brown rice"]
+
+    directions10_array=["Heat oven to 500°F and arrange rack in upper third. Place chiles on a baking sheet and roast until blackened and soft, about 10 to 15 minutes. (Alternatively roast them in a dry cast iron skillet over medium heat.) Set chiles aside to cool briefly then trim off stems, cut in half lengthwise, and remove the white ribs and seeds.",
+    "Combine trimmed chiles, garlic, paprika, lime juice, and vinegar in a blender or mini food processor and blend until smooth and combined, about 1 minute. Add olive oil and blend until thoroughly incorporated and marinade thickens slightly. Combine marinade and shrimp in a medium nonreactive bowl and toss to coat. Let marinate 20 minutes to 24 hours in the refrigerator.",
+    "Heat a large cast iron skillet over medium-high heat. When heated, add the shrimp and marinated and cook until the shrimp are pink. Season well with salt, toss shrimp with cilantro, and serve with lime wedges over rice."]
+
+    piri_shrimp=models.Recipe(name_displayed="Piri-Piri Style Shrimp", food_name="piri_shrimp", ingredients=ingredients10_array, directions=directions10_array, picture="/static/piri_shrimp.png")
 
 
 # def get_link_url (url):

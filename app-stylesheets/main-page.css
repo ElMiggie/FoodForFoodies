@@ -21,6 +21,14 @@
   width: 90%;
   text-decoration: underline;
   margin: 2%;
+  margin-top: -.5%;
+}
+
+.additional {
+  color: white;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: -2%;
 }
 
 .randomsection {
@@ -43,7 +51,7 @@
   margin-top: 5%;
   border: solid thick black;
   margin-bottom: 5%;
-  margin-left: 7%;
+  margin-left: 11%;
 }
 
 .randrecipes {
