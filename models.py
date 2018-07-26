@@ -39,7 +39,7 @@ class Nutrition(ndb.Model):
     fats = ndb.FloatProperty(required=True)
     carbs = ndb.FloatProperty(required=True)
     sodium = ndb.FloatProperty(required=True)
-    servingSize = ndb.FloatProperty(required=True)
+    servingSize = ndb.StringProperty(required=True)
     calFromFat = ndb.FloatProperty(required=True)
     satFat = ndb.FloatProperty(required=True)
     transFat = ndb.FloatProperty(required=True)

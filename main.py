@@ -46,12 +46,7 @@ class MainHandler(webapp2.RequestHandler):
             'recipe3Name': foods[0].recipe3Name,
             'recipe4Name': foods[0].recipe4Name,
             'recipe5Name': foods[0].recipe5Name,
-            'food_image_url': foodImages[foodIndex],
-            "goto1": recipes/foods[0].recipe1Name,
-            "goto2": recipes/foods[0].recipe2Name,
-            "goto3": recipes/foods[0].recipe3Name,
-            "goto4": recipes/foods[0].recipe4Name,
-            "goto5": recipes/foods[0].recipe5Name,
+            'food_image_url': foodImages[foodIndex]
         })
         self.response.write(html)
 
@@ -108,7 +103,6 @@ class InfoEntryHandler(webapp2.RequestHandler):
 
         apples_info = food(name_of_food="apples", food_name = "Apple", calories = 95, fats = 0.2, sodium = 2, carbs = 25, servingSize = "1 medium apple", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 3, sugars= 8,
         protein= 0, vitaminA= 2, vitaminC= 14, calcium= 1, iron= 1 )
-##########Inputing the new nutrition facts
         apple_pie_info = food(name_of_food="apple pie", food_name = "Apple Pie", calories = 243, fats = 10, sodium = 111, carbs = 36.8, servingSize = "111 g", calFromFat= 90, satFat= 1.3, transFat= 0, cholesterol= 0, dietaryFiber= 5.1, sugars= 11.7,
         protein= 4.6, vitaminA= 3, vitaminC= 8, calcium= 1, iron= 9 )
         apple_empanadas_info = food(name_of_food="apple empanadas", food_name = "Apple Empanadas", calories = 280, fats =13, sodium = 260, carbs = 38, servingSize = " 1 empanada (85g)", calFromFat= 117, satFat= 3.5, transFat= 0, cholesterol= 5, dietaryFiber= 1, sugars= 15,
