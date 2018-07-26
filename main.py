@@ -56,7 +56,7 @@ class RandomFoodHandler(webapp2.RequestHandler):
         peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phirini")
         pomegranates = models.Food(food_name = "Pomegranates", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Pomegranate Vinaigrette Salad Dressing", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
         zucchini = models.Food(food_name = "Zucchini", recipe1Name = "Corn and Zucchini Salad", recipe2Name = "Zucchini Stuffed with Lady Peas", recipe3Name = "Stuffed Italian Zucchini Boats", recipe4Name = "Spicy Asian Zucchini", recipe5Name = "Moroccan Chickpea and Zucchini Salad")
-        shrimp = models.Food(food_name = "Shrimp", recipe1Name = "Peruvian Shrimp Paella", recipe2Name = "Bacon-Wrapped Buffalo Shrimp", recipe3Name = "Croatian Shrimp (Skampi Na Buzara)", recipe4Name = "Chinese Shrimp Stir Fry", recipe5Name = "Piri-Piri Style Shrimp")
+        shrimp = models.Food(food_name = "Shrimp", recipe1Name = "Peruvian Shrimp Paella", recipe2Name = "Bacon Wrapped Buffalo Shrimp", recipe3Name = "Croatian Shrimp (Skampi Na Buzara)", recipe4Name = "Chinese Shrimp Stir Fry", recipe5Name = "Piri Piri Style Shrimp")
 
         apples.put()
         peaches.put()
@@ -131,7 +131,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 1, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
         peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = 144 , fats = 2, sodium = 275, carbs = 12, servingSize = "4 oz.", calFromFat= 8, satFat= 1, transFat= 0, cholesterol= 48, dietaryFiber= 1, sugars= 0,
         protein= 18, vitaminA= 2, vitaminC= 3, calcium= 0, iron= 3 )
-        peach_phirni_info = food(name_of_food="peach phirni", food_name = "Peach Phirni", calories = 335, fats = 7.8, sodium = 78, carbs = 62.7, servingSize = "1 cup", calFromFat= 70, satFat= 3.7, transFat= 0, cholesterol= 20, dietaryFiber= 0.7, sugars= 40,
+        peach_phirini_info = food(name_of_food="peach phirni", food_name = "Peach Phirni", calories = 335, fats = 7.8, sodium = 78, carbs = 62.7, servingSize = "1 cup", calFromFat= 70, satFat= 3.7, transFat= 0, cholesterol= 20, dietaryFiber= 0.7, sugars= 40,
         protein= 8.9, vitaminA= 4, vitaminC= 0, calcium= 23, iron= 7 )
         peach_info.put()
         postre_chaja_peach_meringue_cake_info.put()
@@ -146,21 +146,20 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 12, vitaminA= 10, vitaminC= 45, calcium= 6, iron= 10 )
         zucchini_stuffed_peas_info = food(name_of_food="zucchini stuffed peas", food_name = "Zucchini Stuffed Peas", calories = 150, fats = 4, sodium = 552, carbs = 25, servingSize = "350 g", calFromFat= 16, satFat= 1, transFat= 0, cholesterol= 3, dietaryFiber= 6, sugars= 0,
         protein= 6, vitaminA= 0, vitaminC= 0, calcium= 55, iron= 2 )
-<<<<<<< HEAD
+
         # stuffed_italian_zucchini_boats_info = food(name_of_food="stuffed italian zucchini boats", food_name = "Stuffed Zucchini Boats", calories = 596, fats = 31, sodium = 1605, carbs = 45, servingSize = "1 boat", calFromFat= , satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         # protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         spicy_asian_zucchini_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         moroccan_chickenpea_salad_info = food(name_of_food="shrimp", food_name = "Shrimp", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-=======
         stuffed_italian_zucchini_boats_info = food(name_of_food="stuffed italian zucchini boats", food_name = "Stuffed Zucchini Boats", calories = 596, fats = 31, sodium = 1605, carbs = 45, servingSize = "1 boat", calFromFat= 122, satFat= 10, transFat= 0, cholesterol= 141, dietaryFiber= 6, sugars= 16,
         protein= 35, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
         spicy_asian_zucchini_info = food(name_of_food="spicy asian zucchini", food_name = "Spicy Asian Zucchini", calories = 250, fats = 10, sodium = 0, carbs = 3, servingSize = "1 cup", calFromFat= 40, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 0, sugars= 0,
         protein= 19, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
         moroccan_chickpea_salad_info = food(name_of_food="moroccan chickpea salad", food_name = "Moroccan Chickpea Salad", calories = 174, fats = 10, sodium = 278, carbs = 18, servingSize = "1/2 cup", calFromFat= 40, satFat= 1, transFat= 0, cholesterol= 0, dietaryFiber= 4, sugars= 0,
         protein= 4, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
->>>>>>> 896e7185ef83011ff84d66a8783afc2e7540e59d
+
 
         zucchini_info.put()
         corn_and_zucchini_salad_info.put()
@@ -187,11 +186,11 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         chinese_shrimp_stir_fry_info = food(name_of_food="chinese shrimp stir fry", food_name = "Chinese Shrimp Stir-Fry", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        phiri_shrimp_info = food(name_of_food="phiri shrimp", food_name = "Phiri Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        piri_shrimp_info = food(name_of_food="phiri shrimp", food_name = "Phiri Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
 
         shrimp_info.put()
-        peruvian_shrimp_info.put()
+        peruvian_shrimp_paella_info.put()
         bacon_wrapped_buffalo_shrimp_info.put()
         croatian_shrimp_info.put()
         chinese_shrimp_stir_fry_info.put()
