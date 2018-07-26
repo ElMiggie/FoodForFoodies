@@ -163,7 +163,7 @@ def get_recipes_directions ():
     peach_meringuecake=models.Recipe(name_displayed="Postre Chaja Peach Meringue Cake", food_name="peach_meringuecake", ingredients=ingredients11_array, directions=directions11_array, picture="/static/peach_meringuecake.jpg")
     peach_meringuecake.put()
 
-    ingredients12_array=["1/2cup melted butter", "1cup flour", "1cup sugar", "2teaspoons baking powder", "1/4teaspoon salt", "2/3cup room temperature milk", "1room temperature egg", "1(28 ounce) cansliced peaches, drained", "1cup sugar", "1teaspoon cinnamon", "1/2teaspoon nutmeg"]
+    ingredients12_array=["1/2 cup melted butter", "1 cup flour", "1 cup sugar", "2 teaspoons baking powder", "1/4 teaspoon salt", "2/3 cup room temperature milk", "1 room temperature egg", "1(28 ounce) cansliced peaches, drained", "1 cup sugar", "1 teaspoon cinnamon", "1/2 teaspoon nutmeg"]
 
     directions12_array=["Melt butter in a 9 x 13 inch pan.", "Mix together flour, sugar, baking powder & salt.", "Stir in milk & egg.", "Pour evenly over melted butter.", "Combine peaches, sugar & spices and spread over batter-DO NOT STIR!", "Bake 35-45 minutes at 350F until batter comes to the top and is golden brown."]
 
