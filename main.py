@@ -54,9 +54,9 @@ class RandomFoodHandler(webapp2.RequestHandler):
     def get(self):
         apples = models.Food(food_name = "Apples", recipe1Name = "Apple Empanadas", recipe2Name = "All-American Apple Pie", recipe3Name = "Danish Apple Cake", recipe4Name = "Apple Slaw", recipe5Name = "South African Apple Tart")
         peaches = models.Food(food_name = "Peaches", recipe1Name = "Postre Chaja Peach Meringue Cake", recipe2Name = "Peach Cobbler", recipe3Name = "Gooey Peach Dumplings", recipe4Name = "Peach Chicken", recipe5Name = "Peach Phirini")
-        pomegranates = models.Food(food_name = "Pomegranates", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Pomegranate Vinaigette Salad Dressing", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
+        pomegranates = models.Food(food_name = "Pomegranates", recipe1Name = "Pomegranate Granita", recipe2Name = "Grilled Scallops with Pomegranate Brown Butter", recipe3Name = "Pomegranate Vinaigrette Salad Dressing", recipe4Name = "Pomegranate and Onion Salad", recipe5Name = "Squash and Pomegranate Salad")
         zucchini = models.Food(food_name = "Zucchini", recipe1Name = "Corn and Zucchini Salad", recipe2Name = "Zucchini Stuffed with Lady Peas", recipe3Name = "Stuffed Italian Zucchini Boats", recipe4Name = "Spicy Asian Zucchini", recipe5Name = "Moroccan Chickpea and Zucchini Salad")
-        shrimp = models.Food(food_name = "Shrimp", recipe1Name = "Peurvian Shrimp Paella", recipe2Name = "Bacon-Wrapped Buffalo Shrimp", recipe3Name = "Croatian Shrimp (Skampi Na Buzara)", recipe4Name = "Chinese Shrimp Stir Fry", recipe5Name = "Piri-Piri Style Shrimp")
+        shrimp = models.Food(food_name = "Shrimp", recipe1Name = "Peruvian Shrimp Paella", recipe2Name = "Bacon-Wrapped Buffalo Shrimp", recipe3Name = "Croatian Shrimp (Skampi Na Buzara)", recipe4Name = "Chinese Shrimp Stir Fry", recipe5Name = "Piri-Piri Style Shrimp")
 
         apples.put()
         peaches.put()
@@ -237,7 +237,7 @@ class InfoHandler(webapp2.RequestHandler):
             html = food_list_template.render({
             "search_food": nutritionInfo.food_name,
             'food_name': nutritionInfo.food_name,
-            "recipe_food_name": nutritionInfo.name_of_food,
+            "recipe_food_name": nutritionInfo.food_name,
             'food_calories': nutritionInfo.calories,
             'food_fats': nutritionInfo.fats,
             'food_sodium' : nutritionInfo.sodium,
@@ -289,7 +289,7 @@ class InfoHandlerforLinks (webapp2.RequestHandler):
             html = food_list_template.render({
             "search_food": nutritionInfo.food_name,
             'food_name': nutritionInfo.food_name,
-            "recipe_food_name": nutritionInfo.name_of_food,
+            "recipe_food_name": nutritionInfo.food_name,
             'food_calories': nutritionInfo.calories,
             'food_fats': nutritionInfo.fats,
             'food_sodium' : nutritionInfo.sodium,
@@ -304,7 +304,7 @@ app = webapp2.WSGIApplication([
     ('/random', RandomFoodHandler),
     ('/nutrition', InfoHandler),
     ('/nutritionentry',InfoEntryHandler),
-    ('/info/(.*)', InfoHandlerforLinks),
+    # ('/nutrition/(.*)', InfoHandlerforLinks),
     #('/recipes', RecipeHandler),
     ('/recipeentry', RecipeEntryHandler),
     ("/recipes/(.*)", RecipeHandler)

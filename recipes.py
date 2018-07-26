@@ -45,7 +45,7 @@ def get_recipes_directions ():
      "2 tablespoons butter or margarine"]
 
     apple_pie= models.Recipe(name_displayed="All-American Apple Pie", food_name="apple_pie", ingredients=ingredients_array,
-    directions=directions_array, picture="/static/applepie.jpeg")
+    directions=directions_array, picture="/static/applepie.png")
 
     apple_pie.put()
 
@@ -91,7 +91,7 @@ def get_recipes_directions ():
     "Bake cake for one hour. Cover loosely with foil and bake another 15-20 minutes or until set in the center. Check to see if a toothpick inserted in the center comes out clean.",
     "Cool on a baking rack before removing outer ring. Serve warm or at room temperature with a dollop of whipped cream or ice cream. Enjoy!"]
 
-    danish_apple_pie=models.Recipe(name_displayed="Danish Apple Cake", food_name="danish_apple_pie", ingredients=ingredients3_array, directions=directions3_array, picture="/static/danishapplepie.jpg")
+    danish_apple_pie=models.Recipe(name_displayed="Danish Apple Cake", food_name="danish_apple_pie", ingredients=ingredients3_array, directions=directions3_array, picture="/static/danishapplecake.png")
 
     danish_apple_pie.put()
 
@@ -102,7 +102,7 @@ def get_recipes_directions ():
 
     directions4_array=["Combine dressing ingredients in a small bowl & set aside", "Toss with slaw ingredients", "Allow to sit for at least 1 hour before serving"]
 
-    apple_slaw=models.Recipe(name_displayed="Apple Slaw", food_name="apple_slaw", ingredients=ingredients4_array, directions=directions4_array, picture="/static/appleslaw.jpg")
+    apple_slaw=models.Recipe(name_displayed="Apple Slaw", food_name="apple_slaw", ingredients=ingredients4_array, directions=directions4_array, picture="/static/appleslaw.png")
 
     apple_slaw.put()
 
@@ -113,7 +113,7 @@ def get_recipes_directions ():
     "Mix slightly and add the milk little by little", "Add the batter in prepared baking dish and place the apples on top.",
     "Bake for 30-40 minutes until light brown.", "Heat the Tin Cream in a saucepan with the sugar until sugar is completely dissolved. Pour over warm apple tart."]
 
-    apple_tart=models.Recipe(name_displayed="South African Apple Tart", food_name="apple_tart", ingredients=ingredients5_array, directions=directions5_array, picture="/static/appletart.jpg")
+    apple_tart=models.Recipe(name_displayed="South African Apple Tart", food_name="apple_tart", ingredients=ingredients5_array, directions=directions5_array, picture="/static/southafricanappletart.png")
 
     apple_tart.put()
 
@@ -134,7 +134,7 @@ def get_recipes_directions ():
     direction7_array=["Preheat the oven to 400 degrees F.", "Peel and devein the shrimp, remove the tails (if desired)", "Line a baking sheet with parchment paper and arrange bacon on the sheet. Bake the bacon until half-cooked (about 6 minutes). Remove from oven and let the bacon cool and slice each piece in half and then half the bacon pieces again.",
     "Wrap each bacon slice tightly around the center of each shrimp and secure with a toothpick.", "Arrange the shrimp back on baking sheet and bake until the bacon is cooked through and crispy, approximately 6 minutes. The shrimp will have also turned pink.", "Once cooked, transfer the shrimp to a large bowl and gently toss with the Louisiana Hot Sauce until each piece is well coated."]
 
-    buffalo_shrimp=models.Recipe(name_displayed="Bacon Wrapped Buffalo Shrimp", food_name="buffalo_shrimp", ingredients=ingredients7_array, directions=direction7_array, picture="/static/buffalo_shrimp.png")
+    buffalo_shrimp=models.Recipe(name_displayed="Bacon-Wrapped Buffalo Shrimp", food_name="buffalo_shrimp", ingredients=ingredients7_array, directions=direction7_array, picture="/static/buffalo_shrimp.png")
     buffalo_shrimp.put()
 
     ingredients8_array=["3 pounds head-on large shrimp or 1 1/2 pounds tail-on large shrimp", "1/2 cup olive oil", "1/4 cup fresh breadcrumbs", "1 tablespoon (or to taste) minced garlic",
@@ -206,7 +206,7 @@ def get_recipes_directions ():
     "Take 1/4 cup of hot milk & mix it into the rice mixture.", "Add the rice paste to the boiling milk slowly & continue stirring making sure it does not burn at the bottom.", "Cook until milk has reduced & rice is cooked.", "Add sugar & cardamom to the mixture & continue cooking for about 4 minutes on low heat then turn off heat.", "Fold in the pureed peach mixture, do not stir only fold it in & dish into little desert bowls.",
     "Refrigerate for 2 hours & then garnish with sliced almond, peach slices & mint leaves.", "Discover more African and Caribbean recipes on Demand Africa"]
 
-    peach_phirini=models.Recipe(name_displayed="Peach Phirini", food_name="peach_phirini", ingredients=ingredients15_array, directions=directions15_array, picture="/static/")
+    peach_phirini=models.Recipe(name_displayed="Peach Phirini", food_name="peach_phirini", ingredients=ingredients15_array, directions=directions15_array, picture="/static/peach_phirini.jpg")
     peach_phirini.put()
 
     ingredients16_array=["3 cups of pomegranate juice, about 24 fl ounces or 710ml", "1/4 to 1/2 cup simple syrup, adjust based your preference or use your favorite sweetener", "Juice from 2 limes", "1 oz or 2 tbs of tequila, add more for an adult version or to use in the sparkling pomegranate cocktail or omit completely for a child friendly dessert", "Fresh pomegranate arils to garnish"]
@@ -224,7 +224,7 @@ def get_recipes_directions ():
     "In a small skillet, melt the butter over medium-high heat and cook, stirring, until browned and smells nutty, 4 to 5 minutes. Stir in the pomegranate seeds and juice and keep warm.", "Heat a grill over high. Season the scallops with salt and pepper and, working in batches, grill the scallops, turning once, until charred, about 3 minutes. Transfer the scallops to a plate and keep warm.",
     "To serve, pour the vinaigrette over the salad and toss to combine. Arrange the salad on a serving platter, top with scallops, and spoon the pomegranate sauce over the top."]
 
-    scallops_pomegranate=models.Recipe(name_displayed="Grilled Scallops with Pomegranate Brown Butter", food_name="scallops_pomegranate", ingredients=ingredients17_array, directions=directions17_array, picture="/static/scallops_pomegranate")
+    scallops_pomegranate=models.Recipe(name_displayed="Grilled Scallops with Pomegranate Brown Butter", food_name="scallops_pomegranate", ingredients=ingredients17_array, directions=directions17_array, picture="/static/scallops_pomegranate.jpg")
     scallops_pomegranate.put()
 
     ingredients18_array=["1/2 cup fresh or bottled pomegranate juice", "1/4 cup red-wine vinegar", "2 tablespoons honey", "1/2 cup extra-virgin olive oil or sunflower oil", "Salt and pepper", "Pomegranate seeds, for garnish", "1 tablespoon chopped chives, for garnish"]
@@ -271,7 +271,7 @@ def get_recipes_directions ():
     zucchini_stuffed_peas=models.Recipe(name_displayed="Zucchini Stuffed with Lady Peas", food_name="zucchini_stuffed_peas", ingredients=ingredients22_array, directions=directions22_array, picture="/static/zucchini_stuffed_peas.jpg")
     zucchini_stuffed_peas.put()
 
-    ingredients23_array=["4 smallish zucchini - about 4-5 inches long", "2 cloves garlic", "1 cup onions roughly chopped", "1/2 cup canadian bacon or ham finely minced" ,"1/2 teaspoon fennel seed" ,"pinch of red pepper flakes" ,"1/4 teaspoon salt", "4 tablespoons olive oil divided
+    ingredients23_array=["4 smallish zucchini - about 4-5 inches long", "2 cloves garlic", "1 cup onions roughly chopped", "1/2 cup canadian bacon or ham finely minced" ,"1/2 teaspoon fennel seed" ,"pinch of red pepper flakes" ,"1/4 teaspoon salt", "4 tablespoons olive oil divided"
     "1/2 cup tomato finely chopped" ,"1 slice bread I used a dense piece of whole wheat" ,"2 tablespoons parsley chopped" ,"2 tablespoons basil chiffonade + extra for serving", "1/4 cup part-skim mozzarellashredded + extra for sprinkling" ,"sprinkle of parmesan cheese optional"]
 
     directions23_array=["Preheat the oven to 375. Spray a baking sheet with cooking spray and set aside.", "Slice the zucchini lengthwise down the middle. Use a melon-baller to carefully scoop the flesh out of the zucchini and transfer to a mini prep food chopper. Pulse several times until the zucchini flesh is finely chopped. Transfer to a bowl.",
@@ -280,7 +280,7 @@ def get_recipes_directions ():
     "Heat a medium skillet over medium high heat, add the olive oil. When the oil is hot, stir in the zucchini mixture and cook down until it's given up most of it's liquid, about 5-6 minutes. Add the chopped tomato and cook a few minutes more. Remove from heat and set aside.",
     "Tear the bread into small chunks and add them to the food processor along with the parsley. Pulse 3-5 times until coarsely chopped and transfer to the zucchini mixture. Add the mozzarella and basil, stir to combine.", "Lightly coat the interior of each zucchini half with a little olive oil."]
 
-    zucchini_boats=models.Recipe(name_displayed="Stuffed Italian Zucchini Boats", food_name="zucchini_boats", ingredients=ingredients23_array, directions=directions23_array, picture="/staitc/zucchini_boats.jpg")
+    zucchini_boats=models.Recipe(name_displayed="Stuffed Italian Zucchini Boats", food_name="zucchini_boats", ingredients=ingredients23_array, directions=directions23_array, picture="/static/zucchini_boats.jpg")
     zucchini_boats.put()
 
     ingredients24_array=["1 large or two small zucchini, cut into long strips", "Sesame oil", "1/4 cup soy sauce (Tamari if gluten free)", "2 Tablespoons sriracha sauce", "1 teaspoon honey", "2 Tablespoons sesame seeds" ,"2 green onions, sliced", "Salt"]
@@ -291,8 +291,8 @@ def get_recipes_directions ():
     asian_zucchini=models.Recipe(name_displayed="Spicy Asian Zucchini", food_name="asian_zucchini", ingredients=ingredients24_array, directions=directions24_array, picture="/static/asian_zucchini.jpeg")
     asian_zucchini.put()
 
-    ingredients25_array=["240g chickpeas (canned. if uncooked, soak overnight then boil until soft)", "240g zucchini(courgettes)" ,"1teaspoon garlic, minced" ,"10ml lemon juice", "1teaspoon vinegar, white wine" ,"2teaspoons olive oil", "2teaspoons honeys", "1teaspoon mixed spice, paste (actually calls for spice paste take note of recipe below)"
-    "1teaspoon cayenne pepper", "1teaspoon paprika", "1teaspoon garlic powder", "1teaspoonpeppercorn, ground", "1teaspoon cinnamon", "1teaspoon ground cumin", "1teaspoon fresh lemon juice", "5teaspoons olive oil"]
+    ingredients25_array=["240g chickpeas (canned. if uncooked, soak overnight then boil until soft)", "240g zucchini(courgettes)" ,"1teaspoon garlic, minced" ,"10ml lemon juice", "1teaspoon vinegar, white wine" ,"2teaspoons olive oil", "2teaspoons honeys", "1teaspoon mixed spice", "paste (actually calls for spice paste take note of recipe below)",
+    "1 teaspoon cayenne pepper", "1 teaspoon paprika", "1 teaspoon garlic powder", "1 teaspoon peppercorn, ground", "1 teaspoon cinnamon", "1 teaspoon ground cumin", "1 teaspoon fresh lemon juice", "5 teaspoons olive oil"]
 
     directions25_array=["Blanch and refresh zucchini. Combine all ingredients and toss together.", "Spice paste: Combine all the spice paste ingredients and fry to develop flavours. Refrigerate."]
 
