@@ -199,7 +199,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         pomegranate_onion_info = food(name_of_food="pomogrante onion", food_name = "Pomegranate Onion", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        squash_pomegranate_info = food(name_of_food="squash pomogrante", food_name = "Squash Pomegranate", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        squash_pomegranate_info = food(name_of_food="squash pomogranate", food_name = "Squash Pomegranate", calories = 76, fats = 1, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
 
         pomegranate_info.put()
@@ -221,7 +221,7 @@ class InfoHandler(webapp2.RequestHandler):
         "south africa apple tart": "static/southafricaappletart.png",
 ####peach
         "peach":"static/peaches.png",
-        "postre chaja peach meringue cake":"static/postrepeachmeringuecake.png",
+        "postre chaja peach meringue cake":"static/peach_meringuecake.jpg",
         "peach cobbler":"static/peach_cobbler.png",
         "gooey peach dumpling":"static/gooeypeachdumpling.png",
         "peach chicken":"static/peach_chicken.jpeg",
