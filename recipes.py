@@ -160,7 +160,7 @@ def get_recipes_directions ():
     "Combine trimmed chiles, garlic, paprika, lime juice, and vinegar in a blender or mini food processor and blend until smooth and combined, about 1 minute. Add olive oil and blend until thoroughly incorporated and marinade thickens slightly. Combine marinade and shrimp in a medium nonreactive bowl and toss to coat. Let marinate 20 minutes to 24 hours in the refrigerator.",
     "Heat a large cast iron skillet over medium-high heat. When heated, add the shrimp and marinated and cook until the shrimp are pink. Season well with salt, toss shrimp with cilantro, and serve with lime wedges over rice."]
 
-    piri_shrimp=models.Recipe(name_displayed="Piri-Piri Style Shrimp", food_name="piri_shrimp", ingredients=ingredients10_array, directions=directions10_array, picture="/static/piri_shrimp.png")
+    piri_shrimp=models.Recipe(name_displayed="Piri Piri Style Shrimp", food_name="piri_shrimp", ingredients=ingredients10_array, directions=directions10_array, picture="/static/piri_shrimp.png")
     piri_shrimp.put()
 
     ingredients11_array=["4 egg whites", "1/2teaspoon cream of tartar", "1cup sugar", "1pinch salt", "1/2teaspoon vanilla", "1 Sponge cake recipe, baked in two 9-inch cake pans", "6 or 7 peaches",
