@@ -131,7 +131,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 1, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
         peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = 144 , fats = 2, sodium = 275, carbs = 12, servingSize = "4 oz.", calFromFat= 8, satFat= 1, transFat= 0, cholesterol= 48, dietaryFiber= 1, sugars= 0,
         protein= 18, vitaminA= 2, vitaminC= 3, calcium= 0, iron= 3 )
-        peach_phirini_info = food(name_of_food="peach phirini", food_name = "Peach Phirni", calories = 335, fats = 7.8, sodium = 78, carbs = 62.7, servingSize = "1 cup", calFromFat= 70, satFat= 3.7, transFat= 0, cholesterol= 20, dietaryFiber= 0.7, sugars= 40,
+        peach_phirini_info = food(name_of_food="peach phirini", food_name = "Peach Phirini", calories = 335, fats = 7.8, sodium = 78, carbs = 62.7, servingSize = "1 cup", calFromFat= 70, satFat= 3.7, transFat= 0, cholesterol= 20, dietaryFiber= 0.7, sugars= 40,
         protein= 8.9, vitaminA= 4, vitaminC= 0, calcium= 23, iron= 7 )
 
         peach_info.put()
@@ -139,7 +139,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         peach_cobbler_info.put()
         gooey_peach_dumpling_info.put()
         peach_chicken_info.put()
-        peach_phirni_info.put()
+        peach_phirini_info.put()
 ####Zucchini
         zucchini_info = food(name_of_food="zucchini", food_name = "Zucchini", calories = 33, fats = 0.6, sodium = 0, carbs = 5, servingSize = "1 medium zucchini", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 2, sugars= 3,
         protein= 2, vitaminA= 10, vitaminC= 56, calcium= 13, iron= 12 )
@@ -179,7 +179,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         chinese_shrimp_stir_fry_info = food(name_of_food="chinese shrimp stir fry", food_name = "Chinese Shrimp Stir-Fry", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        piri_shrimp_info = food(name_of_food="phiri shrimp", food_name = "Phiri Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        phiri_shrimp_info = food(name_of_food="phiri shrimp", food_name = "Phiri Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
 
         shrimp_info.put()
@@ -266,7 +266,7 @@ class InfoHandler(webapp2.RequestHandler):
             'food_sodium' : nutritionInfo.sodium,
             'food_carbs': nutritionInfo.carbs,
             'servingSize':nutritionInfo.servingSize,
-            'calFromFat':nutritionInfo.servingSize,
+            'calFromFat':nutritionInfo.calFromFat,
             'satFat':nutritionInfo.satFat,
             'transFat':nutritionInfo.transFat,
             'cholesterol':nutritionInfo.cholesterol,
@@ -293,16 +293,38 @@ class InfoHandlerforLinks (webapp2.RequestHandler):
         "apple empanadas":"static/appleempanadas.png",
         "danish apple cake":"static/danishapplecake.png",
         "apple slaw":"static/appleslaw.png",
-        "south african apple tart": "static/southafricaappletart.png",
+        "south africa apple tart": "static/southafricaappletart.png",
 ####peach
         "peach":"static/peaches.png",
         "postre chaja peach meringue cake":"static/postrepeachmeringuecake.png",
-        "peach cobbler":"static/peachcobbler.png",
+        "peach cobbler":"static/peach_cobbler.png",
         "gooey peach dumpling":"static/gooeypeachdumpling.png",
-        "peach chicken":"static/peach chicken.png",
+        "peach chicken":"static/peach_chicken.jpeg",
+        "peach phirni":"static/peach_phirini.jpg",
 ####Pizza
         "cheese pizza":"static/cheesepizza.png",
         "pepperoni pizza":"static/pepperonipizza.png",
+####zucchini
+        "zucchini":"static/zucchini.png",
+        "corn and zucchini salad":"static/corn_zucchini.jpg",
+        "zucchini stuffed peas":"static/zucchini_stuffed_peas.jpg",
+        "stuffed italian zucchini boats":"static/zucchini_boats.jpg",
+        "spicy asian zucchini":"static/asian_zucchini.jpeg",
+        "moroccan chickpea salad":"static/chickpea_zucchini.jpg",
+####shrimp
+        "shrimp":"static/shrimp.png",
+        "peruvian shrimp paella":"static/shrimppaella.png",
+        "bacon wrapped buffalo shrimp":"static/buffalo_shrimp.png",
+        "croatian shrimp":"static/croatian_shrimp.jpg",
+        "chinese shrimp stir fry":"static/shrimp_stirfry.jpg",
+        "piri shrimp":"static/piri_shrimp.png",
+####pomogranate
+        "pomogranate":"static/pomegranate.png",
+        "pomegranate granita":"static/pomegrante_granita.png",
+        "grilled pomegranate scallops":"static/scallops_pomegranate.jpg",
+        "pomogrante vinaigrette":"static/pomegranate_dressing.jpg",
+        "pomogranate onion":"static/pomegranate_onion.jpg",
+        "squash pomegranate":"static/squash_pomegranate.jpg",
         }
         food = models.Nutrition
         requestedFood = search_food
@@ -327,7 +349,7 @@ app = webapp2.WSGIApplication([
     ('/random', RandomFoodHandler),
     ('/nutrition', InfoHandler),
     ('/nutritionentry',InfoEntryHandler),
-    # ('/nutrition/(.*)', InfoHandlerforLinks),
+    #('/nutrition/(.*)', InfoHandlerforLinks),
     #('/recipes', RecipeHandler),
     ('/recipeentry', RecipeEntryHandler),
     ("/recipes/(.*)", RecipeHandler)
