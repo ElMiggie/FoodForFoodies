@@ -111,7 +111,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 3, vitaminA= 0, vitaminC= 0, calcium= 2, iron= 4 )
         apple_slaw_info = food(name_of_food="apple slaw", food_name = "Apple Slaw", calories = 20, fats = 1, sodium = 12, carbs = 2, servingSize = "1 portion", calFromFat= 4, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 1, sugars= 1,
         protein= 0, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
-        southAfrica_apple_tart_info = food(name_of_food="south african apple tart", food_name = "South African Apple Tart", calories = 300, fats = 16, sodium = 60, carbs = 56, servingSize = "1 tart", calFromFat= 64, satFat= 8, transFat= 0, cholesterol= 85, dietaryFiber= 2, sugars= 26,
+        southAfrican_apple_tart_info = food(name_of_food="south african apple tart", food_name = "South African Apple Tart", calories = 300, fats = 16, sodium = 60, carbs = 56, servingSize = "1 tart", calFromFat= 64, satFat= 8, transFat= 0, cholesterol= 85, dietaryFiber= 2, sugars= 26,
         protein= 6, vitaminA= 9, vitaminC= 4, calcium= 3, iron= 21 )
 
         apple_info.put()
@@ -119,7 +119,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         apple_empanadas_info.put()
         danish_apple_cake_info.put()
         apple_slaw_info.put()
-        southAfrica_apple_tart_info.put()
+        southAfrican_apple_tart_info.put()
 ####peaches
         peach_info = food(name_of_food="peach", food_name = "Peach", calories = 60, fats =0.4, sodium = 0, carbs = 16.7, servingSize = "1 peach", calFromFat= 1.6, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 2.3, sugars= 13,
         protein= 1.4, vitaminA= 7, vitaminC= 1, calcium= 1, iron= 1 )
@@ -127,7 +127,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 6, vitaminA= 10, vitaminC= 2, calcium= 6, iron= 12 )
         peach_cobbler_info = food(name_of_food="peach cobbler", food_name = "Peach Cobbler", calories = 250, fats =10, sodium = 150, carbs = 38, servingSize = "4 oz.", calFromFat= 40, satFat= 5, transFat= 0, cholesterol= 0, dietaryFiber= 1, sugars= 25,
         protein= 2, vitaminA= 2, vitaminC= 6, calcium= 0, iron= 4 )
-        gooey_peach_dumpling_info = food(name_of_food="gooey peach dumpling", food_name = "Gooey Peach Dumplings", calories = 70, fats =3, sodium = 116, carbs = 12, servingSize = "1 cup", calFromFat= 12, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 0, sugars= 0,
+        gooey_peach_dumpling_info = food(name_of_food="gooey peach dumplings", food_name = "Gooey Peach Dumplings", calories = 70, fats =3, sodium = 116, carbs = 12, servingSize = "1 cup", calFromFat= 12, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 0, sugars= 0,
         protein= 1, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
         peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = 144 , fats = 2, sodium = 275, carbs = 12, servingSize = "4 oz.", calFromFat= 8, satFat= 1, transFat= 0, cholesterol= 48, dietaryFiber= 1, sugars= 0,
         protein= 18, vitaminA= 2, vitaminC= 3, calcium= 0, iron= 3 )
@@ -143,15 +143,15 @@ class InfoEntryHandler(webapp2.RequestHandler):
 ####Zucchini
         zucchini_info = food(name_of_food="zucchini", food_name = "Zucchini", calories = 33, fats = 0.6, sodium = 0, carbs = 5, servingSize = "1 medium zucchini", calFromFat= 0, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 2, sugars= 3,
         protein= 2, vitaminA= 10, vitaminC= 56, calcium= 13, iron= 12 )
-        corn_and_zucchini_salad_info = food(name_of_food="corn and zucchini salad info", food_name = "Corn and Zucchini Salad", calories = 330, fats = 10, sodium = 0, carbs = 52, servingSize = "1/6 of dish", calFromFat= 40, satFat= 3, transFat= 0, cholesterol= 0, dietaryFiber= 5, sugars= 0,
+        corn_and_zucchini_salad_info = food(name_of_food="corn and zucchini salad", food_name = "Corn and Zucchini Salad", calories = 330, fats = 10, sodium = 0, carbs = 52, servingSize = "1/6 of dish", calFromFat= 40, satFat= 3, transFat= 0, cholesterol= 0, dietaryFiber= 5, sugars= 0,
         protein= 12, vitaminA= 10, vitaminC= 45, calcium= 6, iron= 10 )
-        zucchini_stuffed_peas_info = food(name_of_food="zucchini stuffed peas", food_name = "Zucchini Stuffed Peas", calories = 150, fats = 4, sodium = 552, carbs = 25, servingSize = "350 g", calFromFat= 16, satFat= 1, transFat= 0, cholesterol= 3, dietaryFiber= 6, sugars= 0,
+        zucchini_stuffed_peas_info = food(name_of_food="zucchini stuffed with lady peas", food_name = "Zucchini Stuffed with Lady Peas", calories = 150, fats = 4, sodium = 552, carbs = 25, servingSize = "350 g", calFromFat= 16, satFat= 1, transFat= 0, cholesterol= 3, dietaryFiber= 6, sugars= 0,
         protein= 6, vitaminA= 0, vitaminC= 0, calcium= 55, iron= 2 )
         stuffed_italian_zucchini_boats_info = food(name_of_food="stuffed italian zucchini boats", food_name = "Stuffed Zucchini Boats", calories = 596, fats = 31, sodium = 1605, carbs = 45, servingSize = "1 boat", calFromFat= 122, satFat= 10, transFat= 0, cholesterol= 141, dietaryFiber= 6, sugars= 16,
         protein= 35, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
         spicy_asian_zucchini_info = food(name_of_food="spicy asian zucchini", food_name = "Spicy Asian Zucchini", calories = 250, fats = 10, sodium = 0, carbs = 3, servingSize = "1 cup", calFromFat= 40, satFat= 0, transFat= 0, cholesterol= 0, dietaryFiber= 0, sugars= 0,
         protein= 19, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
-        moroccan_chickpea_salad_info = food(name_of_food="moroccan chickpea salad", food_name = "Moroccan Chickpea Salad", calories = 174, fats = 10, sodium = 278, carbs = 18, servingSize = "1/2 cup", calFromFat= 40, satFat= 1, transFat= 0, cholesterol= 0, dietaryFiber= 4, sugars= 0,
+        moroccan_chickpea_salad_info = food(name_of_food="moroccan chickpea and zucchini salad", food_name = "Moroccan Chickpea and Zucchini Salad", calories = 174, fats = 10, sodium = 278, carbs = 18, servingSize = "1/2 cup", calFromFat= 40, satFat= 1, transFat= 0, cholesterol= 0, dietaryFiber= 4, sugars= 0,
         protein= 4, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
 
         zucchini_info.put()
@@ -179,7 +179,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
         chinese_shrimp_stir_fry_info = food(name_of_food="chinese shrimp stir fry", food_name = "Chinese Shrimp Stir-Fry", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
-        phiri_shrimp_info = food(name_of_food="phiri shrimp", food_name = "Phiri Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
+        piri_piri_shrimp_info = food(name_of_food="piri piri shrimp", food_name = "Piri Piri Shrimp", calories = 76, fats = 7, sodium = 699, carbs = 1, servingSize = "3 oz.", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 0, calcium= 6, iron= 1 )
 
         shrimp_info.put()
@@ -187,11 +187,11 @@ class InfoEntryHandler(webapp2.RequestHandler):
         bacon_wrapped_buffalo_shrimp_info.put()
         croatian_shrimp_info.put()
         chinese_shrimp_stir_fry_info.put()
-        phiri_shrimp_info.put()
+        piri_piri_shrimp_info.put()
 ####pomegranate
         pomegranate_info = food(name_of_food="pomegranate", food_name = "Pomegranate", calories = 72, fats = 1, sodium = 3, carbs = 16, servingSize = "1/2 cup", calFromFat= 4, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 3,
         protein= 1.5, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 1 )
-        pomegranate_granita_info = food(name_of_food="pomegranate granita", food_name = "Pomegranate Granate", calories = 135, fats = 1, sodium = 5, carbs = 16, servingSize = "1 cup", calFromFat= 4, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 3,
+        pomegranate_granita_info = food(name_of_food="pomegranate granita", food_name = "Pomegranate Granita", calories = 135, fats = 1, sodium = 5, carbs = 16, servingSize = "1 cup", calFromFat= 4, satFat= 0, transFat= 0, cholesterol= 30, dietaryFiber= 3, sugars= 3,
         protein= 3, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 1 )
         grilled_scallops_info = food(name_of_food="grilled pomegranate and scallops", food_name = "Grilled Pomegranate and Scallops", calories = 256, fats = 18, sodium = 374, carbs = 20, servingSize = "3 g", calFromFat= 68, satFat= 0, transFat= 0, cholesterol= 60, dietaryFiber= 3, sugars= 8,
         protein= 15, vitaminA= 7, vitaminC= 3, calcium= 6, iron= 1 )
@@ -225,7 +225,7 @@ class InfoHandler(webapp2.RequestHandler):
         "peach cobbler":"static/peach_cobbler.png",
         "gooey peach dumpling":"static/gooeypeachdumpling.png",
         "peach chicken":"static/peach_chicken.jpeg",
-        "peach phirni":"static/peach_phirini.jpg",
+        "peach phirini":"static/peach_phirini.jpg",
 ####Pizza
         "cheese pizza":"static/cheesepizza.png",
         "pepperoni pizza":"static/pepperonipizza.png",
@@ -242,10 +242,10 @@ class InfoHandler(webapp2.RequestHandler):
         "bacon wrapped buffalo shrimp":"static/buffalo_shrimp.png",
         "croatian shrimp":"static/croatian_shrimp.jpg",
         "chinese shrimp stir fry":"static/shrimp_stirfry.jpg",
-        "piri shrimp":"static/piri_shrimp.png",
+        "piri piri shrimp":"static/piri_shrimp.png",
 ####pomogranate
-        "pomogranate":"static/pomegranate.png",
-        "pomegranate granita":"static/pomegrante_granita.png",
+        "pomegranate":"static/pomegranate.png",
+        "pomegranate granita":"static/pomegranate_granita.png",
         "grilled pomegranate scallops":"static/scallops_pomegranate.jpg",
         "pomogrante vinaigrette":"static/pomegranate_dressing.jpg",
         "pomogranate onion":"static/pomegranate_onion.jpg",
@@ -296,7 +296,7 @@ class InfoHandlerforLinks (webapp2.RequestHandler):
         "south africa apple tart": "static/southafricaappletart.png",
 ####peach
         "peach":"static/peaches.png",
-        "postre chaja peach meringue cake":"static/postrepeachmeringuecake.png",
+        "postre chaja peach meringue cake":"static/peachmeringuecake.png",
         "peach cobbler":"static/peach_cobbler.png",
         "gooey peach dumpling":"static/gooeypeachdumpling.png",
         "peach chicken":"static/peach_chicken.jpeg",
