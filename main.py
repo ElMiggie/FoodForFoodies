@@ -131,7 +131,7 @@ class InfoEntryHandler(webapp2.RequestHandler):
         protein= 1, vitaminA= 0, vitaminC= 0, calcium= 0, iron= 0 )
         peach_chicken_info = food(name_of_food="peach chicken", food_name = "Peach Chicken", calories = 144 , fats = 2, sodium = 275, carbs = 12, servingSize = "4 oz.", calFromFat= 8, satFat= 1, transFat= 0, cholesterol= 48, dietaryFiber= 1, sugars= 0,
         protein= 18, vitaminA= 2, vitaminC= 3, calcium= 0, iron= 3 )
-        peach_phirini_info = food(name_of_food="peach phirini", food_name = "Peach Phirini", calories = 335, fats = 7.8, sodium = 78, carbs = 62.7, servingSize = "1 cup", calFromFat= 70, satFat= 3.7, transFat= 0, cholesterol= 20, dietaryFiber= 0.7, sugars= 40,
+        peach_phirini_info = food(name_of_food="peach phirini", food_name = "Peach Phirini", calories = 135, fats = 4.8, sodium = 28, carbs = 32.7, servingSize = "1 cup", calFromFat= 32, satFat= 0, transFat= 0, cholesterol= 20, dietaryFiber= 0.7, sugars= 20,
         protein= 8.9, vitaminA= 4, vitaminC= 0, calcium= 23, iron= 7 )
 
         peach_info.put()
