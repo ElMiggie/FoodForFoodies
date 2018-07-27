@@ -23,9 +23,9 @@ handlers:
 
 - url: /app-stylesheets
   static_dir: app-stylesheets
-
-- url: /recipes
-  static_dir: app-stylesheets
+# 
+# - url: /recipes/.*
+#   static_dir: app-stylesheets
 
 - url: /nutrition
   static_dir: app-stylesheets
